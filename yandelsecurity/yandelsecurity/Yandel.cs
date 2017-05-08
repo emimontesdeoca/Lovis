@@ -3,36 +3,73 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace yandelsecurity
 {
     public class Yandel
     {
-        public string UserKey { get; set; }
-        public string Username { get; set; }
-        public string Email { get; set; }
 
-
-
-        public string EncodeString(string UserKey, string String)
+        /// <summary>
+        /// Function that generates random base64 userkey
+        /// </summary>
+        /// <returns>Base64 userkey</returns>
+        public string GenerateUserKey()
         {
             string res = "";
 
-            string nonencodedstring = String;
-            string encodedstring = Convert.ToBase64String(Encoding.UTF8.GetBytes(nonencodedstring));
+            using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
+            {
+                // Buffer storage.
+                byte[] data = new byte[4];
 
-            string encodedconcat = UserKey + encodedstring;
-            string reencodedconcat = Convert.ToBase64String(Encoding.UTF8.GetBytes(encodedconcat));
+                // Ten iterations.
+                for (int i = 0; i < 10; i++)
+                {
+                    // Fill buffer.
+                    rng.GetBytes(data);
 
-            Random rnd = new Random();
+                    // Convert to int 32.
+                    int value = BitConverter.ToInt32(data, 0);
 
-            int i = rnd.Next(1, 4);
+                    // Convert to string
+                    res = value.ToString();
 
-            //string[] splitEncoded = reencodedconcat.Split()
-
+                    // Make it non negative
+                    
+                }
+                if (res.Substring(0, 1) == "-")
+                {
+                    res = res.Remove(0, 1);
+                }
+            }
+            res = Convert.ToBase64String(Encoding.UTF8.GetBytes(res));
 
             return res;
         }
 
+        /// <summary>
+        /// Function that encode string in base64
+        /// </summary>
+        /// <param name="UserKey">Userkey in base64 string</param>
+        /// <param name="String">String to encode</param>
+        /// <returns></returns>
+        public string EncodeString(string UserKey, string String)
+        {
+            // Get the non encoded string - passw or email
+            string nonencodedstring = String;
+
+            // Make it base64 string
+            string encodedstring = Convert.ToBase64String(Encoding.UTF8.GetBytes(nonencodedstring));
+
+            // Concat it with base64 userkey
+            string encodedconcat = UserKey + "%" + encodedstring;
+
+            // Reencode it again
+            string reencodedconcat = Convert.ToBase64String(Encoding.UTF8.GetBytes(encodedconcat));
+
+            // Return it
+            return reencodedconcat;
+        }
     }
 }
