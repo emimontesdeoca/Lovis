@@ -9,6 +9,7 @@ namespace yandelsecurity
 {
     public class Yandel
     {
+        public static Random r = new Random();
 
         /// <summary>
         /// Function that generates random base64 userkey
@@ -35,15 +36,27 @@ namespace yandelsecurity
                     // Convert to string
                     res = value.ToString();
 
-                    // Make it non negative
-                    
+
                 }
+                // Make it non negative
                 if (res.Substring(0, 1) == "-")
                 {
                     res = res.Remove(0, 1);
                 }
             }
             res = Convert.ToBase64String(Encoding.UTF8.GetBytes(res));
+
+            // Get random number
+            int x = r.Next(1, 5);
+
+            //Encode it X times
+            for (int i = 0; i < x; i++)
+            {
+                res = Convert.ToBase64String(Encoding.UTF8.GetBytes(res));
+            }
+
+            // Concat number of times encoded
+            res += x;
 
             return res;
         }
@@ -65,9 +78,51 @@ namespace yandelsecurity
             // Concat it with base64 userkey
             string encodedconcat = UserKey + "%" + encodedstring;
 
-            // Reencode it again
+            // Encode it first
             string reencodedconcat = Convert.ToBase64String(Encoding.UTF8.GetBytes(encodedconcat));
 
+            // Get random number
+            int x = r.Next(1, 5);
+
+            //Encode it X times
+            for (int i = 0; i < x; i++)
+            {
+                reencodedconcat = Convert.ToBase64String(Encoding.UTF8.GetBytes(reencodedconcat));
+            }
+
+            // Concat number of times encoded
+            reencodedconcat += x;
+
+            // Return it
+            return reencodedconcat;
+        }
+
+        /// <summary>
+        /// Function that encode string in base64
+        /// </summary>
+        /// <param name="UserKey">Userkey in base64 string</param>
+        /// <param name="String">String to encode</param>
+        /// <returns></returns>
+        public string DecodeString(string UserKey, string String, string n)
+        {
+            // Get the non encoded string - passw or email
+            string nonencodedstring = String;
+
+            // Make it base64 string
+            string encodedstring = Convert.ToBase64String(Encoding.UTF8.GetBytes(nonencodedstring));
+
+            // Concat it with base64 userkey
+            string encodedconcat = UserKey + "%" + encodedstring;
+
+            // Encode it first
+            string reencodedconcat = Convert.ToBase64String(Encoding.UTF8.GetBytes(encodedconcat));
+
+            for (int i = 0; i < Convert.ToInt32(n); i++)
+            {
+                reencodedconcat = Convert.ToBase64String(Encoding.UTF8.GetBytes(reencodedconcat));
+            }
+
+            reencodedconcat += n;
             // Return it
             return reencodedconcat;
         }

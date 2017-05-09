@@ -29,7 +29,7 @@ namespace yandelsecurity
             Username = username;
             UserKey = new Yandel().GenerateUserKey();
             PasswordKey = new Yandel().EncodeString(this.UserKey, passwordIntroduced);
-            EmailKey = new Yandel().EncodeString(this.EmailKey, emailIntroduced);
+            EmailKey = new Yandel().EncodeString(this.UserKey, emailIntroduced);
             Name = name;
             Surname = surname;
             this.isLogged = isLogged;
@@ -40,7 +40,7 @@ namespace yandelsecurity
             bool res = false;
 
             // Check if usernameintroducde match with userList
-            if (u.Username == usernameIntroduced && u.PasswordKey == new Yandel().EncodeString(u.UserKey,passwordIntroduced))
+            if (u.Username == usernameIntroduced && u.PasswordKey == new Yandel().DecodeString(u.UserKey, passwordIntroduced, u.PasswordKey.Substring(u.PasswordKey.Length - 1, 1)))
             {
                 // User entered right username and password
                 res = true;

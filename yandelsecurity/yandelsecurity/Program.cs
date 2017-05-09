@@ -59,7 +59,10 @@ namespace yandelsecurity
                 if (new User().UserLogin(u, loginusername, loginpassword))
                 {
                     Console.WriteLine("LOG IN SUCCESSFULLY!");
+                    Console.WriteLine("");
+
                     Console.WriteLine("USER INFORMATION!");
+                    Console.WriteLine("");
 
                     Console.WriteLine("USERNAME: " + u.Username);
                     Console.WriteLine("RANDOM KEY: " + u.UserKey);
