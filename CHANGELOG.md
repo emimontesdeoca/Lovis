@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) - [TODO](TODO.md)
 
-## [0.1.0] - 10/05/2017 - [https://github.com/emimontesdeoca](@emimontesdeoca)
+## [0.1.0] - 10/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Added
 - Structure for project.
 - Created VS project.
