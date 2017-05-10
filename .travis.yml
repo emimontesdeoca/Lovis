@@ -1,0 +1,10 @@
+language: csharp
+addons:
+    apt:
+        sources:
+            - mono
+            - mono-libtiff-compat
+        packages:
+            - mono-complete
+            - nuget
+solution: lovis.sln
