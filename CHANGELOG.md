@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-[LICENSE](../blob/master/LICENSE) - [README](../blob/master/README.md) - [CHANGELOG](../blob/master/CHANGELOG.md) - [TODO](../blob/master/TODO.md)
+[LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) - [TODO](TODO.md)
 
-## [0.1.0] - 2015-10-06
+## [0.1.0] - 10/05/2017 - [https://github.com/emimontesdeoca](@emimontesdeoca)
 ### Added
 - Structure for project.
 - Created VS project.

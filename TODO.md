@@ -2,7 +2,7 @@
 
 All the things that needs to be done will be listed here. This file will be updated constantly.
 
-[LICENSE](../blob/master/LICENSE) - [README](../blob/master/README.md) - [TODO](../blob/master/TODO.md)
+[LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) - [TODO](TODO.md)
 
 
 ## Frontend
