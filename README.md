@@ -1,4 +1,4 @@
-# lovis
+# lovis  [![Build Status](https://travis-ci.org/emimontesdeoca/lovis.svg?branch=master)](https://travis-ci.org/emimontesdeoca/lovis)
 
 For changelog click [here](../blob/master/CHANGELOG.md).
 For TODO list click [here](../blob/master/TODO.md).
