@@ -1,5 +1,5 @@
 ﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>
@@ -67,10 +67,31 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Account\user.html" />
+    <Content Include="Views\Dashboard\dashboard.html" />
+    <Content Include="Views\Proyects\table.html" />
+    <Content Include="Views\Shared\Assets\css\bootstrap.min.css" />
+    <Content Include="Views\Shared\Assets\css\material-dashboard.css" />
+    <Content Include="Views\Shared\Assets\css\style.css" />
+    <Content Include="Views\Shared\Assets\img\sidebar-1.jpg" />
+    <Content Include="Views\Shared\Assets\js\bootstrap.min.js" />
+    <Content Include="Views\Shared\Assets\js\jquery-3.1.0.min.js" />
+    <Content Include="Views\Shared\Assets\js\material-dashboard.js" />
+    <Content Include="Views\Shared\Assets\js\material.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\Dashboard\" />
+    <Folder Include="Controllers\Elements\" />
+    <Folder Include="Controllers\Login\" />
+    <Folder Include="Controllers\Proyects\" />
+    <Folder Include="Controllers\Users\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\Elements\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -101,7 +122,6 @@
     <PropertyGroup>
       <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
-    
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
