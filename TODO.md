@@ -16,6 +16,11 @@ All the things that needs to be done will be listed here. This file will be upda
 - Create delete_project_element page.
 - Create manage_projects page.
 - Create add_project backend page.
+- Convert HTML to aspx.
+- Minify everything.
+- Clear views from unused css and javascript.
+- Get a favicon.
+- Create a basic template for all views. 
 
 ## Backend
 
@@ -43,3 +48,6 @@ All the things that needs to be done will be listed here. This file will be upda
 - ~~Created VS project.~~
 - ~~Added Travis-CLI.~~
 - ~~Created Changelog.~~
+- ~~Create MVC folders.~~
+- ~~Created folder for each view and controller.~~
+- ~~Add assets to project.~~

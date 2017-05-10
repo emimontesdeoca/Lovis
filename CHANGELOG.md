@@ -11,6 +11,10 @@ All notable changes to this project will be documented in this file.
 - Added Travis-CLI.
 - Created Changelog file.
 - Created TODO file.
+- Created MVC folders.
+- Added views to project.
+- Added CSS to project.
 
 ### Changed
 - Still working on the main template for the project.
+- Modified CSS & JS for project.
