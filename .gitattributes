@@ -1,6 +1,3 @@
-*.css linguist-vendored
-*.js linguist-vendored
-
 # Make GitHub ignore vendor libraries while computing language stats.
 # See https://github.com/github/linguist#overrides.
 
