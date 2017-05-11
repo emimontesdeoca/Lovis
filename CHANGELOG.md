@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) - [TODO](TODO.md)
 
+## [0.1.1] - 11/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Added
+- Modified folder structure
+- Added .gitattributes
+- Added aspx for Users.
+
+
 ## [0.1.0] - 10/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Added
 - Structure for project.

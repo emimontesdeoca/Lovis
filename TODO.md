@@ -15,7 +15,9 @@ All the things that needs to be done will be listed here. This file will be upda
 - Create modify_project_element page.
 - Create delete_project_element page.
 - Create manage_projects page.
-- Create add_project backend page.
+- Create add_project page.
+- ~~Create users page.~~
+- Create dashboard page.
 - Convert HTML to aspx.
 - Minify everything.
 - Clear views from unused css and javascript.
