@@ -16,6 +16,15 @@ All notable changes to this project will be documented in this file.
 - Created class for every view.
 - Added intial files security for user login/register.
 - Added element, project views.
+- Added licenses.
+- Added notification in header for masterpage.
+
+### Changes
+- Changes to structure.
+
+### Remove
+- Removed pages for edit/delete element.
+- Removed pages for edit/deleted project.
 
 
 ## [0.1.0] - 10/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)

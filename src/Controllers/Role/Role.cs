@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace lovis.Controllers.Users.Login
+namespace lovis.Controllers.Role
 {
-    public class Login
+    public class Role
     {
         #region ATTRIBUTES
+
+        public int Id { get; set; }
+        public string Name { get; set; }
 
         #endregion
 
@@ -15,15 +18,30 @@ namespace lovis.Controllers.Users.Login
 
         #endregion
 
-        #region NEW
+        #region NEW 
+
+        public void New()
+        {
+
+        }
 
         #endregion
 
         #region EDIT
 
+        public void Edit()
+        {
+
+        }
+
         #endregion
 
         #region REMOVE
+
+        public void Remove()
+        {
+
+        }
 
         #endregion
     }

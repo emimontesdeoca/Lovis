@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace lovis.Controllers.Proyects
+namespace lovis.Controllers.License
 {
-    public class Proyects
+    public class License
     {
         #region ATTRIBUTES
 
-        public string Id { get; set; }
-        public string Title { get; set; }
-        public string Summary { get; set; }
-        public string IdTemplate { get; set; }
+        public int Id { get; set; }
         public string IdLicense { get; set; }
 
         #endregion

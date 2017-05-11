@@ -84,14 +84,11 @@
   <ItemGroup>
     <Compile Include="Controllers\Dashboard\Dashboard.cs" />
     <Compile Include="Controllers\Elements\Elements.cs" />
-    <Compile Include="Controllers\Elements\Element\CheckElement.cs" />
-    <Compile Include="Controllers\Elements\Element\DeleteElement.cs" />
-    <Compile Include="Controllers\Elements\Element\EditElement.cs" />
-    <Compile Include="Controllers\Elements\Element\NewElement.cs" />
-    <Compile Include="Controllers\Elements\Templates\Templates.cs" />
-    <Compile Include="Controllers\Proyects\Proyect\ManageProyect.cs" />
-    <Compile Include="Controllers\Proyects\Proyect\NewProyect.cs" />
+    <Compile Include="Controllers\Proyects\Templates\Templates.cs" />
+    <Compile Include="Controllers\License\License.cs" />
     <Compile Include="Controllers\Proyects\Proyects.cs" />
+    <Compile Include="Controllers\Role\Role.cs" />
+    <Compile Include="Controllers\UserLicense\UserLicense.cs" />
     <Compile Include="Controllers\Users\Login\Login.cs" />
     <Compile Include="Controllers\Users\Register\Register.cs" />
     <Compile Include="Controllers\Users\Users.cs" />

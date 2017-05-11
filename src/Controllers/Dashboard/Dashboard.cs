@@ -7,5 +7,6 @@ namespace lovis.Controllers.Dashboard
 {
     public class Dashboard
     {
+        public Users.Users User { get; set; }
     }
 }

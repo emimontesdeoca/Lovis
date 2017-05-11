@@ -11,9 +11,8 @@ All the things that needs to be done will be listed here. This file will be upda
 - Create login page.
 - ~~Finish masterpage_menu page style.~~
 - ~~Create project page.~~
-- Create add_project_element page.
-- Create modify_project_element page.
-- Create delete_project_element page.
+- Create add_element page.
+- Create manage_element page.
 - Create manage_projects page.
 - Create add_project page.
 - ~~Create users page.~~
@@ -22,7 +21,7 @@ All the things that needs to be done will be listed here. This file will be upda
 - Minify everything.
 - Clear views from unused css and javascript.
 - Get a favicon.
-- ~~ Create a basic template for all views. ~~
+- ~~Create a basic template for all views.~~
 
 ## Backend
 
@@ -33,11 +32,13 @@ All the things that needs to be done will be listed here. This file will be upda
 - Create dashboard backend.
 - Create account backend.
 - Create project backend.
-- Create add_project_element backend.
-- Create modify_project_element backend.
-- Create delete_project_element backend.
+- Create add_element backend.
+- Create manage_element backend.
 - Create manage_projects backend.
 - Create add_project backend.
+- Create backend for licenses.
+- Create backend for IdGenerator.
+
 
 ## Database
 
