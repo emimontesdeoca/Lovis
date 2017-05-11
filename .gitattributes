@@ -5,7 +5,9 @@
 # See https://github.com/github/linguist#overrides.
 
 /src/lovis/Views/Shared/Assets/css/* linguist-vendored=true
+/src/lovis/Views/Shared/Assets/css/style.css linguist-vendored=false
 /src/lovis/Views/Shared/Assets/js/* linguist-vendored=true
+/src/lovis/Views/Shared/Assets/js/app.js linguist-vendored=false
 
 # Explicitly specify language for non-standard extensions used under
 # ide/web/lib/templates to make GitHub correctly count their language stats.
