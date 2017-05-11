@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file.
 - Added masterpage.
 - Added aspx for Dashboard.
 - Added aspx for Project.
+- Created folder structure for every controller.
+- Created class for every view.
+- Added intial files security for user login/register.
+- Added element, project views.
 
 
 ## [0.1.0] - 10/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)

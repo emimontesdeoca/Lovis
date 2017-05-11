@@ -59,7 +59,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Account\User.aspx" />
+    <Content Include="Views\User\User.aspx" />
     <Content Include="Views\Dashboard\Dashboard.aspx" />
     <Content Include="Views\Proyects\Proyects.aspx" />
     <Content Include="Views\Shared\Master.Master" />
@@ -82,12 +82,25 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Dashboard\Dashboard.cs" />
+    <Compile Include="Controllers\Elements\Elements.cs" />
+    <Compile Include="Controllers\Elements\Element\CheckElement.cs" />
+    <Compile Include="Controllers\Elements\Element\DeleteElement.cs" />
+    <Compile Include="Controllers\Elements\Element\EditElement.cs" />
+    <Compile Include="Controllers\Elements\Element\NewElement.cs" />
+    <Compile Include="Controllers\Elements\Templates\Templates.cs" />
+    <Compile Include="Controllers\Proyects\Proyect\ManageProyect.cs" />
+    <Compile Include="Controllers\Proyects\Proyect\NewProyect.cs" />
+    <Compile Include="Controllers\Proyects\Proyects.cs" />
+    <Compile Include="Controllers\Users\Login\Login.cs" />
+    <Compile Include="Controllers\Users\Register\Register.cs" />
+    <Compile Include="Controllers\Users\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Account\User.aspx.cs">
+    <Compile Include="Views\User\User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Account\User.aspx.designer.cs">
+    <Compile Include="Views\User\User.aspx.designer.cs">
       <DependentUpon>User.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Dashboard\Dashboard.aspx.cs">
@@ -113,14 +126,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\Dashboard\" />
-    <Folder Include="Controllers\Elements\" />
-    <Folder Include="Controllers\Login\" />
-    <Folder Include="Controllers\Proyects\" />
-    <Folder Include="Controllers\Users\" />
     <Folder Include="Models\" />
+    <Folder Include="Security\IdGenerator\" />
+    <Folder Include="Security\Users\" />
     <Folder Include="Views\Elements\" />
     <Folder Include="Views\Login\" />
+    <Folder Include="Views\Register\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
