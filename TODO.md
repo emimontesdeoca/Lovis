@@ -7,22 +7,22 @@ All the things that needs to be done will be listed here. This file will be upda
 
 ## Frontend
 
-- Finish masterpage template and style.
+- ~~Finish masterpage template and style.~~
 - Create login page.
-- Finish masterpage_menu page style.
-- Create project page.
+- ~~Finish masterpage_menu page style.~~
+- ~~Create project page.~~
 - Create add_project_element page.
 - Create modify_project_element page.
 - Create delete_project_element page.
 - Create manage_projects page.
 - Create add_project page.
 - ~~Create users page.~~
-- Create dashboard page.
-- Convert HTML to aspx.
+- ~~Create dashboard page.~~
+- ~~Convert HTML to aspx.~~
 - Minify everything.
 - Clear views from unused css and javascript.
 - Get a favicon.
-- Create a basic template for all views. 
+- ~~ Create a basic template for all views. ~~
 
 ## Backend
 

@@ -59,6 +59,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Account\User.aspx" />
+    <Content Include="Views\Dashboard\Dashboard.aspx" />
+    <Content Include="Views\Proyects\Proyects.aspx" />
+    <Content Include="Views\Shared\Master.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -67,10 +71,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Account\User.aspx" />
-    <Content Include="Views\Account\user.html" />
-    <Content Include="Views\Dashboard\dashboard.html" />
-    <Content Include="Views\Proyects\table.html" />
     <Content Include="Views\Shared\Assets\css\bootstrap.min.css" />
     <Content Include="Views\Shared\Assets\css\material-dashboard.css" />
     <Content Include="Views\Shared\Assets\css\style.css" />
@@ -89,6 +89,27 @@
     </Compile>
     <Compile Include="Views\Account\User.aspx.designer.cs">
       <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Proyects\Proyects.aspx.cs">
+      <DependentUpon>Proyects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Proyects\Proyects.aspx.designer.cs">
+      <DependentUpon>Proyects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

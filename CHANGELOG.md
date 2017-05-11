@@ -9,6 +9,9 @@ All notable changes to this project will be documented in this file.
 - Modified folder structure
 - Added .gitattributes
 - Added aspx for Users.
+- Added masterpage.
+- Added aspx for Dashboard.
+- Added aspx for Project.
 
 
 ## [0.1.0] - 10/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)

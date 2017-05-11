@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace lovis.Views.Account {
+namespace lovis.Views.Dashboard {
     
     
-    public partial class User {
+    public partial class Dashboard {
         
         /// <summary>
         /// Propiedad Master.
