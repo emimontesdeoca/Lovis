@@ -47,9 +47,9 @@ namespace lovis.Controllers.Proyects
         /// <param name="u"></param>
         public Proyects(string title, string summary, string idTemplate, string idLicense, Users.Users u)
         {
-            Id = lovis.Security.CryptoUtils.SHA256HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
-            Title = lovis.Security.CryptoUtils.EncodeElementString(this, title);
-            Summary = lovis.Security.CryptoUtils.EncodeElementString(this, summary);
+            Id = Security.CryptoUtils.SHA256HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
+            Title = Security.CryptoUtils.EncodeElementString(this, title);
+            Summary = Security.CryptoUtils.EncodeElementString(this, summary);
             IdTemplate = idTemplate;
 
             // Create a new License for this PROYECT
@@ -70,8 +70,8 @@ namespace lovis.Controllers.Proyects
         {
 
 
-            p.Title = lovis.Security.CryptoUtils.DecodeElementString(p, p.Title);
-            p.Summary = lovis.Security.CryptoUtils.DecodeElementString(p, p.Summary);
+            p.Title = Security.CryptoUtils.DecodeElementString(p, p.Title);
+            p.Summary = Security.CryptoUtils.DecodeElementString(p, p.Summary);
 
             return p;
         }
@@ -116,8 +116,8 @@ namespace lovis.Controllers.Proyects
             // Edit in database
             // Entityframework
 
-            Title = lovis.Security.CryptoUtils.EncodeElementString(this, title);
-            Summary = lovis.Security.CryptoUtils.EncodeElementString(this, summary);
+            Title = Security.CryptoUtils.EncodeElementString(this, title);
+            Summary = Security.CryptoUtils.EncodeElementString(this, summary);
 
 
 

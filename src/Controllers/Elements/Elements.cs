@@ -13,6 +13,7 @@ namespace lovis.Controllers.Elements
         public string Title { get; set; }
         public string Type { get; set; }
         public string State { get; set; }
+        public string AssignedTo { get; set; }
         public string Priority { get; set; }
         public string Summary { get; set; }
         public DateTime DateCreation { get; set; }
@@ -28,14 +29,15 @@ namespace lovis.Controllers.Elements
 
         public Elements(Elements e) { }
 
-        public Elements(string title, string type, string state, string priority, string summary, DateTime dateStart, DateTime dateFinish, lovis.Controllers.Proyects.Proyects p)
+        public Elements(string title, string type, string state, string priority, string assigendTo, string summary, DateTime dateStart, DateTime dateFinish, lovis.Controllers.Proyects.Proyects p)
         {
-            Id = lovis.Security.CryptoUtils.SHA1HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
-            Title = lovis.Security.CryptoUtils.EncodeElementString(p, title);
-            Type = lovis.Security.CryptoUtils.EncodeElementString(p, type);
-            State = lovis.Security.CryptoUtils.EncodeElementString(p, state);
-            Priority = lovis.Security.CryptoUtils.EncodeElementString(p, priority);
-            Summary = lovis.Security.CryptoUtils.EncodeElementString(p, summary);
+            Id = Security.CryptoUtils.SHA1HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
+            Title = Security.CryptoUtils.EncodeElementString(p, title);
+            Type = Security.CryptoUtils.EncodeElementString(p, type);
+            State = Security.CryptoUtils.EncodeElementString(p, state);
+            AssignedTo = Security.CryptoUtils.EncodeElementString(p, assigendTo);
+            Priority = Security.CryptoUtils.EncodeElementString(p, priority);
+            Summary = Security.CryptoUtils.EncodeElementString(p, summary);
             DateCreation = DateTime.Now;
             DateStart = dateStart;
             DateFinish = dateFinish;
@@ -53,11 +55,12 @@ namespace lovis.Controllers.Elements
         /// <returns></returns>
         public Elements DecodeElement(Proyects.Proyects p, Elements e)
         {
-            e.Title = lovis.Security.CryptoUtils.DecodeElementString(p, e.Title);
-            e.Type = lovis.Security.CryptoUtils.DecodeElementString(p, e.Type);
-            e.State = lovis.Security.CryptoUtils.DecodeElementString(p, e.State);
-            e.Priority = lovis.Security.CryptoUtils.DecodeElementString(p, e.Priority);
-            e.Summary = lovis.Security.CryptoUtils.DecodeElementString(p, e.Summary);
+            e.Title = Security.CryptoUtils.DecodeElementString(p, e.Title);
+            e.Type = Security.CryptoUtils.DecodeElementString(p, e.Type);
+            e.State = Security.CryptoUtils.DecodeElementString(p, e.State);
+            e.AssignedTo = Security.CryptoUtils.DecodeElementString(p, e.AssignedTo);
+            e.Priority = Security.CryptoUtils.DecodeElementString(p, e.Priority);
+            e.Summary = Security.CryptoUtils.DecodeElementString(p, e.Summary);
             e.DateCreation = e.DateCreation;
             e.DateStart = e.DateStart;
             e.DateFinish = e.DateFinish;

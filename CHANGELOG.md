@@ -6,15 +6,23 @@ All notable changes to this project will be documented in this file.
 
 ## [0.1.2] - 12/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
-- Added atributes and methods to Elements.cs
-- Added atributes and methods to License.cs
-- Added atributes and methods to Template.cs
-- Added atributes and methods to Proyects.cs
-- Added atributes and methods to UserLicense.cs
-- Added atributes and methods to Elements.cs
-- Created Role
-- Added atributes and methods to Role.cs
-- Added atributes and methods to Users.cs
+- Added atributes and methods to Elements.cs.
+- Added atributes and methods to License.cs.
+- Added atributes and methods to Template.cs.
+- Added atributes and methods to Proyects.cs.
+- Added atributes and methods to UserLicense.cs.
+- Added atributes and methods to Elements.cs.
+- Created Role.
+- Added atributes and methods to Role.cs.
+- Added atributes and methods to Users.cs.
+- Added User assignation to elements.cs.
+
+
+### Changes
+
+- Better refactoring.
+- Better crypto system.
+- Better ID generator.
 
 ## [0.1.1] - 11/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Added

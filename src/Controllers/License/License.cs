@@ -38,9 +38,9 @@ namespace lovis.Controllers.License
         public License(Users.Users u)
         {
             // New license
-            string rnd = lovis.Security.CryptoUtils.RandomKey();
-            Id = lovis.Security.CryptoUtils.SHA1HashStringForUTF8String(rnd);
-            IdLicense = u.Username.Substring(0, 2) + "-" + lovis.Security.CryptoUtils.SHA256HashStringForUTF8String(rnd);
+            string rnd = Security.CryptoUtils.RandomKey();
+            Id = Security.CryptoUtils.SHA1HashStringForUTF8String(rnd);
+            IdLicense = u.Username.Substring(0, 2) + "-" + Security.CryptoUtils.SHA256HashStringForUTF8String(rnd);
 
             // Add to database
             New();

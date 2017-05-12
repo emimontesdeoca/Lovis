@@ -39,7 +39,7 @@ namespace lovis.Controllers.UserLicense
         /// <param name="isBlocked">Blocked (keep false for creating user)</param>
         public UserLicense(string idUser, string idLicense, int role, bool isBlocked = false)
         {
-            Id = lovis.Security.CryptoUtils.SHA1HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
+            Id = Security.CryptoUtils.SHA1HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
             IdUser = idUser;
             IdLicense = idLicense;
             Role = role;

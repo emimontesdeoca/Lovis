@@ -43,13 +43,13 @@ namespace lovis.Controllers.Users
         public Users(string username, string passwordIntroduced, string name, string surname, string phone1)
         {
             // New user
-            Id = lovis.Security.CryptoUtils.SHA1HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
-            Username = lovis.Security.CryptoUtils.EncodeUsername(username);
-            RandomKey = lovis.Security.CryptoUtils.SHA256HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
-            PasswordHash = lovis.Security.CryptoUtils.SHA256HashStringForUTF8String(passwordIntroduced);
-            Name = lovis.Security.CryptoUtils.EncodeUserString(this, name);
-            Surname = lovis.Security.CryptoUtils.EncodeUserString(this, surname);
-            Phone1 = lovis.Security.CryptoUtils.EncodeUserString(this, phone1);
+            Id = Security.CryptoUtils.SHA1HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
+            Username = Security.CryptoUtils.EncodeUsername(username);
+            RandomKey = Security.CryptoUtils.SHA256HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
+            PasswordHash = Security.CryptoUtils.SHA256HashStringForUTF8String(passwordIntroduced);
+            Name = Security.CryptoUtils.EncodeUserString(this, name);
+            Surname = Security.CryptoUtils.EncodeUserString(this, surname);
+            Phone1 = Security.CryptoUtils.EncodeUserString(this, phone1);
             DateRegister = DateTime.Now;
         }
 
@@ -60,10 +60,10 @@ namespace lovis.Controllers.Users
         public Users DecodeUser(Users cU)
         {
 
-            cU.Username = lovis.Security.CryptoUtils.DecodeUserString(cU.Username, cU);
-            cU.Name = lovis.Security.CryptoUtils.DecodeUserString(cU.Name, cU);
-            cU.Surname = lovis.Security.CryptoUtils.DecodeUserString(cU.Surname, cU);
-            cU.Phone1 = lovis.Security.CryptoUtils.DecodeUserString(cU.Phone1, cU);
+            cU.Username = Security.CryptoUtils.DecodeUserString(cU.Username, cU);
+            cU.Name = Security.CryptoUtils.DecodeUserString(cU.Name, cU);
+            cU.Surname = Security.CryptoUtils.DecodeUserString(cU.Surname, cU);
+            cU.Phone1 = Security.CryptoUtils.DecodeUserString(cU.Phone1, cU);
 
             return cU;
         }
@@ -83,7 +83,7 @@ namespace lovis.Controllers.Users
             License.License idLicense = new License.License(this);
 
             // Add to UserLicense (it add itself to db)
-            new lovis.Controllers.UserLicense.UserLicense(this.Id, idLicense.Id, 1, false);
+            new UserLicense.UserLicense(this.Id, idLicense.Id, 1, false);
         }
 
         #endregion
@@ -95,10 +95,10 @@ namespace lovis.Controllers.Users
             // Edit user
             // Do foreach in entityframework
 
-            PasswordHash = lovis.Security.CryptoUtils.SHA256HashStringForUTF8String(passwordIntroduced);
-            Name = lovis.Security.CryptoUtils.EncodeUserString(this, name);
-            Surname = lovis.Security.CryptoUtils.EncodeUserString(this, surname);
-            Phone1 = lovis.Security.CryptoUtils.EncodeUserString(this, phone1);
+            PasswordHash = Security.CryptoUtils.SHA256HashStringForUTF8String(passwordIntroduced);
+            Name = Security.CryptoUtils.EncodeUserString(this, name);
+            Surname = Security.CryptoUtils.EncodeUserString(this, surname);
+            Phone1 = Security.CryptoUtils.EncodeUserString(this, phone1);
         }
 
         #endregion
