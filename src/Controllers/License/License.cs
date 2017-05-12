@@ -56,8 +56,6 @@ namespace lovis.Controllers.License
         /// <returns>42 lenght string idLicnse</returns>
         public void New()
         {
-
-
             // Add to database here
             // entityframeworks
 
@@ -67,6 +65,9 @@ namespace lovis.Controllers.License
 
         #region EDIT
 
+        /// <summary>
+        /// Method to edit license, probably not going to be used.
+        /// </summary>
         public void Edit()
         {
 
@@ -76,6 +77,9 @@ namespace lovis.Controllers.License
 
         #region REMOVE
 
+        /// <summary>
+        /// Method that removes a license, probably not going to be used.
+        /// </summary>
         public void Remove()
         {
 

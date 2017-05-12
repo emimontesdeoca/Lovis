@@ -63,10 +63,38 @@ namespace lovis.Controllers.UserLicense
 
         #region EDIT 
 
+        /// <summary>
+        /// Method that edits a UserLicens, mostly going to be used to edit a role
+        /// </summary>
+        public void Edit(string Username, string idLicense, int NewRole)
+        {
+            // Get idUser from Username
+            string idUser = "";
+
+            // Set new role
+
+            // Search on the userlicenses list/table where usernmar&&idlicense match, set NewRole
+
+        }
+
         #endregion
 
         #region ADD USER TO LICENSE
 
+        /// <summary>
+        /// Method that creates a new user for an existing license
+        /// </summary>
+        /// <param name="Username">Username (email)</param>
+        /// <param name="idLicense">License ID</param>
+        public void AddUserToLicense(string Username, string idLicense)
+        {
+            // Get idUser from Username
+            string idUser = "";
+
+            // Create new UserLicense
+            new UserLicense(idUser, idLicense, 0, false);
+
+        }
 
         #endregion
     }

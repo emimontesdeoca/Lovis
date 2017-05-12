@@ -63,7 +63,7 @@ namespace lovis.Controllers.Users
             cU.Username = lovis.Security.CryptoUtils.DecodeUserString(cU.Username, cU);
             cU.Name = lovis.Security.CryptoUtils.DecodeUserString(cU.Name, cU);
             cU.Surname = lovis.Security.CryptoUtils.DecodeUserString(cU.Surname, cU);
-            cU.Phone1 = lovis.Security.CryptoUtils.DecodeUserString(cU.DateRegister, cU,);
+            cU.Phone1 = lovis.Security.CryptoUtils.DecodeUserString(cU.Phone1, cU);
 
             return cU;
         }
