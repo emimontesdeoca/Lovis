@@ -19,21 +19,107 @@ namespace lovis.Controllers.Proyects
 
         #region CONSTRUCTORS
 
+        /// <summary>
+        /// Empty constructor
+        /// </summary>
+        public Proyects() { }
+
+        /// <summary>
+        /// Constructor filled with a Proyect
+        /// </summary>
+        /// <param name="P"></param>
+        public Proyects(Proyects P) { }
+
+        /// <summary>
+        /// Constructor filled with current User
+        /// </summary>
+        /// <param name="u"></param>
+        public Proyects(Users.Users u) { }
+
+        /// <summary>
+        /// Constructor that creates a proyect, creates a license for it and then creates a UserLicense linking the new License and the user that created
+        /// this proyect.
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="summary"></param>
+        /// <param name="idTemplate"></param>
+        /// <param name="idLicense"></param>
+        /// <param name="u"></param>
+        public Proyects(string title, string summary, string idTemplate, string idLicense, Users.Users u)
+        {
+            Id = lovis.Security.CryptoUtils.SHA256HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
+            Title = lovis.Security.CryptoUtils.EncodeElementString(this, title);
+            Summary = lovis.Security.CryptoUtils.EncodeElementString(this, summary);
+            IdTemplate = idTemplate;
+
+            // Create a new License for this PROYECT
+            License.License L = new License.License(u);
+
+            // Set IdLicense for this Proyect IDLICENSE
+            IdLicense = L.Id;
+
+            // Create a UserLicens with this new IdLicense and IdUser
+            UserLicense.UserLicense UL = new UserLicense.UserLicense(u.Id, idLicense, 0, false);
+        }
+
+        #endregion
+
+        #region GET PROYECTS
+
+        public Proyects DecodeProyect(Proyects p)
+        {
+
+
+            p.Title = lovis.Security.CryptoUtils.DecodeElementString(p, p.Title);
+            p.Summary = lovis.Security.CryptoUtils.DecodeElementString(p, p.Summary);
+
+            return p;
+        }
+
+        public List<Proyects> GetAllDecodedProyects(UserLicense.UserLicense UL)
+        {
+            List<Proyects> LP = new List<Proyects>();
+
+            // Its necessary to fill this LIST with Proyects from the license
+            // which is coming from the UserLicense table, do a query where the
+            // UL.idUser is the same as the current USER
+
+
+
+            foreach (Proyects p in LP)
+            {
+                p.DecodeProyect(p);
+            }
+
+            return LP;
+        }
+
         #endregion
 
         #region NEW 
 
+        /// <summary>
+        /// Method that adds proyect to database
+        /// </summary>
         public void New()
         {
-
+            // Add to database
+            // entityframework
         }
 
         #endregion
 
         #region EDIT
 
-        public void Edit()
+        public void Edit(string title, string summary)
         {
+            // Edit in database
+            // Entityframework
+
+            Title = lovis.Security.CryptoUtils.EncodeElementString(this, title);
+            Summary = lovis.Security.CryptoUtils.EncodeElementString(this, summary);
+
+
 
         }
 
