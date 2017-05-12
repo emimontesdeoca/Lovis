@@ -26,10 +26,68 @@ namespace lovis.Controllers.Elements
 
         public Elements() { }
 
+        public Elements(Elements e) { }
+
+        public Elements(string title, string type, string state, string priority, string summary, DateTime dateStart, DateTime dateFinish, lovis.Controllers.Proyects.Proyects p)
+        {
+            Id = lovis.Security.CryptoUtils.SHA1HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
+            Title = lovis.Security.CryptoUtils.EncodeElementString(p, title);
+            Type = lovis.Security.CryptoUtils.EncodeElementString(p, type);
+            State = lovis.Security.CryptoUtils.EncodeElementString(p, state);
+            Priority = lovis.Security.CryptoUtils.EncodeElementString(p, priority);
+            Summary = lovis.Security.CryptoUtils.EncodeElementString(p, summary);
+            DateCreation = DateTime.Now;
+            DateStart = dateStart;
+            DateFinish = dateFinish;
+            IdProyect = p.Id;
+        }
+
         #endregion
 
         #region CHECK ELEMENT
 
+        /// <summary>
+        /// Method that decodes a element
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        public Elements DecodeElement(Proyects.Proyects p, Elements e)
+        {
+            e.Title = lovis.Security.CryptoUtils.DecodeElementString(p, e.Title);
+            e.Type = lovis.Security.CryptoUtils.DecodeElementString(p, e.Type);
+            e.State = lovis.Security.CryptoUtils.DecodeElementString(p, e.State);
+            e.Priority = lovis.Security.CryptoUtils.DecodeElementString(p, e.Priority);
+            e.Summary = lovis.Security.CryptoUtils.DecodeElementString(p, e.Summary);
+            e.DateCreation = e.DateCreation;
+            e.DateStart = e.DateStart;
+            e.DateFinish = e.DateFinish;
+            e.IdProyect = e.IdProyect;
+
+            return e;
+        }
+
+        /// <summary>
+        /// Method that decodes an elements list from a proyect
+        /// </summary>
+        /// <param name="p">Proyect</param>
+        /// <returns></returns>
+        public List<Elements> GetAllElementsDecoded(Proyects.Proyects p)
+        {
+
+            List<Elements> LE = new List<Elements>();
+
+            // Its necessary to fill this LIST with elements from the P introduced
+            // Do a linq query and get all elements from a certain idProyect
+            // then add it to this LE list
+
+            // Decode the entire list
+            foreach (Elements e in LE)
+            {
+                e.DecodeElement(p, e);
+            }
+
+            return LE;
+        }
 
         #endregion
 
@@ -37,7 +95,8 @@ namespace lovis.Controllers.Elements
 
         public void New()
         {
-
+            // Add to database
+            // entityframework
         }
 
         #endregion
@@ -46,7 +105,8 @@ namespace lovis.Controllers.Elements
 
         public void Edit()
         {
-
+            // Edit in database
+            // entityframework
         }
 
         #endregion
@@ -56,6 +116,8 @@ namespace lovis.Controllers.Elements
         public void Remove()
         {
 
+            // Removef in database
+            // entityframework
         }
 
         #endregion
