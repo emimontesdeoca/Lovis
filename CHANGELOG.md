@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - Added element, project views.
 - Added licenses.
 - Added notification in header for masterpage.
+- Added userlicenses.
 
 ### Changes
 - Changes to structure.
