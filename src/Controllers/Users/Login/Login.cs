@@ -7,24 +7,19 @@ namespace lovis.Controllers.Users.Login
 {
     public class Login
     {
-        #region ATTRIBUTES
 
-        #endregion
+        public Users isUser(string UsernameIntroduced, string PasswordIntroduced)
+        {
+            Users x = new Users().isUser(UsernameIntroduced, PasswordIntroduced);
 
-        #region CONSTRUCTORS
-
-        #endregion
-
-        #region NEW
-
-        #endregion
-
-        #region EDIT
-
-        #endregion
-
-        #region REMOVE
-
-        #endregion
+            if (x != null)
+            {
+                return x;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

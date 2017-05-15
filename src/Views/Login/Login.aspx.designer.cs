@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace lovis.Views.User {
+namespace lovis.Views.Login {
     
     
-    public partial class User {
+    public partial class Login {
         
         /// <summary>
         /// Control form1.
@@ -22,49 +22,31 @@ namespace lovis.Views.User {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control user_username.
+        /// Control login_username.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_username;
+        protected global::System.Web.UI.WebControls.TextBox login_username;
         
         /// <summary>
-        /// Control user_password.
+        /// Control login_password.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_password;
+        protected global::System.Web.UI.WebControls.TextBox login_password;
         
         /// <summary>
-        /// Control user_repeatpassword.
+        /// Control login_loginbtn.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_repeatpassword;
-        
-        /// <summary>
-        /// Control user_name.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_name;
-        
-        /// <summary>
-        /// Control user_surname.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_surname;
+        protected global::System.Web.UI.WebControls.Button login_loginbtn;
         
         /// <summary>
         /// Propiedad Master.

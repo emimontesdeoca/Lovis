@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) - [TODO](TODO.md)
 
+## [0.2.0] - 15/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- Login view and backend done.
+- Register view and backend done.
+- Account view and backend done
+
+
+### Changes
+
+- Changed style of templates.
+- Refactor
+
+
 ## [0.1.2] - 12/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - Added atributes and methods to Elements.cs.

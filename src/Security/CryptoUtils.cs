@@ -113,10 +113,10 @@ namespace lovis.Security
             string encodedstring = Convert.ToBase64String(Encoding.UTF8.GetBytes(StringToEncode));
 
             // Concat enodedstring + first 8 randomkey hash + encode all again
-            string fullencodedstring = Convert.ToBase64String(Encoding.UTF8.GetBytes(encodedstring + "LvS" + "JuancaEsFeminista"));
+            //string fullencodedstring = Convert.ToBase64String(Encoding.UTF8.GetBytes(encodedstring));
 
             // Return it
-            return fullencodedstring;
+            return encodedstring;
         }
 
         /// <summary>
@@ -163,6 +163,20 @@ namespace lovis.Security
             }
 
             // Return it.
+            return decodedString;
+        }
+
+        /// <summary>
+        /// Method that decodes a string once
+        /// </summary>
+        /// <param name="us"></param>
+        /// <returns></returns>
+        public static string DecodeUsername(string us)
+        {
+
+            byte[] data = Convert.FromBase64String(us);
+            string decodedString = Encoding.UTF8.GetString(data);
+
             return decodedString;
         }
 

@@ -8,46 +8,69 @@
     <div class="content" style="margin-top: 40px;">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-6 col-sm-6">
                     <div class="card card-stats">
-                        <div class="card-header" data-background-color="orange">
+                        <div class="card-header" data-background-color="gray">
                             <i class="material-icons">content_copy</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Por hacer</p>
+                            <p class="category">Pending</p>
                             <h3 class="title">5</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="card card-stats">
-                        <div class="card-header" data-background-color="green">
-                            <i class="material-icons">store</i>
-                        </div>
-                        <div class="card-content">
-                            <p class="category">En proceso</p>
-                            <h3 class="title">10</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-6 col-sm-6">
                     <div class="card card-stats">
                         <div class="card-header" data-background-color="red">
-                            <i class="material-icons">date_range</i>
+                            <i class="material-icons">announcement</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Hecho</p>
+                            <p class="category">Analysis</p>
                             <h3 class="title">20</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-6 col-sm-6">
                     <div class="card card-stats">
-                        <div class="card-header" data-background-color="blue">
-                            <i class="fa fa-twitter"></i>
+                        <div class="card-header fuck">
+                            <i class="material-icons">code</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Entrgado</p>
+                            <p class="category">In process</p>
+                            <h3 class="title">25</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header" data-background-color="orange">
+
+                            <i class="material-icons">done</i>
+                        </div>
+                        <div class="card-content">
+                            <p class="category">Done</p>
+                            <h3 class="title">25</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header" data-background-color="blue">
+                            <i class="material-icons">spellcheck</i>
+                        </div>
+                        <div class="card-content">
+                            <p class="category">Test</p>
+                            <h3 class="title">25</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header" data-background-color="green">
+                            <i class="material-icons">done_all</i>
+                        </div>
+                        <div class="card-content">
+                            <p class="category">Deploy</p>
                             <h3 class="title">25</h3>
                         </div>
                     </div>

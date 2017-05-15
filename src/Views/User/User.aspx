@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="lovis.Views.Account.User" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="lovis.Views.User.User" %>
 
 <%@ MasterType VirtualPath="~/Views/Shared/Master.Master" %>
 
@@ -6,6 +6,7 @@
     User
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ViewContainer" runat="server">
+
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -16,18 +17,12 @@
                             <p class="category">Complete your profile</p>
                         </div>
                         <div class="card-content">
-                            <form>
+                            <form id="form1" runat="server">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Username</label>
-                                            <input type="text" class="form-control" readonly>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Email address</label>
-                                            <input type="email" class="form-control">
+                                            <asp:TextBox runat="server" ID="user_username" Type="Email" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -35,13 +30,15 @@
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Password</label>
-                                            <input type="password" class="form-control">
+                                            <asp:TextBox runat="server" ID="user_password" Type="Password" CssClass="form-control"></asp:TextBox>
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Repeat password</label>
-                                            <input type="password" class="form-control">
+                                            <asp:TextBox runat="server" ID="user_repeatpassword" Type="Password" CssClass="form-control"></asp:TextBox>
+
                                         </div>
                                     </div>
                                 </div>
@@ -49,13 +46,15 @@
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Fist Name</label>
-                                            <input type="text" class="form-control">
+                                            <asp:TextBox runat="server" ID="user_name" CssClass="form-control"></asp:TextBox>
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Last Name</label>
-                                            <input type="text" class="form-control">
+                                            <asp:TextBox runat="server" ID="user_surname" CssClass="form-control"></asp:TextBox>
+
                                         </div>
                                     </div>
                                 </div>

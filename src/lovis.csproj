@@ -59,6 +59,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Login\Login.aspx" />
+    <Content Include="Views\Register\Register.aspx" />
     <Content Include="Views\User\User.aspx" />
     <Content Include="Views\Dashboard\Dashboard.aspx" />
     <Content Include="Views\Proyects\Proyects.aspx" />
@@ -94,6 +96,20 @@
     <Compile Include="Controllers\Users\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\CryptoUtils.cs" />
+    <Compile Include="Views\Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Register\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Register\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\User\User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,8 +142,6 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Views\Elements\" />
-    <Folder Include="Views\Login\" />
-    <Folder Include="Views\Register\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

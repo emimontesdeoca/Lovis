@@ -15,8 +15,9 @@ namespace lovis.Controllers.Users
         public string PasswordHash { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public string Phone1 { get; set; }
         public DateTime DateRegister { get; set; }
+
+        public static List<Users> uLTest = new List<Users>();
 
         #endregion
 
@@ -40,7 +41,7 @@ namespace lovis.Controllers.Users
         /// <param name="name">Name</param>
         /// <param name="surname">Surname</param>
         /// <param name="phone1">Phone</param>
-        public Users(string username, string passwordIntroduced, string name, string surname, string phone1)
+        public Users(string username, string passwordIntroduced, string name, string surname)
         {
             // New user
             Id = Security.CryptoUtils.SHA1HashStringForUTF8String(Security.CryptoUtils.RandomKey());
@@ -49,7 +50,6 @@ namespace lovis.Controllers.Users
             PasswordHash = Security.CryptoUtils.SHA256HashStringForUTF8String(passwordIntroduced);
             Name = Security.CryptoUtils.EncodeUserString(this, name);
             Surname = Security.CryptoUtils.EncodeUserString(this, surname);
-            Phone1 = Security.CryptoUtils.EncodeUserString(this, phone1);
             DateRegister = DateTime.Now;
         }
 
@@ -60,12 +60,32 @@ namespace lovis.Controllers.Users
         public Users DecodeUser(Users cU)
         {
 
-            cU.Username = Security.CryptoUtils.DecodeUserString(cU.Username, cU);
+            cU.Username = Security.CryptoUtils.DecodeUsername(cU.Username);
             cU.Name = Security.CryptoUtils.DecodeUserString(cU.Name, cU);
             cU.Surname = Security.CryptoUtils.DecodeUserString(cU.Surname, cU);
-            cU.Phone1 = Security.CryptoUtils.DecodeUserString(cU.Phone1, cU);
 
             return cU;
+        }
+
+        public Users isUser(string UsernameIntroduced, string PasswordIntroduced)
+        {
+            /// User list - have to fill it from DATABASE
+            List<Users> uL = uLTest;
+
+            /// Look for the user introduced
+            var xu = uL.SingleOrDefault(x => Security.CryptoUtils.DecodeUsername(x.Username) == UsernameIntroduced && x.PasswordHash == Security.CryptoUtils.SHA256HashStringForUTF8String(PasswordIntroduced));
+
+            /// If it is not null return user
+            if (xu != null)
+            {
+                /// Return user if login is a success
+                return xu;
+            }
+            /// Else return no user 
+            else
+            {
+                return null;
+            }
         }
 
         #endregion
@@ -78,7 +98,7 @@ namespace lovis.Controllers.Users
         public void New()
         {
             // Create new user + add to database
-
+            uLTest.Add(this);
             // Create new license (it add itself to db)
             License.License idLicense = new License.License(this);
 
@@ -90,7 +110,7 @@ namespace lovis.Controllers.Users
 
         #region EDIT
 
-        public void Edit(string passwordIntroduced, string name, string surname, string phone1)
+        public void Edit(string passwordIntroduced, string name, string surname)
         {
             // Edit user
             // Do foreach in entityframework
@@ -98,7 +118,6 @@ namespace lovis.Controllers.Users
             PasswordHash = Security.CryptoUtils.SHA256HashStringForUTF8String(passwordIntroduced);
             Name = Security.CryptoUtils.EncodeUserString(this, name);
             Surname = Security.CryptoUtils.EncodeUserString(this, surname);
-            Phone1 = Security.CryptoUtils.EncodeUserString(this, phone1);
         }
 
         #endregion

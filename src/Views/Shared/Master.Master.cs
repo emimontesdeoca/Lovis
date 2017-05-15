@@ -11,7 +11,14 @@ namespace lovis.Views.Shared
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["User"] == null)
+            {
+                Response.Redirect("/Views/Login/Login.aspx");
+            }
+            else
+            {
+                
+            }
         }
     }
 }
