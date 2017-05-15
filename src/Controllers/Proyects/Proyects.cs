@@ -12,7 +12,6 @@ namespace lovis.Controllers.Proyects
         public string Id { get; set; }
         public string Title { get; set; }
         public string Summary { get; set; }
-        public string IdTemplate { get; set; }
         public string IdLicense { get; set; }
 
         #endregion
@@ -45,12 +44,11 @@ namespace lovis.Controllers.Proyects
         /// <param name="idTemplate"></param>
         /// <param name="idLicense"></param>
         /// <param name="u"></param>
-        public Proyects(string title, string summary, string idTemplate, string idLicense, Users.Users u)
+        public Proyects(string title, string summary, string idLicense, Users.Users u)
         {
             Id = Security.CryptoUtils.SHA256HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
             Title = Security.CryptoUtils.EncodeElementString(this, title);
             Summary = Security.CryptoUtils.EncodeElementString(this, summary);
-            IdTemplate = idTemplate;
 
             // Create a new License for this PROYECT
             License.License L = new License.License(u);

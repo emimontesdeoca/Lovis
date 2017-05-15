@@ -7,45 +7,48 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace lovis.Views.Shared {
+namespace lovis.Views.Proyects.Add {
     
     
-    public partial class Master {
+    public partial class AddProyect {
         
         /// <summary>
-        /// Control PageTitle.
+        /// Control addp_title.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder PageTitle;
+        protected global::System.Web.UI.WebControls.TextBox addp_title;
         
         /// <summary>
-        /// Control containerform.
+        /// Control addp_summary.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm containerform;
+        protected global::System.Web.UI.WebControls.TextBox addp_summary;
         
         /// <summary>
-        /// Control master_logout.
+        /// Control addp_create.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton master_logout;
+        protected global::System.Web.UI.WebControls.Button addp_create;
         
         /// <summary>
-        /// Control ViewContainer.
+        /// Propiedad Master.
         /// </summary>
         /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// Propiedad generada automáticamente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ViewContainer;
+        public new lovis.Views.Shared.Master Master {
+            get {
+                return ((lovis.Views.Shared.Master)(base.Master));
+            }
+        }
     }
 }

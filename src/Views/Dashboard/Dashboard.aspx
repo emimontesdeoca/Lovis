@@ -8,7 +8,7 @@
     <div class="content" style="margin-top: 40px;">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
                         <div class="card-header" data-background-color="gray">
                             <i class="material-icons">content_copy</i>
@@ -19,7 +19,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
                         <div class="card-header" data-background-color="red">
                             <i class="material-icons">announcement</i>
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
                         <div class="card-header fuck">
                             <i class="material-icons">code</i>
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
                         <div class="card-header" data-background-color="orange">
 
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
                         <div class="card-header" data-background-color="blue">
                             <i class="material-icons">spellcheck</i>
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
                         <div class="card-header" data-background-color="green">
                             <i class="material-icons">done_all</i>

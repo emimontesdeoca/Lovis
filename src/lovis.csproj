@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Login\Login.aspx" />
+    <Content Include="Views\Proyects\Add\AddProyect.aspx" />
+    <Content Include="Views\Proyects\Manage\ManageProyect.aspx" />
     <Content Include="Views\Register\Register.aspx" />
     <Content Include="Views\User\User.aspx" />
     <Content Include="Views\Dashboard\Dashboard.aspx" />
@@ -102,6 +104,20 @@
     </Compile>
     <Compile Include="Views\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Proyects\Add\AddProyect.aspx.cs">
+      <DependentUpon>AddProyect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Proyects\Add\AddProyect.aspx.designer.cs">
+      <DependentUpon>AddProyect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Proyects\Manage\ManageProyect.aspx.cs">
+      <DependentUpon>ManageProyect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Proyects\Manage\ManageProyect.aspx.designer.cs">
+      <DependentUpon>ManageProyect.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Register\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

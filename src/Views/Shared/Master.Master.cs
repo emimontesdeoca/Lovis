@@ -17,8 +17,15 @@ namespace lovis.Views.Shared
             }
             else
             {
-                
+                /// Get proyects from user to build sidebar
             }
+        }
+
+        protected void master_logout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Response.Redirect("/Views/Login/Login.aspx");
         }
     }
 }

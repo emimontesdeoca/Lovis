@@ -7,55 +7,82 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace lovis.Views.User {
+namespace lovis.Views.Proyects.Manage {
     
     
-    public partial class User {
+    public partial class ManageProyect {
         
         /// <summary>
-        /// Control user_username.
+        /// Control mng_title.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_username;
+        protected global::System.Web.UI.WebControls.TextBox mng_title;
         
         /// <summary>
-        /// Control user_password.
+        /// Control mng_summary.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_password;
+        protected global::System.Web.UI.WebControls.TextBox mng_summary;
         
         /// <summary>
-        /// Control user_repeatpassword.
+        /// Control addp_create.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_repeatpassword;
+        protected global::System.Web.UI.WebControls.Button addp_create;
         
         /// <summary>
-        /// Control user_name.
+        /// Control mng_del_title.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_name;
+        protected global::System.Web.UI.WebControls.TextBox mng_del_title;
         
         /// <summary>
-        /// Control user_surname.
+        /// Control mgn_del_summary.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_surname;
+        protected global::System.Web.UI.WebControls.TextBox mgn_del_summary;
+        
+        /// <summary>
+        /// Control mgn_del_confirm_title.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox mgn_del_confirm_title;
+        
+        /// <summary>
+        /// Control mng_del_checkbox.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox mng_del_checkbox;
+        
+        /// <summary>
+        /// Control Button1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
         /// Propiedad Master.

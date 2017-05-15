@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="lovis.Views.Login.Login" %>
+
 <%@ MasterType VirtualPath="~/Views/Shared/Master.Master" %>
 
 <!DOCTYPE html>
@@ -20,11 +21,11 @@
     <!--  Lovis CSS  -->
     <link href="../Shared/Assets/css/style.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css' />
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form runat="server" id="form1">
         <div class="content ">
             <div class="container-fluid " style="min-width: 550px; max-width: 550px; height: 100%; position: absolute; top: 50%; bottom: 0; left: 0; right: 0; margin: auto;">
                 <div class="row">
@@ -36,7 +37,6 @@
                             </div>
                             <div class="card-content">
                                 <div class="row">
-
                                     <div class="col-md-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Email address</label>
@@ -46,7 +46,6 @@
                                     </div>
                                 </div>
                                 <div class="row">
-
                                     <div class="col-md-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Password</label>
@@ -61,14 +60,11 @@
                                         <p>Don't have an account yet? <a href="../Register/Register.aspx">Register</a>.</p>
                                     </div>
                                 </div>
-
                                 <div class="text-center">
                                     <%--<button type="submit" class="">Log in</button>--%>
                                     <asp:Button runat="server" CssClass="btn btn-primary" ID="login_loginbtn" OnClick="login_loginbtn_Click" Text="Log in" />
                                 </div>
-
                                 <div class="clearfix"></div>
-
                             </div>
                         </div>
                     </div>

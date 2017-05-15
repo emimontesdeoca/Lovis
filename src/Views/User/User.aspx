@@ -17,53 +17,51 @@
                             <p class="category">Complete your profile</p>
                         </div>
                         <div class="card-content">
-                            <form id="form1" runat="server">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Email address</label>
-                                            <asp:TextBox runat="server" ID="user_username" Type="Email" CssClass="form-control" ReadOnly="true"></asp:TextBox>
-                                        </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Email address</label>
+                                        <asp:TextBox runat="server" ID="user_username" Type="Email" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Password</label>
-                                            <asp:TextBox runat="server" ID="user_password" Type="Password" CssClass="form-control"></asp:TextBox>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Password</label>
+                                        <asp:TextBox runat="server" ID="user_password" Type="Password" CssClass="form-control"></asp:TextBox>
 
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Repeat password</label>
-                                            <asp:TextBox runat="server" ID="user_repeatpassword" Type="Password" CssClass="form-control"></asp:TextBox>
-
-                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Fist Name</label>
-                                            <asp:TextBox runat="server" ID="user_name" CssClass="form-control"></asp:TextBox>
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Repeat password</label>
+                                        <asp:TextBox runat="server" ID="user_repeatpassword" Type="Password" CssClass="form-control"></asp:TextBox>
 
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Last Name</label>
-                                            <asp:TextBox runat="server" ID="user_surname" CssClass="form-control"></asp:TextBox>
-
-                                        </div>
                                     </div>
                                 </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
-                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Fist Name</label>
+                                        <asp:TextBox runat="server" ID="user_name" CssClass="form-control"></asp:TextBox>
 
-                                <div class="clearfix"></div>
-                            </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Last Name</label>
+                                        <asp:TextBox runat="server" ID="user_surname" CssClass="form-control"></asp:TextBox>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                            </div>
+
+                            <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>

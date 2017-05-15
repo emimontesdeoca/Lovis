@@ -18,12 +18,12 @@
     <!--  Lovis CSS  -->
     <link href="../Shared/Assets/css/style.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css' />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="content ">
+        <div class="content">
             <div class="container-fluid " style="min-width: 550px; max-width: 550px; height: 100%; position: absolute; top: 50%; bottom: 0; left: 0; right: 0; margin: auto;">
                 <div class="row">
                     <div class="col-md-12">
@@ -34,7 +34,6 @@
                             </div>
                             <div class="card-content">
                                 <div class="row">
-
                                     <div class="col-md-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Email address</label>
