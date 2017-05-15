@@ -43,9 +43,9 @@ namespace lovis.Controllers.Users
         public Users(string username, string passwordIntroduced, string name, string surname, string phone1)
         {
             // New user
-            Id = Security.CryptoUtils.SHA1HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
+            Id = Security.CryptoUtils.SHA1HashStringForUTF8String(Security.CryptoUtils.RandomKey());
             Username = Security.CryptoUtils.EncodeUsername(username);
-            RandomKey = Security.CryptoUtils.SHA256HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
+            RandomKey = Security.CryptoUtils.SHA256HashStringForUTF8String(Security.CryptoUtils.RandomKey());
             PasswordHash = Security.CryptoUtils.SHA256HashStringForUTF8String(passwordIntroduced);
             Name = Security.CryptoUtils.EncodeUserString(this, name);
             Surname = Security.CryptoUtils.EncodeUserString(this, surname);

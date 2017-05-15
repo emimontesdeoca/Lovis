@@ -47,7 +47,7 @@ namespace lovis.Security
 
         #endregion
 
-        #region SHA1
+        #region SHA
 
         /// <summary>
         /// Compute hash for string encoded as UTF8
