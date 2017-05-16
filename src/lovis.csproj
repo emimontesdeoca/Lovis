@@ -59,10 +59,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Error\404.aspx" />
     <Content Include="Views\Login\Login.aspx" />
     <Content Include="Views\Proyects\AddProyect.aspx" />
     <Content Include="Views\Proyects\ManageProyect.aspx" />
     <Content Include="Views\Register\Register.aspx" />
+    <Content Include="Views\Shared\Assets\icon\favicon.ico" />
     <Content Include="Views\User\User.aspx" />
     <Content Include="Views\Dashboard\Dashboard.aspx" />
     <Content Include="Views\Proyects\Proyects.aspx" />
@@ -88,6 +90,13 @@
   <ItemGroup>
     <Compile Include="Controllers\Dashboard\Dashboard.cs" />
     <Compile Include="Controllers\Elements\Elements.cs" />
+    <Compile Include="Views\Error\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Error\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Proyects\Templates\Templates.cs" />
     <Compile Include="Controllers\License\License.cs" />
     <Compile Include="Controllers\Proyects\Proyects.cs" />

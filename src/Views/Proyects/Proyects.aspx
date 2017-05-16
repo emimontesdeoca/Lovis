@@ -3,11 +3,23 @@
 <%@ MasterType VirtualPath="~/Views/Shared/Master.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
-    Proyect
+    <asp:Literal runat="server" ID="pagetitle"></asp:Literal>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ViewContainer" runat="server">
     <div class="content" style="margin-top: 50px;">
         <div class="container-fluid">
+            <div class="col-md-12">
+                <div class="row">
+                    <h2 style="margin-top: -10px;">Summary</h2>
+                    <p runat="server" id="proyect_summary"></p>
+
+                    <h3>People in this project</h3>
+                    <p runat="server" id="proyect_people"></p>
+
+
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">

@@ -73,7 +73,7 @@ namespace lovis.Controllers.Users
             List<Users> uL = uLTest;
 
             /// Look for the user introduced
-            var xu = uL.SingleOrDefault(x => Security.CryptoUtils.DecodeUsername(x.Username) == UsernameIntroduced && x.PasswordHash == Security.CryptoUtils.SHA256HashStringForUTF8String(PasswordIntroduced));
+            var xu = uL.First(x => x.Username == Security.CryptoUtils.EncodeUsername(UsernameIntroduced) && x.PasswordHash == Security.CryptoUtils.SHA256HashStringForUTF8String(PasswordIntroduced));
 
             /// If it is not null return user
             if (xu != null)
@@ -103,7 +103,7 @@ namespace lovis.Controllers.Users
             License.License idLicense = new License.License(this);
 
             // Add to UserLicense (it add itself to db)
-            new UserLicense.UserLicense(this.Id, idLicense.Id, 1, false);
+            new UserLicense.UserLicense(this.Id, idLicense.IdLicense, 1, false);
         }
 
         #endregion

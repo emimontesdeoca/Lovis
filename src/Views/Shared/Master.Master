@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <link rel="icon" href="../Shared/Assets/icon/favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         <asp:ContentPlaceHolder ID="PageTitle" runat="server">
@@ -29,24 +29,10 @@
         <div class="wrapper">
             <div class="sidebar" data-color="purple" data-image="../Shared/Assets/img/sidebar-1.jpg">
                 <div class="logo">
-                    <a href="#" class="simple-text">Lovis
+                    <a href="/Views/Dashboard/Dashboard.aspx" class="simple-text">Lovis
                     </a>
                 </div>
-                <div class="sidebar-wrapper">
-                    <ul class="nav">
-                        <li>
-                            <a href="/Views/Dashboard/Dashboard.aspx">
-                                <i class="material-icons">dashboard</i>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/Views/Proyects/AddProyect.aspx">
-                                <i class="material-icons">add</i>
-                                <p>Add proyect</p>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="sidebar-wrapper" runat="server" id="sidebarContainer">
                 </div>
             </div>
             <div class="main-panel">
@@ -59,7 +45,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#" style="font-size: 30px; line-height: 40px;">Page title</a>
+                            <a class="navbar-brand" style="font-size: 26px; line-height: 30px;" runat="server" id="Master_pagetitle"></a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">

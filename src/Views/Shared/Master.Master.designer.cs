@@ -31,6 +31,24 @@ namespace lovis.Views.Shared {
         protected global::System.Web.UI.HtmlControls.HtmlForm containerform;
         
         /// <summary>
+        /// Control sidebarContainer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl sidebarContainer;
+        
+        /// <summary>
+        /// Control Master_pagetitle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor Master_pagetitle;
+        
+        /// <summary>
         /// Control master_logout.
         /// </summary>
         /// <remarks>

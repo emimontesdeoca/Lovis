@@ -2,17 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
-[LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) - [TODO](TODO.md)
+[LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
+
+## [0.2.1] - 16/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- Proyect backend done.
+- Add proyect backend done.
+- Load proyects in sidebar done.
+- Load proyect in proyect.aspx done.
+- Added temporal favicon.
+- Added security when a user tries to redirect to another user proyect.
+- Added pagetitle for current views.
+- Added header title for current views.
+
+### Changes
+- Changed ManageProyect.
+- Changed AddProyect.
+- Fixed mistake where users where decripting when trying to load, Sessions now keep encrypted.
+
+### Remove
+- TODO file, not being used at all.
 
 ## [0.2.0] - 15/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - Login view and backend done.
 - Register view and backend done.
-- Account view and backend done
+- Account view and backend done.
 
 
 ### Changes
-
 - Changed style of templates.
 - Refactor
 

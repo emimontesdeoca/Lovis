@@ -8,7 +8,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <link rel="icon" href="../Shared/Assets/icon/favicon.ico" />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Lovis login
     </title>

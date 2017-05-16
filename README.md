@@ -1,10 +1,8 @@
 # lovis  [![Build Status](https://travis-ci.org/emimontesdeoca/lovis.svg?branch=master)](https://travis-ci.org/emimontesdeoca/lovis)
 
-For changelog click [here](CHANGELOG.md).
+For Changelog click [here](CHANGELOG.md).
 
-For TODO list click [here](TODO.md).
-
-For license click [here](LICENSE).
+For License click [here](LICENSE).
 
 ## Purpose
 

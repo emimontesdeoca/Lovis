@@ -46,7 +46,7 @@ namespace lovis.Controllers.Proyects
         /// <param name="idTemplate"></param>
         /// <param name="idLicense"></param>
         /// <param name="u"></param>
-        public Proyects(string title, string summary, string idLicense, Users.Users u)
+        public Proyects(string title, string summary, Users.Users u)
         {
             Id = Security.CryptoUtils.SHA256HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
 
@@ -55,10 +55,10 @@ namespace lovis.Controllers.Proyects
             License.License L = new License.License(u);
 
             // Set IdLicense for this Proyect IDLICENSE
-            IdLicense = L.Id;
+            IdLicense = L.IdLicense;
 
             // Create a UserLicens with this new IdLicense and IdUser
-            UserLicense.UserLicense UL = new UserLicense.UserLicense(u.Id, idLicense, 0, false);
+            UserLicense.UserLicense UL = new UserLicense.UserLicense(u.Id, IdLicense, 0, false);
 
             Title = Security.CryptoUtils.EncodeElementString(this, title);
             Summary = Security.CryptoUtils.EncodeElementString(this, summary);
@@ -71,14 +71,14 @@ namespace lovis.Controllers.Proyects
 
         #region GET PROYECTS
 
-        public Proyects DecodeProyect(Proyects p)
+        public static Proyects DecodeProyect(Proyects p)
         {
 
+            Proyects np = p;
+            np.Title = Security.CryptoUtils.DecodeElementString(p, p.Title);
+            np.Summary = Security.CryptoUtils.DecodeElementString(p, p.Summary);
 
-            p.Title = Security.CryptoUtils.DecodeElementString(p, p.Title);
-            p.Summary = Security.CryptoUtils.DecodeElementString(p, p.Summary);
-
-            return p;
+            return np;
         }
 
         public List<Proyects> GetAllDecodedProyects(UserLicense.UserLicense UL)
@@ -93,7 +93,7 @@ namespace lovis.Controllers.Proyects
 
             foreach (Proyects p in LP)
             {
-                p.DecodeProyect(p);
+                //p.DecodeProyect(p);
             }
 
             return LP;

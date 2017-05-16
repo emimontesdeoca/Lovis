@@ -3,6 +3,7 @@
 <%@ MasterType VirtualPath="~/Views/Shared/Master.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
+    Dashboard
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ViewContainer" runat="server">
     <div class="content" style="margin-top: 40px;">
