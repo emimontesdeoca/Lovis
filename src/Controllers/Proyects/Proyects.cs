@@ -14,6 +14,8 @@ namespace lovis.Controllers.Proyects
         public string Summary { get; set; }
         public string IdLicense { get; set; }
 
+        public static List<Proyects> lP = new List<Proyects>();
+
         #endregion
 
         #region CONSTRUCTORS
@@ -47,8 +49,7 @@ namespace lovis.Controllers.Proyects
         public Proyects(string title, string summary, string idLicense, Users.Users u)
         {
             Id = Security.CryptoUtils.SHA256HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
-            Title = Security.CryptoUtils.EncodeElementString(this, title);
-            Summary = Security.CryptoUtils.EncodeElementString(this, summary);
+
 
             // Create a new License for this PROYECT
             License.License L = new License.License(u);
@@ -58,6 +59,12 @@ namespace lovis.Controllers.Proyects
 
             // Create a UserLicens with this new IdLicense and IdUser
             UserLicense.UserLicense UL = new UserLicense.UserLicense(u.Id, idLicense, 0, false);
+
+            Title = Security.CryptoUtils.EncodeElementString(this, title);
+            Summary = Security.CryptoUtils.EncodeElementString(this, summary);
+
+            // Add to list
+            lP.Add(this);
         }
 
         #endregion
@@ -103,6 +110,7 @@ namespace lovis.Controllers.Proyects
         {
             // Add to database
             // entityframework
+
         }
 
         #endregion

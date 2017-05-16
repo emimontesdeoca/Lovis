@@ -19,7 +19,8 @@ namespace lovis.Views.Login
                 /// Test acc
                 Controllers.Users.Users.uLTest.Clear();
                 new Controllers.Users.Users("test@test.com", "test", "Emiliano", "Montesdeoca").New();
-                new Controllers.Users.Users("test2@test.com", "test", "Luis", "Sanfiel").New();
+                //new Controllers.Users.Users("test2@test.com", "test", "Luis", "Sanfiel").New();
+
 
             }
             else

@@ -15,6 +15,7 @@ namespace lovis.Controllers.UserLicense
         public int Role { get; set; }
         public bool IsBlocked { get; set; }
 
+        public static List<UserLicense> lUL = new List<UserLicense>();
         #endregion
 
         #region CONSTRUCTORS
@@ -56,7 +57,7 @@ namespace lovis.Controllers.UserLicense
         public void New()
         {
             // Add to database
-
+            lUL.Add(this);
         }
 
         #endregion

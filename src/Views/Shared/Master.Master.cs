@@ -17,7 +17,29 @@ namespace lovis.Views.Shared
             }
             else
             {
+                Controllers.Users.Users CU = Session["User"] as Controllers.Users.Users;
                 /// Get proyects from user to build sidebar
+
+                List<Controllers.Proyects.Proyects> CuLP = new List<Controllers.Proyects.Proyects>();
+
+                foreach (Controllers.UserLicense.UserLicense UL in Controllers.UserLicense.UserLicense.lUL)
+                {
+                    /// Find Userlicenses of user
+                    if (UL.IdUser == CU.Id)
+                    {
+                        /// Finde License of UserLicense
+                        var x = Controllers.License.License.lL.Single(l => l.Id == UL.IdLicense);
+
+                        /// Filter proyects for Licenses of user
+                        foreach (Controllers.Proyects.Proyects P in Controllers.Proyects.Proyects.lP)
+                        {
+                            if (P.IdLicense == x.Id)
+                            {
+                                CuLP.Add(P);
+                            }
+                        }
+                    }
+                }
             }
         }
 

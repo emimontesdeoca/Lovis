@@ -12,6 +12,7 @@ namespace lovis.Controllers.License
 
         public string Id { get; set; }
         public string IdLicense { get; set; }
+        public static List<License> lL = new List<License>();
 
         #endregion
 
@@ -58,7 +59,7 @@ namespace lovis.Controllers.License
         {
             // Add to database here
             // entityframeworks
-
+            lL.Add(this); 
         }
 
         #endregion
