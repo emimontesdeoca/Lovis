@@ -41,7 +41,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/Views/Proyects/Add/AddProyect.aspx">
+                            <a href="/Views/Proyects/AddProyect.aspx">
                                 <i class="material-icons">add</i>
                                 <p>Add proyect</p>
                             </a>

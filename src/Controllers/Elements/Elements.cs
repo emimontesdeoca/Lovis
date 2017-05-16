@@ -29,7 +29,7 @@ namespace lovis.Controllers.Elements
 
         public Elements(Elements e) { }
 
-        public Elements(string title, string type, string state, string priority, string assigendTo, string summary, DateTime dateStart, DateTime dateFinish, lovis.Controllers.Proyects.Proyects p)
+        public Elements(string title, string type, string state, string priority, string assigendTo, string summary, DateTime dateStart, DateTime dateFinish, Proyects.Proyects p)
         {
             Id = Security.CryptoUtils.SHA1HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
             Title = Security.CryptoUtils.EncodeElementString(p, title);

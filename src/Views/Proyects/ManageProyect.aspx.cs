@@ -5,16 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace lovis.Views.Proyects.Add
+namespace lovis.Views.Proyects
 {
-    public partial class AddProyect : System.Web.UI.Page
+    public partial class ManageProyect : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void addp_create_Click(object sender, EventArgs e)
         {
 
         }

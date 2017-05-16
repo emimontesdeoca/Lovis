@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace lovis.Views.Proyects.Add {
+namespace lovis.Views.Proyects {
     
     
     public partial class AddProyect {

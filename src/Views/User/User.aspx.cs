@@ -12,10 +12,6 @@ namespace lovis.Views.User
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["User"] == null)
-            {
-                Response.Redirect("/Views/Login/Login.aspx");
-            }
 
             Controllers.Users.Users DU = Session["User"] as Controllers.Users.Users;
             user_username.Text = DU.Username;
