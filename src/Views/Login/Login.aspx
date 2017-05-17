@@ -11,7 +11,7 @@
     <link rel="icon" href="../Shared/Assets/icon/favicon.ico" />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Lovis login
+    <title>Login - Lovis
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -39,10 +39,14 @@
                             <div class="card-content">
                                 <div class="row">
                                     <div class="col-md-12">
+                                        <p runat="server" id="login_error" class="text-danger text-center">User or password incorrect.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Email address</label>
                                             <asp:TextBox ID="login_username" runat="server" TextMode="Email" CssClass="form-control"></asp:TextBox>
-                                            <%--<input type="email" class="form-control" />--%>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +55,6 @@
                                         <div class="form-group label-floating">
                                             <label class="control-label">Password</label>
                                             <asp:TextBox runat="server" ID="login_password" TextMode="Password" CssClass="form-control"></asp:TextBox>
-                                            <%--<input type="password" class="form-control" />--%>
                                         </div>
                                     </div>
                                 </div>
@@ -62,7 +65,6 @@
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <%--<button type="submit" class="">Log in</button>--%>
                                     <asp:Button runat="server" CssClass="btn btn-primary" ID="login_loginbtn" OnClick="login_loginbtn_Click" Text="Log in" />
                                 </div>
                                 <div class="clearfix"></div>

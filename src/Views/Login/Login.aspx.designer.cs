@@ -22,6 +22,15 @@ namespace lovis.Views.Login {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// Control login_error.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl login_error;
+        
+        /// <summary>
         /// Control login_username.
         /// </summary>
         /// <remarks>

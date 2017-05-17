@@ -56,12 +56,19 @@
                                         <p class="hidden-lg hidden-md">Notifications</p>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Pending <span class="badge">5</span></a></li>
-                                        <li><a href="#">Analysis <span class="badge">5</span></a></li>
-                                        <li><a href="#">Doing <span class="badge">5</span></a></li>
-                                        <li><a href="#">Done <span class="badge">5</span></a></li>
-                                        <li><a href="#">Test <span class="badge">5</span></a></li>
-                                        <li><a href="#">Deploy <span class="badge">5</span></a></li>
+                                        <li><a href="#">Yaco wants to be your friend</a></li>
+                                        <li><a href="#">[PHP](BUG) Not working</a></li>                                      
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="material-icons">message</i>
+                                        <span class="notification">1</span>
+                                        <p class="hidden-lg hidden-md">Messages</p>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Message title </a></li>
+                                        <%--<li><a href="#">Deploy <span class="badge">5</span></a></li>--%>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -71,20 +78,14 @@
                                     </a>
 
                                     <ul class="dropdown-menu">
-
-                                        <li><a href="/Views/User/User.aspx">Account</a></li>
                                         <li>
-                                            <asp:LinkButton runat="server" ID="master_logout" OnClick="master_logout_Click">Log out</asp:LinkButton></li>
+                                            <a href="/Views/User/User.aspx">Account</a>
+                                        </li>
+                                        <li>
+                                            <asp:LinkButton runat="server" ID="master_logout" OnClick="master_logout_Click">Log out</asp:LinkButton>
+                                        </li>
                                     </ul>
-
                                 </li>
-
-                                <%-- <li>
-                                <a href="/Views/User/User.aspx">
-                                    <i class="material-icons">person</i>
-                                    <p class="hidden-lg hidden-md">Profile</p>
-                                </a>
-                            </li>--%>
                             </ul>
                         </div>
                     </div>

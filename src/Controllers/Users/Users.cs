@@ -15,7 +15,14 @@ namespace lovis.Controllers.Users
         public string PasswordHash { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+        public string PostalCode { get; set; }
+        public string AboutMe { get; set; }
         public DateTime DateRegister { get; set; }
+        public DateTime LastModification { get; set; }
+
 
         public static List<Users> uLTest = new List<Users>();
 
@@ -50,6 +57,12 @@ namespace lovis.Controllers.Users
             PasswordHash = Security.CryptoUtils.SHA256HashStringForUTF8String(passwordIntroduced);
             Name = Security.CryptoUtils.EncodeUserString(this, name);
             Surname = Security.CryptoUtils.EncodeUserString(this, surname);
+            Address = Security.CryptoUtils.EncodeUserString(this, "");
+            City = Security.CryptoUtils.EncodeUserString(this, "");
+            Country = Security.CryptoUtils.EncodeUserString(this, "");
+            PostalCode = Security.CryptoUtils.EncodeUserString(this, "");
+            AboutMe = Security.CryptoUtils.EncodeUserString(this, "");
+            LastModification = DateTime.Now;
             DateRegister = DateTime.Now;
         }
 
@@ -57,34 +70,57 @@ namespace lovis.Controllers.Users
 
         #region CHECK
 
+        /// <summary>
+        /// Method that decode user
+        /// </summary>
+        /// <param name="cU">User to decode</param>
+        /// <returns></returns>
         public Users DecodeUser(Users cU)
         {
 
             cU.Username = Security.CryptoUtils.DecodeUsername(cU.Username);
             cU.Name = Security.CryptoUtils.DecodeUserString(cU.Name, cU);
             cU.Surname = Security.CryptoUtils.DecodeUserString(cU.Surname, cU);
+            cU.Address = Security.CryptoUtils.DecodeUserString(cU.Address, cU);
+            cU.City = Security.CryptoUtils.DecodeUserString(cU.City, cU);
+            cU.Country = Security.CryptoUtils.DecodeUserString(cU.Country, cU);
+            cU.PostalCode = Security.CryptoUtils.DecodeUserString(cU.PostalCode, cU);
+            cU.AboutMe = Security.CryptoUtils.DecodeUserString(cU.AboutMe, cU);
 
             return cU;
         }
 
+        /// <summary>
+        /// Method that returns a user if it exists in the user LIST
+        /// </summary>
+        /// <param name="UsernameIntroduced">Username introduced</param>
+        /// <param name="PasswordIntroduced">Password introduced</param>
+        /// <returns></returns>
         public Users isUser(string UsernameIntroduced, string PasswordIntroduced)
         {
             /// User list - have to fill it from DATABASE
             List<Users> uL = uLTest;
 
-            /// Look for the user introduced
-            var xu = uL.First(x => x.Username == Security.CryptoUtils.EncodeUsername(UsernameIntroduced) && x.PasswordHash == Security.CryptoUtils.SHA256HashStringForUTF8String(PasswordIntroduced));
+            try
+            {
+                /// Look for the user introduced
+                var xu = uL.First(x => x.Username == Security.CryptoUtils.EncodeUsername(UsernameIntroduced) && x.PasswordHash == Security.CryptoUtils.SHA256HashStringForUTF8String(PasswordIntroduced));
 
-            /// If it is not null return user
-            if (xu != null)
-            {
-                /// Return user if login is a success
-                return xu;
+                /// If it is not null return user
+                if (xu != null)
+                {
+                    /// Return user if login is a success
+                    return xu;
+                }
+                /// Else return no user 
+                else
+                {
+                    return null;
+                }
             }
-            /// Else return no user 
-            else
+            catch (Exception)
             {
-                return null;
+                throw;
             }
         }
 
