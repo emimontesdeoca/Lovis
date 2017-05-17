@@ -57,32 +57,51 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Yaco wants to be your friend</a></li>
-                                        <li><a href="#">[PHP](BUG) Not working</a></li>                                      
+                                        <li><a href="#">[PHP](BUG) Not working</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <i class="material-icons">message</i>
-                                        <span class="notification">1</span>
-                                        <p class="hidden-lg hidden-md">Messages</p>
+                                        <i class="material-icons">add</i><i class="material-icons" style="font-size: 15px;">keyboard_arrow_down</i>
+                                        <p class="hidden-lg hidden-md">Add</p>
                                     </a>
+
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Message title </a></li>
-                                        <%--<li><a href="#">Deploy <span class="badge">5</span></a></li>--%>
+                                        <li>
+                                            <a href="/Views/Proyects/AddProyect.aspx">New proyect</a>
+                                        </li>
+                                        <li class="disabled">
+                                            <a href="#">New ticket</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <i class="material-icons">person</i>
+                                        <i class="material-icons">person</i><i class="material-icons" style="font-size: 15px;">keyboard_arrow_down</i>
                                         <p class="hidden-lg hidden-md">Profile</p>
                                     </a>
 
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="/Views/User/User.aspx">Account</a>
+                                            <span class="span-li">Hello <b><span runat="server" class="text-capitalize" id="master_username"></span></b>!</span>
+                                        </li>
+                                        <hr class="dropdown-hr disa" />
+                                        <li class="disabled">
+                                            <a href="#">Your profile</a>
+                                        </li>
+                                        <li class="disabled">
+                                            <a href="#">Your proyects</a>
+                                        </li>
+                                        <li class="disabled">
+                                            <a href="#">Help</a>
+                                        </li>
+                                        <hr class="dropdown-hr" />
+                                        <div class="dropdown-divider"></div>
+                                        <li>
+                                            <a href="/Views/User/User.aspx">Settings</a>
                                         </li>
                                         <li>
-                                            <asp:LinkButton runat="server" ID="master_logout" OnClick="master_logout_Click">Log out</asp:LinkButton>
+                                            <asp:LinkButton runat="server" ID="master_logout" OnClick="master_logout_Click">Sign out</asp:LinkButton>
                                         </li>
                                     </ul>
                                 </li>

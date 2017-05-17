@@ -65,6 +65,7 @@ namespace lovis.Views.Shared
 
                 #region BUILD SIDEBAR
 
+
                 /// Get proyects from user to build sidebar
                 List<Controllers.Proyects.Proyects> CuLP = new List<Controllers.Proyects.Proyects>();
 
@@ -88,6 +89,8 @@ namespace lovis.Views.Shared
                     }
                 }
 
+               
+
                 foreach (Controllers.Proyects.Proyects DP in CuLP)
                 {
                     Controllers.Proyects.Proyects dP = new Controllers.Proyects.Proyects();
@@ -107,6 +110,12 @@ namespace lovis.Views.Shared
                 ////////////////////////////////////////////////////////////////////////////////////////////////////////
                 ///
                 /// START SET PROJECT SESSION IF WEB IS PROYECTS.ASPX
+                ///
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////
+                ///
+                /// BUILD TOP BAR
                 ///
                 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -148,6 +157,13 @@ namespace lovis.Views.Shared
                 }
 
                 #endregion
+
+                #region BUILD TOPBAR
+
+                /// Set name in account dropdown
+                master_username.InnerText = CU.Name;
+
+                #endregion
             }
         }
 
@@ -182,7 +198,7 @@ namespace lovis.Views.Shared
             }
             sb.AppendFormat(@"<a  href=""{0}"">", dashboardurl);
             sb.Append(@"<i class=""material-icons"">dashboard</i>");
-            sb.Append(@"<p>Dashboard</p>");
+            sb.Append(@"<p class=""text-capitalize""> Dashboard</p>");
             sb.Append(@"</a>");
             sb.Append("</li>");
 
@@ -199,7 +215,7 @@ namespace lovis.Views.Shared
             }
             sb.AppendFormat(@"<a href=""{0}"">", newproyecturl);
             sb.Append(@"<i class=""material-icons"">add</i>");
-            sb.Append(@"<p>New proyect</p>");
+            sb.Append(@"<p class=""text-capitalize"">New proyect</p>");
             sb.Append(@"</a>");
             sb.Append("</li>");
 
@@ -217,7 +233,7 @@ namespace lovis.Views.Shared
                 }
                 sb.AppendFormat(@"<a href=""{0}?id={1}"">", BASEproyecturl, DP.IdLicense);
                 sb.Append(@"<i class=""material-icons"">assignment</i>");
-                sb.AppendFormat(@"<p>{0}</p>", DP.Title);
+                sb.AppendFormat(@"<p class=""text-capitalize"">{0}</p>", DP.Title);
                 sb.Append(@"</a>");
                 sb.Append("</li>");
             }

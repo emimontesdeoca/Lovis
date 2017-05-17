@@ -76,3 +76,31 @@
     white-space: normal !important;
     word-wrap: break-word;
 }
+
+.dropdown-menu > li > .span-li {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+.dropdown-menu li > .span-li {
+    font-size: 13px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 2px;
+    -webkit-transition: all 150ms linear;
+    -moz-transition: all 150ms linear;
+    -o-transition: all 150ms linear;
+    -ms-transition: all 150ms linear;
+    transition: all 150ms linear;
+}
+
+.dropdown-hr {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    border-top: 1px solid #e1e4e8 !important;
+}

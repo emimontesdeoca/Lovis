@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
+## [0.2.2] - 17/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- Added Last Modified datetime to user.
+- Added Country/City/Postal code to user.
+- Added Address to user.
+- Added Summary to user.
+- Added suppor to update the profile, everything but email (username).
+- Added topbar dropdown for user.
+- Added topbar dropdown for new things like proyects and etc.
+
+### Changes
+- Changed the way it loads Sessions in Proyets/User.
+
+
 ## [0.2.1] - 16/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - Proyect backend done.
