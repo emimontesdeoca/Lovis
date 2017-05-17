@@ -121,6 +121,33 @@ namespace lovis.Views.User {
         protected global::System.Web.UI.WebControls.TextBox user_cp;
         
         /// <summary>
+        /// Control user_fb.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox user_fb;
+        
+        /// <summary>
+        /// Control user_tw.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox user_tw;
+        
+        /// <summary>
+        /// Control user_gh.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox user_gh;
+        
+        /// <summary>
         /// Control user_aboutme.
         /// </summary>
         /// <remarks>

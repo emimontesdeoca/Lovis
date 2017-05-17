@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
+## [0.2.3] - 18/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- Added fieldset & legend to AddProyect.
+- Added fieldset & legend to ManageUser.
+- Added social links to User.
+- Added collaborators to addproyect
+- Added webiste, repository and support link to AddProyect.
+
+
 ## [0.2.2] - 17/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - Added Last Modified datetime to user.
@@ -16,7 +25,6 @@ All notable changes to this project will be documented in this file.
 
 ### Changes
 - Changed the way it loads Sessions in Proyets/User.
-
 
 ## [0.2.1] - 16/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
@@ -43,11 +51,9 @@ All notable changes to this project will be documented in this file.
 - Register view and backend done.
 - Account view and backend done.
 
-
 ### Changes
 - Changed style of templates.
 - Refactor
-
 
 ## [0.1.2] - 12/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
@@ -61,7 +67,6 @@ All notable changes to this project will be documented in this file.
 - Added atributes and methods to Role.cs.
 - Added atributes and methods to Users.cs.
 - Added User assignation to elements.cs.
-
 
 ### Changes
 
@@ -91,7 +96,6 @@ All notable changes to this project will be documented in this file.
 ### Remove
 - Removed pages for edit/delete element.
 - Removed pages for edit/deleted project.
-
 
 ## [0.1.0] - 10/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Added
