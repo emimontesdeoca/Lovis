@@ -40,6 +40,15 @@ namespace lovis.Views.User {
         protected global::System.Web.UI.WebControls.TextBox user_username;
         
         /// <summary>
+        /// Control user_registerdate.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox user_registerdate;
+        
+        /// <summary>
         /// Control user_lastmodification.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,24 @@ namespace lovis.Views.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox user_lastmodification;
+        
+        /// <summary>
+        /// Control user_public.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox user_public;
+        
+        /// <summary>
+        /// Control user_currentpassword.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox user_currentpassword;
         
         /// <summary>
         /// Control user_password.
@@ -65,6 +92,15 @@ namespace lovis.Views.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox user_repeatpassword;
+        
+        /// <summary>
+        /// Control user_updatepasswordbtn.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button user_updatepasswordbtn;
         
         /// <summary>
         /// Control user_name.
@@ -146,6 +182,33 @@ namespace lovis.Views.User {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox user_gh;
+        
+        /// <summary>
+        /// Control user_skype.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox user_skype;
+        
+        /// <summary>
+        /// Control user_linkedin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox user_linkedin;
+        
+        /// <summary>
+        /// Control user_googleplus.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox user_googleplus;
         
         /// <summary>
         /// Control user_aboutme.

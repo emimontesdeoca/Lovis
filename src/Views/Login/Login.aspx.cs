@@ -51,14 +51,22 @@ namespace lovis.Views.Login
                     loginUser.Username = Security.CryptoUtils.DecodeUsername(u.Username);
                     loginUser.Name = Security.CryptoUtils.DecodeUserString(u.Name, u);
                     loginUser.Surname = Security.CryptoUtils.DecodeUserString(u.Surname, u);
+                    loginUser.Address = Security.CryptoUtils.DecodeUserString(u.Address, u);
                     loginUser.City = Security.CryptoUtils.DecodeUserString(u.City, u);
                     loginUser.Country = Security.CryptoUtils.DecodeUserString(u.Country, u);
                     loginUser.PostalCode = Security.CryptoUtils.DecodeUserString(u.PostalCode, u);
                     loginUser.AboutMe = Security.CryptoUtils.DecodeUserString(u.AboutMe, u);
+                    loginUser.Facebook = Security.CryptoUtils.DecodeUserString(u.Facebook, u);
+                    loginUser.Twitter = Security.CryptoUtils.DecodeUserString(u.Twitter, u);
+                    loginUser.Github = Security.CryptoUtils.DecodeUserString(u.Github, u);
+                    loginUser.Skype = Security.CryptoUtils.DecodeUserString(u.Skype, u);
+                    loginUser.Linkedin = Security.CryptoUtils.DecodeUserString(u.Linkedin, u);
+                    loginUser.Googleplus = Security.CryptoUtils.DecodeUserString(u.Googleplus, u);
                     loginUser.DateRegister = u.DateRegister;
                     loginUser.LastModification = u.LastModification;
                     loginUser.PasswordHash = u.PasswordHash;
                     loginUser.RandomKey = u.RandomKey;
+                    loginUser.isPublic = u.isPublic;
 
                     /// Set user
                     Session["User"] = loginUser;

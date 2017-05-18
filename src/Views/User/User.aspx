@@ -24,7 +24,7 @@
                             <fieldset class="scheduler-border">
                                 <legend class="scheduler-border" style="margin-bottom: 5px;">User</legend>
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Company</label>
                                             <asp:TextBox runat="server" ID="user_company" CssClass="form-control" ReadOnly="true"></asp:TextBox>
@@ -32,36 +32,67 @@
 
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Email address</label>
                                             <asp:TextBox runat="server" ID="user_username" Type="Email" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                             <div class="help-block">E.g: shakira@waka.eh.</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Last Modification</label>
+                                            <asp:TextBox runat="server" ID="user_registerdate" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                                            <div class="help-block">Last modification to the user.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Last Modification</label>
                                             <asp:TextBox runat="server" ID="user_lastmodification" CssClass="form-control" ReadOnly="true"></asp:TextBox>
-                                            <div class="help-block">Last modification to the user.</div>
-
+                                            <div class="help-block">When user registered.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" runat="server" id="user_public" />
+                                                    Public profile.
+                                                </label>
+                                            </div>
+                                            <div class="help-block">If users can see your profile.</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-3">
                                         <div class="form-group label-floating">
-                                            <label class="control-label">Password</label>
+                                            <label class="control-label">Current password</label>
+                                            <asp:TextBox runat="server" ID="user_currentpassword" Type="Password" CssClass="form-control"></asp:TextBox>
+                                            <div class="help-block">Minimun length is 8. </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Repeat new password</label>
                                             <asp:TextBox runat="server" ID="user_password" Type="Password" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">Minimun length is 8. </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-3">
                                         <div class="form-group label-floating">
-                                            <label class="control-label">Repeat password</label>
+                                            <label class="control-label">New password</label>
                                             <asp:TextBox runat="server" ID="user_repeatpassword" Type="Password" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">Minimun length is 8. </div>
                                         </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group label-floating text-center">
+                                            <asp:Button runat="server" ID="user_updatepasswordbtn" CssClass="btn btn-primary btn-xs" Text="Update password" OnClick="user_updatepasswordbtn_Click" />
+                                        </div>
+                                        <div class="help-block text-center">Password change will sign out automatically. </div>
+
                                     </div>
                                 </div>
                             </fieldset>
@@ -141,7 +172,29 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Skype</label>
+                                            <asp:TextBox runat="server" ID="user_skype" CssClass="form-control"></asp:TextBox>
+                                            <div class="help-block">E.g: peterlaanguila. </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">LinkedIn</label>
+                                            <asp:TextBox runat="server" ID="user_linkedin" CssClass="form-control"></asp:TextBox>
+                                            <div class="help-block">E.g: https://www.linkedin.com/in/ronaldo/. </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Google+</label>
+                                            <asp:TextBox runat="server" ID="user_googleplus" CssClass="form-control"></asp:TextBox>
+                                            <div class="help-block">E.g: https://plus.google.com/u/0/12378341313103488825. </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group label-floating">
@@ -152,11 +205,11 @@
                                     </div>
                                 </div>
                             </fieldset>
-                            <div class="row">
+                            <%-- <div class="row">
                                 <div class="col-md-12">
-                                    <p class="text-warning text-center">Updating the profile will log out the session.</p>
+                                    <p class="text-warning text-center">Updating the password will log out the session.</p>
                                 </div>
-                            </div>
+                            </div>--%>
                             <div class="text-center">
                                 <asp:Button runat="server" ID="user_update" CssClass="btn btn-primary" Text="Update profile" OnClick="user_update_Click" />
                             </div>

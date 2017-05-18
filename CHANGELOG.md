@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 - Added social links to User.
 - Added collaborators to addproyect
 - Added webiste, repository and support link to AddProyect.
+- Added public bool to user.
 
 
 ## [0.2.2] - 17/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)

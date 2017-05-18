@@ -20,8 +20,15 @@ namespace lovis.Controllers.Users
         public string Country { get; set; }
         public string PostalCode { get; set; }
         public string AboutMe { get; set; }
+        public string Facebook { get; set; }
+        public string Twitter { get; set; }
+        public string Github { get; set; }
+        public string Linkedin { get; set; }
+        public string Skype { get; set; }
+        public string Googleplus { get; set; }
         public DateTime DateRegister { get; set; }
         public DateTime LastModification { get; set; }
+        public bool isPublic { get; set; }
 
 
         public static List<Users> uLTest = new List<Users>();
@@ -62,8 +69,15 @@ namespace lovis.Controllers.Users
             Country = Security.CryptoUtils.EncodeUserString(this, "");
             PostalCode = Security.CryptoUtils.EncodeUserString(this, "");
             AboutMe = Security.CryptoUtils.EncodeUserString(this, "");
+            Facebook = Security.CryptoUtils.EncodeUserString(this, "");
+            Twitter = Security.CryptoUtils.EncodeUserString(this, "");
+            Github = Security.CryptoUtils.EncodeUserString(this, "");
+            Skype = Security.CryptoUtils.EncodeUserString(this, "");
+            Linkedin = Security.CryptoUtils.EncodeUserString(this, "");
+            Googleplus = Security.CryptoUtils.EncodeUserString(this, "");
             LastModification = DateTime.Now;
             DateRegister = DateTime.Now;
+            isPublic = true;
         }
 
         #endregion
@@ -86,6 +100,11 @@ namespace lovis.Controllers.Users
             cU.Country = Security.CryptoUtils.DecodeUserString(cU.Country, cU);
             cU.PostalCode = Security.CryptoUtils.DecodeUserString(cU.PostalCode, cU);
             cU.AboutMe = Security.CryptoUtils.DecodeUserString(cU.AboutMe, cU);
+            cU.Facebook = Security.CryptoUtils.DecodeUserString(cU.AboutMe, cU);
+            cU.Github = Security.CryptoUtils.DecodeUserString(cU.AboutMe, cU);
+            cU.Skype = Security.CryptoUtils.DecodeUserString(cU.AboutMe, cU);
+            cU.Linkedin = Security.CryptoUtils.DecodeUserString(cU.AboutMe, cU);
+            cU.Googleplus = Security.CryptoUtils.DecodeUserString(cU.AboutMe, cU);
 
             return cU;
         }
