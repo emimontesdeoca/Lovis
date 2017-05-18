@@ -68,10 +68,10 @@
 
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="/Views/Proyects/AddProyect.aspx">New proyect</a>
+                                            <a href="/Views/Proyects/AddProyect.aspx">New project</a>
                                         </li>
                                         <li class="disabled">
-                                            <a href="#">New ticket</a>
+                                            <a href="/View/Ticket/AddTicket.aspx">New ticket</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -85,7 +85,7 @@
                                         <li>
                                             <span class="span-li">Hello <b><span runat="server" class="text-capitalize" id="master_username"></span></b>!</span>
                                         </li>
-                                        <hr class="dropdown-hr disa" />
+                                        <hr class="dropdown-hr" />
                                         <li class="disabled">
                                             <a href="#">Your profile</a>
                                         </li>

@@ -31,49 +31,31 @@ namespace lovis.Views.Proyects {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl proyect_summary;
         
         /// <summary>
-        /// Control p2.
+        /// Control proyect_website.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl p2;
+        protected global::System.Web.UI.WebControls.HyperLink proyect_website;
         
         /// <summary>
-        /// Control p3.
+        /// Control proyect_repository.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl p3;
+        protected global::System.Web.UI.WebControls.HyperLink proyect_repository;
         
         /// <summary>
-        /// Control p4.
+        /// Control proyect_support.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl p4;
-        
-        /// <summary>
-        /// Control p5.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl p5;
-        
-        /// <summary>
-        /// Control p1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl p1;
+        protected global::System.Web.UI.WebControls.HyperLink proyect_support;
         
         /// <summary>
         /// Control proyect_people.
@@ -85,22 +67,22 @@ namespace lovis.Views.Proyects {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl proyect_people;
         
         /// <summary>
-        /// Control xs.
+        /// Control proyect_newtask.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button xs;
+        protected global::System.Web.UI.WebControls.Button proyect_newtask;
         
         /// <summary>
-        /// Control x.
+        /// Control proyect_manageproyect.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button x;
+        protected global::System.Web.UI.WebControls.Button proyect_manageproyect;
         
         /// <summary>
         /// Propiedad Master.

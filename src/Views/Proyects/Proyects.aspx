@@ -10,34 +10,41 @@
         <div class="container-fluid">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
                         <fieldset class="scheduler-border">
                             <legend class="scheduler-border" style="margin-bottom: 5px;">Summary</legend>
                             <p runat="server" id="proyect_summary"></p>
                         </fieldset>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-4 col-sm-4">
                         <fieldset class="scheduler-border">
                             <legend class="scheduler-border" style="margin-bottom: 5px;">Information</legend>
-                            <p runat="server" id="p2">Website: -</p>
-                            <p runat="server" id="p3">Repository: -</p>
-                            <p runat="server" id="p4">Support: -</p>
-                            <p runat="server" id="p5">Created: -</p>
-                            <p runat="server" id="p1">Last modification: -</p>
+                            <p>
+                                Website:
+                                <asp:HyperLink runat="server" ID="proyect_website"></asp:HyperLink>
+                            </p>
+                            <p>
+                                Repository:
+                                <asp:HyperLink runat="server" ID="proyect_repository"></asp:HyperLink>
+                            </p>
+                            <p>
+                                Support:
+                                <asp:HyperLink runat="server" ID="proyect_support"></asp:HyperLink>
+                            </p>
                         </fieldset>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-5 col-sm-5">
                         <fieldset class="scheduler-border">
                             <legend class="scheduler-border" style="margin-bottom: 5px;">Collaborators</legend>
                             <p runat="server" id="proyect_people"></p>
                         </fieldset>
                     </div>
-                    <div class="col-md-2 text-center">
+                    <div class="col-lg-2 col-md-3 col-sm-3 text-center">
                         <fieldset class="scheduler-border">
                             <legend class="scheduler-border" style="margin-bottom: 5px;">Management</legend>
                             <div class="btn-group-vertical ">
-                                <asp:Button runat="server" ID="xs" CssClass="btn btn-primary btn-ms btn-manage-proyect" Text="Create task" />
-                                <asp:Button runat="server" ID="x" CssClass="btn btn-warning btn-ms btn-manage-proyect" Text="Manage proyect" />
+                                <asp:Button runat="server" ID="proyect_newtask" OnClick="proyect_newtask_Click" CssClass="btn btn-primary btn-ms btn-manage-proyect btn-responsive" Text="New task" />
+                                <asp:Button runat="server" ID="proyect_manageproyect" OnClick="proyect_manageproyect_Click" CssClass="btn btn-warning btn-ms btn-manage-proyect btn-responsive" Text="Manage proyect" />
                             </div>
                         </fieldset>
                     </div>

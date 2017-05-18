@@ -12,9 +12,12 @@ All notable changes to this project will be documented in this file.
 - Added collaborators to addproyect
 - Added webiste, repository and support link to AddProyect.
 - Added public bool to user.
-- Added information to proyect.
+- Added information to project.
+- Added ManageProject information in view.
+- Added ManageProject backend.
 
-
+### Fixes
+- Column design on AddProject and Project fixed.
 
 ## [0.2.2] - 17/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add

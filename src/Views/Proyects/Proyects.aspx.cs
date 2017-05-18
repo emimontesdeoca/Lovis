@@ -37,11 +37,17 @@ namespace lovis.Views.Proyects
                     cP.IdLicense = x.IdLicense;
                     cP.Title = x.Title;
                     cP.Summary = x.Summary;
+                    cP.Owner = x.Owner;
+                    cP.Website = x.Website;
+                    cP.Repository = x.Repository;
+                    cP.Support = x.Support;
 
                     cP.Title = Security.CryptoUtils.DecodeElementString(cP, cP.Title);
                     cP.Summary = Security.CryptoUtils.DecodeElementString(cP, cP.Summary);
-
-
+                    cP.Owner = Security.CryptoUtils.DecodeElementString(cP, cP.Owner);
+                    cP.Website = Security.CryptoUtils.DecodeElementString(cP, cP.Website);
+                    cP.Repository = Security.CryptoUtils.DecodeElementString(cP, cP.Repository);
+                    cP.Support = Security.CryptoUtils.DecodeElementString(cP, cP.Support);
 
 
                     /// If everything works lets save Session
@@ -68,6 +74,12 @@ namespace lovis.Views.Proyects
 
             /// Set the summary on the view
             proyect_summary.InnerText = cP.Summary;
+            proyect_website.Text = cP.Website;
+            proyect_repository.Text = cP.Repository;
+            proyect_support.Text = cP.Repository;
+            proyect_website.NavigateUrl = cP.Website;
+            proyect_repository.NavigateUrl = cP.Repository;
+            proyect_support.NavigateUrl = cP.Website;
             pagetitle.Text = cP.Title;
 
             /// Get the people from the proyect
@@ -86,7 +98,7 @@ namespace lovis.Views.Proyects
                 ppU.Surname = Security.CryptoUtils.DecodeUserString(pU.Surname, pU);
 
 
-                sb.AppendFormat("{0} {1} ({2}), ", ppU.Name, ppU.Surname, ppU.Username);
+                sb.AppendFormat("{0} {1}, ", ppU.Name, ppU.Surname);
             }
 
             sb.Remove(sb.Length - 2, 2);
@@ -94,6 +106,16 @@ namespace lovis.Views.Proyects
             proyect_people.InnerText = sb.ToString();
 
 
+
+        }
+
+        protected void proyect_newtask_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void proyect_manageproyect_Click(object sender, EventArgs e)
+        {
 
         }
     }

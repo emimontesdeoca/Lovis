@@ -123,7 +123,7 @@ namespace lovis.Views.Shared
 
                 if (url == "/Views/Proyects/Proyects.aspx")
                 {
-                    Master_pagetitle.InnerText = "Lovis > Proyects > " + cpTITLE;
+                    Master_pagetitle.InnerText = "Lovis > Projects > " + cpTITLE;
                 }
                 else
                 {
@@ -215,7 +215,7 @@ namespace lovis.Views.Shared
             }
             sb.AppendFormat(@"<a href=""{0}"">", newproyecturl);
             sb.Append(@"<i class=""material-icons"">add</i>");
-            sb.Append(@"<p class=""text-capitalize"">New proyect</p>");
+            sb.Append(@"<p class=""text-capitalize"">New project</p>");
             sb.Append(@"</a>");
             sb.Append("</li>");
 
