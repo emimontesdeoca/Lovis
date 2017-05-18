@@ -123,3 +123,7 @@ legend.scheduler-border {
     padding: 0 10px;
     border-bottom: none;
 }
+
+.btn-manage-proyect {
+    padding: 10px 15px !important;
+}

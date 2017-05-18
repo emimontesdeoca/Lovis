@@ -29,9 +29,9 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
-                                            <label class="control-label ">Creator</label>
-                                            <asp:TextBox runat="server" ID="addp_creator" CssClass="form-control" ReadOnly="true"></asp:TextBox>
-                                            <div class="help-block">This is you. </div>
+                                            <label class="control-label ">Owner</label>
+                                            <asp:TextBox runat="server" ID="addp_owner" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                                            <div class="help-block">Proyect owner. </div>
                                         </div>
                                     </div>
                                 </div>

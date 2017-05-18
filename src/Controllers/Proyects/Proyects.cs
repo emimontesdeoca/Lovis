@@ -12,6 +12,10 @@ namespace lovis.Controllers.Proyects
         public string Id { get; set; }
         public string Title { get; set; }
         public string Summary { get; set; }
+        public string Owner { get; set; }
+        public string Website { get; set; }
+        public string Repository { get; set; }
+        public string Support { get; set; }
         public string IdLicense { get; set; }
 
         public static List<Proyects> lP = new List<Proyects>();
@@ -46,7 +50,7 @@ namespace lovis.Controllers.Proyects
         /// <param name="idTemplate"></param>
         /// <param name="idLicense"></param>
         /// <param name="u"></param>
-        public Proyects(string title, string summary, Users.Users u)
+        public Proyects(string title, string summary, string creator, string website, string repository, string support, Users.Users u)
         {
             Id = Security.CryptoUtils.SHA256HashStringForUTF8String(lovis.Security.CryptoUtils.RandomKey());
 
@@ -62,6 +66,10 @@ namespace lovis.Controllers.Proyects
 
             Title = Security.CryptoUtils.EncodeElementString(this, title);
             Summary = Security.CryptoUtils.EncodeElementString(this, summary);
+            Owner = Security.CryptoUtils.EncodeElementString(this, creator);
+            Repository = Security.CryptoUtils.EncodeElementString(this, repository);
+            Website = Security.CryptoUtils.EncodeElementString(this, website);
+            Support = Security.CryptoUtils.EncodeElementString(this, support);
 
             // Add to list
             lP.Add(this);

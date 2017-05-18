@@ -11,7 +11,8 @@ namespace lovis.Views.Proyects
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Controllers.Users.Users CU = Session["User"] as Controllers.Users.Users;
+            addp_owner.Text = CU.Name + " " + CU.Surname + " (" + CU.Username + ")";
         }
 
         protected void addp_create_Click(object sender, EventArgs e)
@@ -20,7 +21,7 @@ namespace lovis.Views.Proyects
             Controllers.Users.Users CU = Session["User"] as Controllers.Users.Users;
 
             // Create proyect to license
-            new Controllers.Proyects.Proyects(addp_title.Text, addp_summary.Text, CU);
+            new Controllers.Proyects.Proyects(addp_title.Text, addp_summary.Text, addp_owner.Text, addp_webiste.Text, addp_repository.Text, addp_support.Text, CU);
 
             //Redirecto to dashboard
             Response.Redirect("~/Views/Dashboard/Dashboard.aspx");

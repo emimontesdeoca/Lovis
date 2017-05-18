@@ -10,17 +10,41 @@
         <div class="container-fluid">
             <div class="col-md-12">
                 <div class="row">
-                    <h2 style="margin-top: -10px;">Summary</h2>
-                    <p runat="server" id="proyect_summary"></p>
-
-                    <h3>People in this project</h3>
-                    <p runat="server" id="proyect_people"></p>
-
-
+                    <div class="col-md-4">
+                        <fieldset class="scheduler-border">
+                            <legend class="scheduler-border" style="margin-bottom: 5px;">Summary</legend>
+                            <p runat="server" id="proyect_summary"></p>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-3">
+                        <fieldset class="scheduler-border">
+                            <legend class="scheduler-border" style="margin-bottom: 5px;">Information</legend>
+                            <p runat="server" id="p2">Website: -</p>
+                            <p runat="server" id="p3">Repository: -</p>
+                            <p runat="server" id="p4">Support: -</p>
+                            <p runat="server" id="p5">Created: -</p>
+                            <p runat="server" id="p1">Last modification: -</p>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-3">
+                        <fieldset class="scheduler-border">
+                            <legend class="scheduler-border" style="margin-bottom: 5px;">Collaborators</legend>
+                            <p runat="server" id="proyect_people"></p>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <fieldset class="scheduler-border">
+                            <legend class="scheduler-border" style="margin-bottom: 5px;">Management</legend>
+                            <div class="btn-group-vertical ">
+                                <asp:Button runat="server" ID="xs" CssClass="btn btn-primary btn-ms btn-manage-proyect" Text="Create task" />
+                                <asp:Button runat="server" ID="x" CssClass="btn btn-warning btn-ms btn-manage-proyect" Text="Manage proyect" />
+                            </div>
+                        </fieldset>
+                    </div>
                 </div>
             </div>
 
-            <div class="row">
+            <%-- <div class="row">
                 <div class="col-md-12">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
@@ -375,7 +399,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>--%>
         </div>
     </div>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="ManageProyect.aspx.cs" Inherits="lovis.Views.Proyects.ManageProyect" %>
+﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Master.Master" AutoEventWireup="true" CodeBehind="ManageProyect.aspx.cs" Inherits="lovis.Views.Proyects.ManageProyect" %>
 
 <%@ MasterType VirtualPath="~/Views/Shared/Master.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
