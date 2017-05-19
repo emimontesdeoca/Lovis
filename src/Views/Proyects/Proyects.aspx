@@ -43,8 +43,8 @@
                         <fieldset class="scheduler-border">
                             <legend class="scheduler-border" style="margin-bottom: 5px;">Management</legend>
                             <div class="btn-group-vertical ">
-                                <asp:Button runat="server" ID="proyect_newtask" OnClick="proyect_newtask_Click" CssClass="btn btn-primary btn-ms btn-manage-proyect btn-responsive" Text="New task" />
-                                <asp:Button runat="server" ID="proyect_manageproyect" OnClick="proyect_manageproyect_Click" CssClass="btn btn-warning btn-ms btn-manage-proyect btn-responsive" Text="Manage proyect" />
+                                <asp:HyperLink runat="server" ID="proyect_newtask" CssClass="btn btn-primary btn-ms btn-manage-proyect btn-responsive" Text="New task" />
+                                <asp:HyperLink runat="server" ID="proyect_manage" CssClass="btn btn-warning btn-ms btn-manage-proyect btn-responsive" Text="Manage proyect" />
                             </div>
                         </fieldset>
                     </div>

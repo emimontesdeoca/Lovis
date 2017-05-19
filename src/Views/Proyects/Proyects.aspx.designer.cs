@@ -73,16 +73,16 @@ namespace lovis.Views.Proyects {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button proyect_newtask;
+        protected global::System.Web.UI.WebControls.HyperLink proyect_newtask;
         
         /// <summary>
-        /// Control proyect_manageproyect.
+        /// Control proyect_manage.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button proyect_manageproyect;
+        protected global::System.Web.UI.WebControls.HyperLink proyect_manage;
         
         /// <summary>
         /// Propiedad Master.

@@ -19,6 +19,8 @@ namespace lovis.Views.Proyects
             string fullPATH = HttpContext.Current.Request.Url.AbsoluteUri;
             string[] splitnpu = fullPATH.Split('=');
 
+            proyect_manage.NavigateUrl = "~/Views/Proyects/ManageProyect.aspx?id=" + splitnpu[1];
+
             /// Get project from ID
             Controllers.Proyects.Proyects cP = new Controllers.Proyects.Proyects();
 
@@ -114,9 +116,5 @@ namespace lovis.Views.Proyects
 
         }
 
-        protected void proyect_manageproyect_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

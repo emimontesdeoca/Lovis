@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
+## [0.2.4] - 19/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- New forms for ManageProject.
+
+### Fixes
+- Found a bug in Reponse.Redirect() with Sessions.
+- Fixed buttons in Project.
+- It's PROJECT not PROYECT, nice englando @emimontesdeoca.
+
 ## [0.2.3] - 18/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - Added fieldset & legend to AddProyect.

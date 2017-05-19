@@ -52,7 +52,7 @@ namespace lovis.Views.Shared
 
                 if (Response.TrySkipIisCustomErrors == true || Response.Status == "404 Not Found" || Response.StatusCode == 404)
                 {
-                    Response.Redirect("/Views/Error/404.aspx");
+                    Response.Redirect("~/Views/Error/404.aspx");
                 }
 
                 #endregion
@@ -89,7 +89,7 @@ namespace lovis.Views.Shared
                     }
                 }
 
-               
+
 
                 foreach (Controllers.Proyects.Proyects DP in CuLP)
                 {
@@ -119,9 +119,9 @@ namespace lovis.Views.Shared
                 ///
                 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-                #region PROJECT SESSION
+                #region TOPNAME
 
-                if (url == "/Views/Proyects/Proyects.aspx")
+                if (url == "~/Views/Proyects/Proyects.aspx")
                 {
                     Master_pagetitle.InnerText = "Lovis > Projects > " + cpTITLE;
                 }
