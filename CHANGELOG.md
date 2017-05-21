@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
+## [0.2.5] - 19/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Removed
+- Docs clean.
+- Tools clean.
+
 ## [0.2.4] - 19/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - New forms for ManageProject.
