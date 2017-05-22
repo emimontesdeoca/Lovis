@@ -22,76 +22,94 @@ namespace lovis.Views.Proyects {
         protected global::System.Web.UI.WebControls.Literal pagetitle;
         
         /// <summary>
-        /// Control addp_title.
+        /// Control managep_title.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addp_title;
+        protected global::System.Web.UI.WebControls.TextBox managep_title;
         
         /// <summary>
-        /// Control addp_owner.
+        /// Control managep_owner.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addp_owner;
+        protected global::System.Web.UI.WebControls.TextBox managep_owner;
         
         /// <summary>
-        /// Control addp_summary.
+        /// Control managep_summary.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addp_summary;
+        protected global::System.Web.UI.WebControls.TextBox managep_summary;
         
         /// <summary>
-        /// Control addp_webiste.
+        /// Control managep_webiste.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addp_webiste;
+        protected global::System.Web.UI.WebControls.TextBox managep_webiste;
         
         /// <summary>
-        /// Control addp_repository.
+        /// Control managep_repository.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addp_repository;
+        protected global::System.Web.UI.WebControls.TextBox managep_repository;
         
         /// <summary>
-        /// Control addp_support.
+        /// Control managep_support.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addp_support;
+        protected global::System.Web.UI.WebControls.TextBox managep_support;
         
         /// <summary>
-        /// Control addp_invitepeople.
+        /// Control managep_invitepeople.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addp_invitepeople;
+        protected global::System.Web.UI.WebControls.TextBox managep_invitepeople;
         
         /// <summary>
-        /// Control addp_create.
+        /// Control managep_addcollaborators.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addp_create;
+        protected global::System.Web.UI.WebControls.Button managep_addcollaborators;
+        
+        /// <summary>
+        /// Control proyect_people.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl proyect_people;
+        
+        /// <summary>
+        /// Control managep_update.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button managep_update;
         
         /// <summary>
         /// Propiedad Master.

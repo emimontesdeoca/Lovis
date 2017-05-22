@@ -4,7 +4,12 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
-## [0.2.5] - 19/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+## [0.2.6] - 22/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- ManageProject backend.
+- Coveralls.
+
+## [0.2.5] - 21/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Removed
 - Docs clean.
 - Tools clean.
