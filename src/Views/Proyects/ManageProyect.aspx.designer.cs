@@ -112,6 +112,33 @@ namespace lovis.Views.Proyects {
         protected global::System.Web.UI.WebControls.Button managep_update;
         
         /// <summary>
+        /// Control managep_name_delete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox managep_name_delete;
+        
+        /// <summary>
+        /// Control managep_checkbox_delete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox managep_checkbox_delete;
+        
+        /// <summary>
+        /// Control managep_btn_delete.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button managep_btn_delete;
+        
+        /// <summary>
         /// Propiedad Master.
         /// </summary>
         /// <remarks>

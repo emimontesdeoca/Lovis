@@ -103,9 +103,41 @@
                                 </div>
                             </fieldset>
                             <div class="text-center">
-                                <asp:Button runat="server" ID="managep_update" CssClass="btn btn-primary" Text="Update proyect" OnClick="managep_update_Click"/>
+                                <asp:Button runat="server" ID="managep_update" CssClass="btn btn-primary" Text="Update proyect" OnClick="managep_update_Click" />
                             </div>
                             <div class="clearfix"></div>
+                            <fieldset class="scheduler-border" style="border: 1px solid red !important;">
+                                <legend class="scheduler-border" style="margin-bottom: 5px; color: red !important;">Danger zone</legend>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-sm-12">
+                                        <div class="form-group label-floating">
+                                            <p style="color: red;" class="text-center"><b>Deleted projects can not be restored since they are wiped out from our database.</b></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-lg-8 col-sm-12">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Insert the project name to confirm</label>
+                                            <asp:TextBox runat="server" ID="managep_name_delete" CssClass="form-control"></asp:TextBox>
+                                            <div class="help-block">For example: MyProjectName</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-lg-2 col-sm-12">
+                                        <div class="form-group label-floating">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" runat="server" id="managep_checkbox_delete" required />
+                                                    Confirm to delete.
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-lg-2 col-sm-12">
+                                        <div class="form-group label-floating" style="margin-top: 10px !important;">
+                                            <asp:Button runat="server" ID="managep_btn_delete" CssClass="btn btn-danger" Text="Delete project" OnClick="managep_btn_delete_Click" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
                         </div>
                     </div>
                 </div>

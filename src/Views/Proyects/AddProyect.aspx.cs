@@ -21,10 +21,10 @@ namespace lovis.Views.Proyects
             Controllers.Users.Users CU = Session["User"] as Controllers.Users.Users;
 
             // Create proyect to license
-            new Controllers.Proyects.Proyects(addp_title.Text, addp_summary.Text, addp_owner.Text, addp_webiste.Text, addp_repository.Text, addp_support.Text, CU);
+            Controllers.Proyects.Proyects a = new Controllers.Proyects.Proyects(addp_title.Text, addp_summary.Text, addp_owner.Text, addp_webiste.Text, addp_repository.Text, addp_support.Text, CU);
 
             //Redirecto to dashboard
-            Response.Redirect("~/Views/Dashboard/Dashboard.aspx");
+            Response.Redirect("~/Views/Proyects/Proyects.aspx?id=" + a.IdLicense);
         }
     }
 }

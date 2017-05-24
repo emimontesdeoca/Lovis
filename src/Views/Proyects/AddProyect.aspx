@@ -23,7 +23,7 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Title</label>
-                                            <asp:TextBox runat="server" ID="addp_title" CssClass="form-control" requiered></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="addp_title" CssClass="form-control" required></asp:TextBox>
                                             <div class="help-block">E.g: Facebo- oh wait. </div>
                                         </div>
                                     </div>

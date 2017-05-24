@@ -108,7 +108,7 @@ namespace lovis.Views.Proyects
 
                 proyect_people.InnerText = sb.ToString();
             }
-            
+
 
         }
 
@@ -124,7 +124,26 @@ namespace lovis.Views.Proyects
             x.Website = Security.CryptoUtils.EncodeElementString(x, managep_title.Text);
             x.Repository = Security.CryptoUtils.EncodeElementString(x, managep_repository.Text);
             x.Support = Security.CryptoUtils.EncodeElementString(x, managep_support.Text);
-            
+
+        }
+
+        protected void managep_btn_delete_Click(object sender, EventArgs e)
+        {
+            Controllers.Proyects.Proyects CP = Session["Proyect"] as Controllers.Proyects.Proyects;
+            if (managep_name_delete.Text == CP.Title)
+            {
+                if (managep_checkbox_delete.Checked)
+                {
+                    /// Remove project
+                    Controllers.Proyects.Proyects.lP.Remove(Controllers.Proyects.Proyects.lP.Single(a => a.Id == CP.Id));
+
+                    /// Remove userlicense to this user
+                    Controllers.Users.Users CU = Session["User"] as Controllers.Users.Users;
+                    Controllers.UserLicense.UserLicense.lUL.Remove(Controllers.UserLicense.UserLicense.lUL.Single(b => b.IdUser == CU.Id && b.IdLicense == CP.IdLicense));
+
+                    Response.Redirect("~/Views/Dashboard/dashboard.aspx");
+                }
+            }
         }
     }
 }
