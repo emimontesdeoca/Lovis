@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
+## [0.2.8] - 22/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- AddElement view.
+- ManageElement view.
+- ManageProject finished.
+- AddElement finished.
+
 ## [0.2.6] - 22/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - ManageProject backend.

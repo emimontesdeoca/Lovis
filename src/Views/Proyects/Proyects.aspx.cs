@@ -82,6 +82,7 @@ namespace lovis.Views.Proyects
             proyect_website.NavigateUrl = cP.Website;
             proyect_repository.NavigateUrl = cP.Repository;
             proyect_support.NavigateUrl = cP.Website;
+            proyect_newtask.NavigateUrl = "/Views/Element/AddElement.aspx?id=" + splitnpu[1];
             pagetitle.Text = cP.Title;
 
             /// Get the people from the proyect

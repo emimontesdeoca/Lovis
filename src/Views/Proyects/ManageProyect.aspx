@@ -95,7 +95,7 @@
                                     </div>
                                     <div class="col-md-12 col-lg-12 col-sm-12">
                                         <div class="form-group label-floating">
-                                            <h4>Current collaborators in proyect</h4>
+                                            <h4>Current collaborators in project</h4>
 
                                             <p runat="server" id="proyect_people"></p>
                                         </div>

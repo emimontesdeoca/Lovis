@@ -21,6 +21,8 @@ namespace lovis.Controllers.Elements
         public DateTime DateFinish { get; set; }
         public string IdProyect { get; set; }
 
+        public static List<Elements> lE = new List<Elements>();
+
         #endregion
 
         #region CONSTRUCTORS
@@ -42,6 +44,8 @@ namespace lovis.Controllers.Elements
             DateStart = dateStart;
             DateFinish = dateFinish;
             IdProyect = p.Id;
+
+            lE.Add(this);
         }
 
         #endregion
@@ -100,6 +104,7 @@ namespace lovis.Controllers.Elements
         {
             // Add to database
             // entityframework
+            
         }
 
         #endregion

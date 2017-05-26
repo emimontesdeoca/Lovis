@@ -62,6 +62,8 @@
     <Content Include="Views\Error\404.aspx" />
     <Content Include="Views\Login\Login.aspx" />
     <Content Include="Views\Proyects\AddProyect.aspx" />
+    <Content Include="Views\Element\AddElement.aspx" />
+    <Content Include="Views\Element\ManageElement.aspx" />
     <Content Include="Views\Proyects\ManageProyect.aspx" />
     <Content Include="Views\Register\Register.aspx" />
     <Content Include="Views\Shared\Assets\icon\favicon.ico" />
@@ -120,6 +122,20 @@
     </Compile>
     <Compile Include="Views\Proyects\AddProyect.aspx.designer.cs">
       <DependentUpon>AddProyect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Element\AddElement.aspx.cs">
+      <DependentUpon>AddElement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Element\AddElement.aspx.designer.cs">
+      <DependentUpon>AddElement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Element\ManageElement.aspx.cs">
+      <DependentUpon>ManageElement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Element\ManageElement.aspx.designer.cs">
+      <DependentUpon>ManageElement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Proyects\ManageProyect.aspx.cs">
       <DependentUpon>ManageProyect.aspx</DependentUpon>

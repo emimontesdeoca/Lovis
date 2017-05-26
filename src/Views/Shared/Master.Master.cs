@@ -136,7 +136,7 @@ namespace lovis.Views.Shared
 
                     if (splitpath[0] == "AddProyect")
                     {
-                        Master_pagetitle.InnerText = "Lovis > Proyects > Add proyect";
+                        Master_pagetitle.InnerText = "Lovis > Proyects > Add project";
 
                     }
                     if (splitpath[0] == "User")
@@ -153,6 +153,10 @@ namespace lovis.Views.Shared
                     {
                         Master_pagetitle.InnerText = "Lovis > Dashboard";
 
+                    }
+                    if (splitpath[0] == "AddElement")
+                    {
+                        Master_pagetitle.InnerText = "Lovis > " + cpTITLE + " > Add task";
                     }
                 }
 
@@ -205,19 +209,19 @@ namespace lovis.Views.Shared
             /// New proyect
 
 
-            if (newproyecturl == url)
-            {
-                sb.Append(@"<li class=""active"">");
-            }
-            else
-            {
-                sb.Append("<li>");
-            }
-            sb.AppendFormat(@"<a href=""{0}"">", newproyecturl);
-            sb.Append(@"<i class=""material-icons"">add</i>");
-            sb.Append(@"<p class=""text-capitalize"">New project</p>");
-            sb.Append(@"</a>");
-            sb.Append("</li>");
+            //if (newproyecturl == url)
+            //{
+            //    sb.Append(@"<li class=""active"">");
+            //}
+            //else
+            //{
+            //    sb.Append("<li>");
+            //}
+            //sb.AppendFormat(@"<a href=""{0}"">", newproyecturl);
+            //sb.Append(@"<i class=""material-icons"">add</i>");
+            //sb.Append(@"<p class=""text-capitalize"">New project</p>");
+            //sb.Append(@"</a>");
+            //sb.Append("</li>");
 
             /// Proyects
             foreach (Controllers.Proyects.Proyects DP in CuLPP)
