@@ -158,6 +158,10 @@ namespace lovis.Views.Shared
                     {
                         Master_pagetitle.InnerText = "Lovis > " + cpTITLE + " > Add task";
                     }
+                    if (splitpath[0] == "ManageProyect")
+                    {
+                        Master_pagetitle.InnerText = "Lovis > " + cpTITLE + " > Manage";
+                    }
                 }
 
                 #endregion

@@ -22,6 +22,15 @@ namespace lovis.Views.Proyects.Element {
         protected global::System.Web.UI.WebControls.Literal pagetitle;
         
         /// <summary>
+        /// Control adde_error.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl adde_error;
+        
+        /// <summary>
         /// Control adde_title.
         /// </summary>
         /// <remarks>
@@ -37,7 +46,7 @@ namespace lovis.Views.Proyects.Element {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox adde_priority;
+        protected global::System.Web.UI.WebControls.DropDownList adde_priority;
         
         /// <summary>
         /// Control adde_state.
@@ -46,7 +55,7 @@ namespace lovis.Views.Proyects.Element {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox adde_state;
+        protected global::System.Web.UI.WebControls.DropDownList adde_state;
         
         /// <summary>
         /// Control adde_type.
@@ -55,7 +64,7 @@ namespace lovis.Views.Proyects.Element {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox adde_type;
+        protected global::System.Web.UI.WebControls.DropDownList adde_type;
         
         /// <summary>
         /// Control adde_assignedto.
@@ -64,7 +73,7 @@ namespace lovis.Views.Proyects.Element {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox adde_assignedto;
+        protected global::System.Web.UI.WebControls.DropDownList adde_assignedto;
         
         /// <summary>
         /// Control adde_summary.

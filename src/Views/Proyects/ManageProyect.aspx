@@ -12,7 +12,7 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="card">
                         <div class="card-header" data-background-color="purple">
-                            <h4 class="title">Manage </h4>
+                            <h4 class="title">Manage</h4>
                             <p class="category">Change the project's information or settings.</p>
                         </div>
                         <div class="card-content">

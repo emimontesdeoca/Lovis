@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
+## [0.3.0] - 30/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- AddElement fixed.
+- ManageElement backend done.
+- Better project task table.
+
 ## [0.2.8] - 22/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - AddElement view.

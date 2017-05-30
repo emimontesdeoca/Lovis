@@ -15,6 +15,11 @@
                             <h4 class="title">Create task</h4>
                             <p class="category">Start by creating task for your project</p>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 runat="server" id="adde_error" class="text-danger text-center">There was an error.</h3>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <fieldset class="scheduler-border">
                                 <legend class="scheduler-border" style="margin-bottom: 5px;">Initial information</legend>
@@ -29,14 +34,16 @@
                                     <div class="col-lg-4 col-md-4 col-sm-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label ">Priority</label>
-                                            <asp:TextBox runat="server" ID="adde_priority" CssClass="form-control" required></asp:TextBox>
+                                            <%--<asp:TextBox runat="server" ID="adde_priority" CssClass="form-control" required></asp:TextBox>--%>
+                                            <asp:DropDownList runat="server" ID="adde_priority" CssClass="form-control" required></asp:DropDownList>
                                             <div class="help-block">E.g: Critial. </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label ">State</label>
-                                            <asp:TextBox runat="server" ID="adde_state" CssClass="form-control"></asp:TextBox>
+                                            <%--<asp:TextBox runat="server" ID="adde_state" CssClass="form-control"></asp:TextBox>--%>
+                                            <asp:DropDownList runat="server" ID="adde_state" CssClass="form-control" Enabled="False" required></asp:DropDownList>
                                             <div class="help-block">E.g: In process. </div>
                                         </div>
                                     </div>
@@ -45,14 +52,16 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label ">Type</label>
-                                            <asp:TextBox runat="server" ID="adde_type" CssClass="form-control" required></asp:TextBox>
+                                            <%--<asp:TextBox runat="server" ID="adde_type" CssClass="form-control" required></asp:TextBox>--%>
+                                            <asp:DropDownList runat="server" ID="adde_type" CssClass="form-control" required></asp:DropDownList>
                                             <div class="help-block">E.g: Bug. </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label ">Assigned to</label>
-                                            <asp:TextBox runat="server" ID="adde_assignedto" CssClass="form-control"></asp:TextBox>
+                                            <%--<asp:TextBox runat="server" ID="adde_assignedto" CssClass="form-control"></asp:TextBox>--%>
+                                            <asp:DropDownList runat="server" ID="adde_assignedto" CssClass="form-control" required></asp:DropDownList>
                                             <div class="help-block">E.g: Luis. </div>
                                         </div>
                                     </div>
@@ -85,7 +94,7 @@
 
                             </fieldset>
                             <div class="text-center">
-                                <asp:Button runat="server" ID="adde_create" CssClass="btn btn-primary" Text="Create task" OnClick="adde_create_Click"/>
+                                <asp:Button runat="server" ID="adde_create" CssClass="btn btn-primary" Text="Create task" OnClick="adde_create_Click" />
                             </div>
                             <div class="clearfix"></div>
                         </div>

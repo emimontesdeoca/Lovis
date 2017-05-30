@@ -117,5 +117,15 @@ namespace lovis.Views.Proyects
 
         }
 
+        protected void btn_edit_task(object sender, EventArgs e)
+        {
+            var btn = sender as System.Web.UI.HtmlControls.HtmlButton;
+
+            var a = btn.Attributes["taskid"].ToString();
+
+            Response.Redirect("/Views/Element/ManageElement.aspx?id=" + a);
+        }
+
+
     }
 }

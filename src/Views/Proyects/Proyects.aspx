@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-            <%-- <div class="row">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
@@ -66,78 +66,30 @@
                                     <div class="card-content table-responsive">
                                         <table class="table">
                                             <thead class="text-primary">
-                                                <th>Titulo</th>
-                                                <th>Estado</th>
-                                                <th>Fecha creacion</th>
-                                                <th>Fecha finalizacion</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Editar</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Borrar</th>
+                                                <th>Title</th>
+                                                <th>Type</th>
+                                                <th>State</th>
+                                                <th>Priority</th>
+                                                <th>Assigned to</th>
+                                                <th>Creation date</th>
+                                                <th>Start date</th>
+                                                <th>Finish date</th>
+                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
+                                                    <td style="padding: 0px 10px;">Responsive not working</td>
+                                                    <td style="padding: 0px 10px;"><span class="label label-danger">Bug</span></td>
+                                                    <td class="text-primary" style="padding: 0px 10px;"><span class="label label-info">New</span></td>
+                                                    <td class="text-primary" style="padding: 0px 10px;"><span class="label label-primary">Low</span></td>
+                                                    <td style="padding: 0px 10px;">Emiliano Montesdeoca</td>
+                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
                                                     <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
                                                     <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
                                                     <td style="padding: 0px 10px;">
-                                                        <!-- <button type="button" class="btn btn-primary" style=" padding: 6px 12px">Editar</button> -->
-                                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                                                        <button type="submit" rel="tooltip" runat="server" onserverclick="btn_edit_task" title="Edit Task" taskid="4920cf45709ba15ceaa8f9d20d464556be4147fc" class="btn btn-primary btn-simple btn-xs">
                                                             <i class="material-icons">edit</i>
                                                         </button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <!-- <button type="button" class="btn btn-danger" style=" padding: 6px 12px">Borrar</button> -->
-                                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                            <i class="material-icons">close</i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">ASP.net</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">27/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">27/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -232,182 +184,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingThree">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Actividades</a>
-                                    <button type="button" class="btn btn-primary" style="float: right; padding: 6px 12px; margin: -3px 1px;">Nuevo</button>
-                                </h4>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                <div class="panel-body">
-                                    <div class="card-content table-responsive">
-                                        <table class="table">
-                                            <thead class="text-primary">
-                                                <th>Titulo</th>
-                                                <th>Estado</th>
-                                                <th>Fecha creacion</th>
-                                                <th>Fecha finalizacion</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Editar</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Borrar</th>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">ASP.net</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">27/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">27/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingFour">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Prácticas</a>
-                                    <button type="button" class="btn btn-primary" style="float: right; padding: 6px 12px; margin: -3px 1px;">Nuevo</button>
-                                </h4>
-                            </div>
-                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                                <div class="panel-body">
-                                    <div class="card-content table-responsive">
-                                        <table class="table">
-                                            <thead class="text-primary">
-                                                <th>Titulo</th>
-                                                <th>Estado</th>
-                                                <th>Fecha creacion</th>
-                                                <th>Fecha finalizacion</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Editar</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Borrar</th>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">ASP.net</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">27/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">27/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
-            </div>--%>
+            </div>
         </div>
     </div>
-
 </asp:Content>

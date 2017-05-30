@@ -21,8 +21,6 @@ namespace lovis.Views.Proyects
                 string fullPATH = HttpContext.Current.Request.Url.AbsoluteUri;
                 string[] splitnpu = fullPATH.Split('=');
 
-                //proyect_manage.NavigateUrl = "~/Views/Proyects/ManageProyect.aspx?id=" + splitnpu[1];
-
                 /// Get project from ID
                 Controllers.Proyects.Proyects cP = new Controllers.Proyects.Proyects();
 
@@ -34,7 +32,7 @@ namespace lovis.Views.Proyects
                                   select lUL).First();
                     try
                     {
-                        /// If they are equal ( just in case someone paste another proyectID
+                        /// If they are equal (just in case someone paste another proyectID)
                         var x = Controllers.Proyects.Proyects.lP.Single(a => a.IdLicense == splitnpu[1] && a.IdLicense == query2.IdLicense);
 
                         cP.Id = x.Id;
@@ -74,8 +72,6 @@ namespace lovis.Views.Proyects
                 }
 
                 /// Get current Proyect from the Session["Proyect"]
-                //Controllers.Proyects.Proyects CP = Session["Proyect"] as Controllers.Proyects.Proyects;
-
                 /// Set the summary on the view
                 managep_summary.Text = cP.Summary;
                 managep_webiste.Text = cP.Website;
@@ -83,7 +79,7 @@ namespace lovis.Views.Proyects
                 managep_title.Text = cP.Title;
                 managep_support.Text = cP.Support;
                 managep_repository.Text = cP.Repository;
-
+                Master.cpTITLE = cP.Title;
 
                 /// Get the people from the proyect
                 var query = (from lUL in Controllers.Users.Users.uLTest
@@ -93,6 +89,7 @@ namespace lovis.Views.Proyects
 
                 StringBuilder sb = new StringBuilder();
 
+                /// Build the string with all the contributors
                 foreach (Controllers.Users.Users pU in query)
                 {
                     Controllers.Users.Users ppU = new Controllers.Users.Users();
@@ -100,12 +97,11 @@ namespace lovis.Views.Proyects
                     ppU.Name = Security.CryptoUtils.DecodeUserString(pU.Name, pU);
                     ppU.Surname = Security.CryptoUtils.DecodeUserString(pU.Surname, pU);
 
-
                     sb.AppendFormat("{0} {1}, ", ppU.Name, ppU.Surname);
                 }
-
+                /// Remove last ,
                 sb.Remove(sb.Length - 2, 2);
-
+                /// Set it
                 proyect_people.InnerText = sb.ToString();
             }
 
@@ -114,10 +110,13 @@ namespace lovis.Views.Proyects
 
         protected void managep_update_Click(object sender, EventArgs e)
         {
+            /// Get the current proyect previously.
             Controllers.Proyects.Proyects CP = Session["Proyect"] as Controllers.Proyects.Proyects;
 
+            /// Find the proyect where this current proyect id match some proyect ID
             var x = Controllers.Proyects.Proyects.lP.Single(a => a.Id == CP.Id);
 
+            /// Change everything and encode it again.
             x.Title = Security.CryptoUtils.EncodeElementString(x, managep_title.Text);
             x.Summary = Security.CryptoUtils.EncodeElementString(x, managep_summary.Text);
             x.Owner = Security.CryptoUtils.EncodeElementString(x, managep_owner.Text);
