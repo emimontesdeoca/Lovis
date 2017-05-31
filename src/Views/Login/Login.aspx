@@ -59,7 +59,6 @@
                                     </div>
                                 </div>
                                 <div class="row">
-
                                     <div class="col-md-12">
                                         <p>Don't have an account yet? <a href="../Register/Register.aspx">Register</a>.</p>
                                     </div>

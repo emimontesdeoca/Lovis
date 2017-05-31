@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
+## [0.3.1] - 31/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- Elements showing in project
+- Security measures for elements from other users
+
+### Fixes
+- Update project.
+- Update element.
+
+
 ## [0.3.0] - 30/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - AddElement fixed.

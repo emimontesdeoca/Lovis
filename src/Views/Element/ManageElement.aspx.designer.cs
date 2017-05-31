@@ -103,13 +103,13 @@ namespace lovis.Views.Proyects.Element {
         protected global::System.Web.UI.WebControls.TextBox managee_datefinish;
         
         /// <summary>
-        /// Control managee_update.
+        /// Control managee_update_btn.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button managee_update;
+        protected global::System.Web.UI.WebControls.Button managee_update_btn;
         
         /// <summary>
         /// Control managep_checkbox_delete.

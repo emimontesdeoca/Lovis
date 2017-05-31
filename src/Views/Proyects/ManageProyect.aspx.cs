@@ -120,7 +120,7 @@ namespace lovis.Views.Proyects
             x.Title = Security.CryptoUtils.EncodeElementString(x, managep_title.Text);
             x.Summary = Security.CryptoUtils.EncodeElementString(x, managep_summary.Text);
             x.Owner = Security.CryptoUtils.EncodeElementString(x, managep_owner.Text);
-            x.Website = Security.CryptoUtils.EncodeElementString(x, managep_title.Text);
+            x.Website = Security.CryptoUtils.EncodeElementString(x, managep_webiste.Text);
             x.Repository = Security.CryptoUtils.EncodeElementString(x, managep_repository.Text);
             x.Support = Security.CryptoUtils.EncodeElementString(x, managep_support.Text);
 

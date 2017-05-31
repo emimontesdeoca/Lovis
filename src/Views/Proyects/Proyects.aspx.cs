@@ -108,12 +108,249 @@ namespace lovis.Views.Proyects
 
             proyect_people.InnerText = sb.ToString();
 
-
+            /// Elements load
+            bugPanel.Text = BuildElement("Bug", splitnpu[1], cP, 1);
+            defectPanel.Text = BuildElement("Defect", splitnpu[1], cP, 1);
+            patchesPanel.Text = BuildElement("Patch", splitnpu[1], cP, 1);
+            changesPanel.Text = BuildElement("Changes", splitnpu[1], cP, 1);
+            featurePanel.Text = BuildElement("Feature", splitnpu[1], cP, 1);
+            supportPanel.Text = BuildElement("Support", splitnpu[1], cP, 1);
+            reviewPanel.Text = BuildElement("Review", splitnpu[1], cP, 1);
+            documentationPanel.Text = BuildElement("Documentation", splitnpu[1], cP, 1);
+            closedPanel.Text = BuildElement("", splitnpu[1], cP, 2);
 
         }
 
-        protected void proyect_newtask_Click(object sender, EventArgs e)
+
+        private string BuildElement(string type, string splitnpu, Controllers.Proyects.Proyects cP, int state)
         {
+            string res = "";
+
+            var y = Controllers.Proyects.Proyects.lP.Single(a => a.IdLicense == splitnpu);
+
+            var query3 = (from a in Controllers.Elements.Elements.lE
+                          where a.IdProyect == y.Id
+                          select a).OrderByDescending(d => d.DateCreation).ToList();
+
+            StringBuilder sb = new StringBuilder();
+            int i = 0;
+            if (query3.Count > 0)
+            {
+                foreach (Controllers.Elements.Elements ea in query3)
+                {
+                    switch (state)
+                    {
+                        case 1:
+                            if (Security.CryptoUtils.DecodeElementString(cP, ea.Type) == type && Security.CryptoUtils.DecodeElementString(cP, ea.State) != "Closed")
+                            {
+                                sb.AppendFormat(@"<tr>");
+
+                                /// Title
+                                string c = Security.CryptoUtils.DecodeElementString(cP, ea.Title);
+                                sb.AppendFormat(@"<td class=""project-table"">{0}</td>", c);
+
+                                /// Type
+                                string a = Security.CryptoUtils.DecodeElementString(cP, ea.Type);
+                                if (a == "Bug" || a == "Defect")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-danger"">{0}</span></td>", a);
+                                }
+                                else if (a == "Changes" || a == "Patch")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-warning"">{0}</span></td>", a);
+
+                                }
+                                else if (a == "Review" || a == "Feature")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-info"">{0}</span></td>", a);
+
+                                }
+                                else if (a == "Support" || a == "Documentation")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-success"">{0}</span></td>", a);
+
+                                }
+
+                                /// State
+                                string b = Security.CryptoUtils.DecodeElementString(cP, ea.State);
+                                if (b == "New")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-danger"">{0}</span></td>", b);
+                                }
+                                else if (b == "In-Progress")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-primary"">{0}</span></td>", b);
+                                }
+                                else if (b == "Resolved")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-info"">{0}</span></td>", b);
+                                }
+                                else if (b == "Test")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-warning"">{0}</span></td>", b);
+                                }
+                                else if (b == "Closed")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-success"">{0}</span></td>", b);
+                                }
+
+                                /// Priority
+                                string d = Security.CryptoUtils.DecodeElementString(cP, ea.Priority);
+                                if (d == "Low")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-info"">{0}</span></td>", d);
+                                }
+                                else if (d == "Normal")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-primary"">{0}</span></td>", d);
+                                }
+                                else if (d == "High")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-warning"">{0}</span></td>", d);
+                                }
+                                else if (d == "Critical")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-danger"">{0}</span></td>", d);
+                                }
+
+                                /// Assignation
+                                string f = Security.CryptoUtils.DecodeElementString(cP, ea.AssignedTo);
+                                var u = Controllers.Users.Users.uLTest.Single(s => s.Id == f);
+                                f = Security.CryptoUtils.DecodeUserString(u.Name, u) + " " + Security.CryptoUtils.DecodeUserString(u.Surname, u);
+                                sb.AppendFormat(@"<td class=""project-table"">{0}</td>", f);
+
+                                /// Dates
+                                sb.AppendFormat(@"<td class=""project-table"">{0}</td>", ea.DateCreation);
+                                sb.AppendFormat(@"<td class=""project-table"">{0}</td>", ea.DateStart);
+                                sb.AppendFormat(@"<td class=""project-table"">{0}</td>", ea.DateFinish);
+
+                                /// Button
+                                sb.AppendFormat(@"<td class=""project-table"">");
+                                sb.AppendFormat(@"<a href=""/Views/Element/ManageElement.aspx?id={0}"" class=""btn btn-primary btn-simple btn-xs"">", ea.Id);
+                                sb.AppendFormat(@"<i class=""material-icons"">edit</i>");
+                                sb.AppendFormat(@"</button>");
+                                sb.AppendFormat(@"</td>");
+
+
+                                sb.AppendFormat(@"</tr>");
+
+                                res = sb.ToString();
+                                i++;
+
+                            }
+                            break;
+                        case 2:
+                            if (Security.CryptoUtils.DecodeElementString(cP, ea.State) == "Closed")
+                            {
+                                sb.AppendFormat(@"<tr>");
+
+                                /// Title
+                                string c = Security.CryptoUtils.DecodeElementString(cP, ea.Title);
+                                sb.AppendFormat(@"<td class=""project-table"">{0}</td>", c);
+
+                                /// Type
+                                string a = Security.CryptoUtils.DecodeElementString(cP, ea.Type);
+                                if (a == "Bug" || a == "Defect")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-danger"">{0}</span></td>", a);
+                                }
+                                else if (a == "Changes" || a == "Patch")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-warning"">{0}</span></td>", a);
+
+                                }
+                                else if (a == "Review" || a == "Feature")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-info"">{0}</span></td>", a);
+
+                                }
+                                else if (a == "Support" || a == "Documentation")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-success"">{0}</span></td>", a);
+
+                                }
+
+                                /// State
+                                string b = Security.CryptoUtils.DecodeElementString(cP, ea.State);
+                                if (b == "New")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-danger"">{0}</span></td>", b);
+                                }
+                                else if (b == "In-Progress")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-primary"">{0}</span></td>", b);
+                                }
+                                else if (b == "Resolved")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-info"">{0}</span></td>", b);
+                                }
+                                else if (b == "Test")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-warning"">{0}</span></td>", b);
+                                }
+                                else if (b == "Closed")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-success"">{0}</span></td>", b);
+                                }
+
+                                /// Priority
+                                string d = Security.CryptoUtils.DecodeElementString(cP, ea.Priority);
+                                if (d == "Low")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-info"">{0}</span></td>", d);
+                                }
+                                else if (d == "Normal")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-primary"">{0}</span></td>", d);
+                                }
+                                else if (d == "High")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-warning"">{0}</span></td>", d);
+                                }
+                                else if (d == "Critical")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-danger"">{0}</span></td>", d);
+                                }
+
+                                /// Assignation
+                                string f = Security.CryptoUtils.DecodeElementString(cP, ea.AssignedTo);
+                                var u = Controllers.Users.Users.uLTest.Single(s => s.Id == f);
+                                f = Security.CryptoUtils.DecodeUserString(u.Name, u) + " " + Security.CryptoUtils.DecodeUserString(u.Surname, u);
+                                sb.AppendFormat(@"<td class=""project-table"">{0}</td>", f);
+
+                                /// Dates
+                                sb.AppendFormat(@"<td class=""project-table"">{0}</td>", ea.DateCreation);
+                                sb.AppendFormat(@"<td class=""project-table"">{0}</td>", ea.DateStart);
+                                sb.AppendFormat(@"<td class=""project-table"">{0}</td>", ea.DateFinish);
+
+                                /// Button
+                                sb.AppendFormat(@"<td class=""project-table"">");
+                                sb.AppendFormat(@"<a href=""/Views/Element/ManageElement.aspx?id={0}"" class=""btn btn-primary btn-simple btn-xs"">", ea.Id);
+                                sb.AppendFormat(@"<i class=""material-icons"">edit</i>");
+                                sb.AppendFormat(@"</button>");
+                                sb.AppendFormat(@"</td>");
+
+
+                                sb.AppendFormat(@"</tr>");
+
+                                res = sb.ToString();
+                                i++;
+
+                            }
+                            break;
+                    }
+                }
+            }
+            if (i == 0)
+            {
+                sb.AppendFormat(@"<p class=""text-center"">No task or issues found for this category.</p>");
+                res = sb.ToString();
+                return res;
+            }
+            else
+            {
+                return res;
+            }
 
         }
 

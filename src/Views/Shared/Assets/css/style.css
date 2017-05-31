@@ -127,3 +127,7 @@ legend.scheduler-border {
 .btn-manage-proyect {
     padding: 10px 15px !important;
 }
+
+.project-table {
+    padding: 0px 10px !important;
+}

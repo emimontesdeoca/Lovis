@@ -49,7 +49,7 @@
                             <i class="material-icons">done</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Done</p>
+                            <p class="category">Closed</p>
                             <h3 class="title">25</h3>
                         </div>
                     </div>

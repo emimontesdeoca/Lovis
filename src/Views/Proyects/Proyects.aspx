@@ -56,15 +56,15 @@
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingOne">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Examenes</a>
-                                    <button type="button" class="btn btn-primary" style="float: right; padding: 6px 12px; margin: -3px 1px;">Nuevo</button>
-                                </h4>
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h4 class="panel-title">Bugs
+                                    </h4>
+                                </a>
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
                                     <div class="card-content table-responsive">
-                                        <table class="table">
+                                        <table class="table" style="margin-bottom: 0px !important">
                                             <thead class="text-primary">
                                                 <th>Title</th>
                                                 <th>Type</th>
@@ -77,21 +77,7 @@
                                                 <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Responsive not working</td>
-                                                    <td style="padding: 0px 10px;"><span class="label label-danger">Bug</span></td>
-                                                    <td class="text-primary" style="padding: 0px 10px;"><span class="label label-info">New</span></td>
-                                                    <td class="text-primary" style="padding: 0px 10px;"><span class="label label-primary">Low</span></td>
-                                                    <td style="padding: 0px 10px;">Emiliano Montesdeoca</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="submit" rel="tooltip" runat="server" onserverclick="btn_edit_task" title="Edit Task" taskid="4920cf45709ba15ceaa8f9d20d464556be4147fc" class="btn btn-primary btn-simple btn-xs">
-                                                            <i class="material-icons">edit</i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
+                                                <asp:Literal runat="server" ID="bugPanel"></asp:Literal>
                                             </tbody>
                                         </table>
                                     </div>
@@ -100,90 +86,245 @@
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingTwo">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Tareas</a>
-                                    <button type="button" class="btn btn-primary" style="float: right; padding: 6px 12px; margin: -3px 1px;">Nuevo</button>
-                                </h4>
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    <h4 class="panel-title">Defect
+                                    </h4>
+                                </a>
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
                                     <div class="card-content table-responsive">
-                                        <table class="table">
+                                        <table class="table" style="margin-bottom: 0px !important">
                                             <thead class="text-primary">
-                                                <th>Titulo</th>
-                                                <th>Estado</th>
-                                                <th>Fecha creacion</th>
-                                                <th>Fecha finalizacion</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Editar</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Borrar</th>
+                                                <th>Title</th>
+                                                <th>Type</th>
+                                                <th>State</th>
+                                                <th>Priority</th>
+                                                <th>Assigned to</th>
+                                                <th>Creation date</th>
+                                                <th>Start date</th>
+                                                <th>Finish date</th>
+                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">ASP.net</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">27/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">27/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0px 10px;">Razor</td>
-                                                    <td style="padding: 0px 10px;">Por hacer</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td class="text-primary" style="padding: 0px 10px;">26/04/2015</td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-primary" style="padding: 6px 12px">Editar</button>
-                                                    </td>
-                                                    <td style="padding: 0px 10px;">
-                                                        <button type="button" class="btn btn-danger" style="padding: 6px 12px">Borrar</button>
-                                                    </td>
-                                                </tr>
+                                                <asp:Literal runat="server" ID="defectPanel"></asp:Literal>
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    <h4 class="panel-title">Patches
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <div class="card-content table-responsive">
+                                        <table class="table" style="margin-bottom: 0px !important">
+                                            <thead class="text-primary">
+                                                <th>Title</th>
+                                                <th>Type</th>
+                                                <th>State</th>
+                                                <th>Priority</th>
+                                                <th>Assigned to</th>
+                                                <th>Creation date</th>
+                                                <th>Start date</th>
+                                                <th>Finish date</th>
+                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                            </thead>
+                                            <tbody>
+                                                <asp:Literal runat="server" ID="patchesPanel"></asp:Literal>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    <h4 class="panel-title">Changes
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                <div class="panel-body">
+                                    <div class="card-content table-responsive">
+                                        <table class="table" style="margin-bottom: 0px !important">
+                                            <thead class="text-primary">
+                                                <th>Title</th>
+                                                <th>Type</th>
+                                                <th>State</th>
+                                                <th>Priority</th>
+                                                <th>Assigned to</th>
+                                                <th>Creation date</th>
+                                                <th>Start date</th>
+                                                <th>Finish date</th>
+                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                            </thead>
+                                            <tbody>
+                                                <asp:Literal runat="server" ID="changesPanel"></asp:Literal>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFive">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                    <h4 class="panel-title">Feature
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                <div class="panel-body">
+                                    <div class="card-content table-responsive">
+                                        <table class="table" style="margin-bottom: 0px !important">
+                                            <thead class="text-primary">
+                                                <th>Title</th>
+                                                <th>Type</th>
+                                                <th>State</th>
+                                                <th>Priority</th>
+                                                <th>Assigned to</th>
+                                                <th>Creation date</th>
+                                                <th>Start date</th>
+                                                <th>Finish date</th>
+                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                            </thead>
+                                            <tbody>
+                                                <asp:Literal runat="server" ID="featurePanel"></asp:Literal>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingSix">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                    <h4 class="panel-title">Support
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                                <div class="panel-body">
+                                    <div class="card-content table-responsive">
+                                        <table class="table" style="margin-bottom: 0px !important">
+                                            <thead class="text-primary">
+                                                <th>Title</th>
+                                                <th>Type</th>
+                                                <th>State</th>
+                                                <th>Priority</th>
+                                                <th>Assigned to</th>
+                                                <th>Creation date</th>
+                                                <th>Start date</th>
+                                                <th>Finish date</th>
+                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                            </thead>
+                                            <tbody>
+                                                <asp:Literal runat="server" ID="supportPanel"></asp:Literal>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingSeven">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                    <h4 class="panel-title">Review
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                                <div class="panel-body">
+                                    <div class="card-content table-responsive">
+                                        <table class="table" style="margin-bottom: 0px !important">
+                                            <thead class="text-primary">
+                                                <th>Title</th>
+                                                <th>Type</th>
+                                                <th>State</th>
+                                                <th>Priority</th>
+                                                <th>Assigned to</th>
+                                                <th>Creation date</th>
+                                                <th>Start date</th>
+                                                <th>Finish date</th>
+                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                            </thead>
+                                            <tbody>
+                                                <asp:Literal runat="server" ID="reviewPanel"></asp:Literal>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingEigth">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEigth" aria-expanded="true" aria-controls="collapseEigth">
+                                    <h4 class="panel-title">Documentation
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="collapseEigth" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEigth">
+                                <div class="panel-body">
+                                    <div class="card-content table-responsive">
+                                        <table class="table" style="margin-bottom: 0px !important">
+                                            <thead class="text-primary">
+                                                <th>Title</th>
+                                                <th>Type</th>
+                                                <th>State</th>
+                                                <th>Priority</th>
+                                                <th>Assigned to</th>
+                                                <th>Creation date</th>
+                                                <th>Start date</th>
+                                                <th>Finish date</th>
+                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                            </thead>
+                                            <tbody>
+                                                <asp:Literal runat="server" ID="documentationPanel"></asp:Literal>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingNine">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                                    <h4 class="panel-title">Closed
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                                <div class="panel-body">
+                                    <div class="card-content table-responsive">
+                                        <table class="table" style="margin-bottom: 0px !important">
+                                            <thead class="text-primary">
+                                                <th>Title</th>
+                                                <th>Type</th>
+                                                <th>State</th>
+                                                <th>Priority</th>
+                                                <th>Assigned to</th>
+                                                <th>Creation date</th>
+                                                <th>Start date</th>
+                                                <th>Finish date</th>
+                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                            </thead>
+                                            <tbody>
+                                                <asp:Literal runat="server" ID="closedPanel"></asp:Literal>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>

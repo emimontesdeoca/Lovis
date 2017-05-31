@@ -27,7 +27,7 @@
                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Title</label>
-                                            <asp:TextBox runat="server" ID="managee_title" CssClass="form-control" required></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="managee_title" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: Responsive not working. </div>
                                         </div>
                                     </div>
@@ -35,7 +35,7 @@
                                         <div class="form-group label-floating">
                                             <label class="control-label ">Priority</label>
                                             <%--<asp:TextBox runat="server" ID="adde_priority" CssClass="form-control" required></asp:TextBox>--%>
-                                            <asp:DropDownList runat="server" ID="managee_priority" CssClass="form-control" required></asp:DropDownList>
+                                            <asp:DropDownList runat="server" ID="managee_priority" CssClass="form-control"></asp:DropDownList>
                                             <div class="help-block">E.g: Critial. </div>
                                         </div>
                                     </div>
@@ -43,7 +43,7 @@
                                         <div class="form-group label-floating">
                                             <label class="control-label ">State</label>
                                             <%--<asp:TextBox runat="server" ID="adde_state" CssClass="form-control"></asp:TextBox>--%>
-                                            <asp:DropDownList runat="server" ID="managee_state" CssClass="form-control" required></asp:DropDownList>
+                                            <asp:DropDownList runat="server" ID="managee_state" CssClass="form-control"></asp:DropDownList>
                                             <div class="help-block">E.g: In process. </div>
                                         </div>
                                     </div>
@@ -53,7 +53,7 @@
                                         <div class="form-group label-floating">
                                             <label class="control-label ">Type</label>
                                             <%--<asp:TextBox runat="server" ID="adde_type" CssClass="form-control" required></asp:TextBox>--%>
-                                            <asp:DropDownList runat="server" ID="managee_type" CssClass="form-control" required></asp:DropDownList>
+                                            <asp:DropDownList runat="server" ID="managee_type" CssClass="form-control"></asp:DropDownList>
                                             <div class="help-block">E.g: Bug. </div>
                                         </div>
                                     </div>
@@ -61,7 +61,7 @@
                                         <div class="form-group label-floating">
                                             <label class="control-label ">Assigned to</label>
                                             <%--<asp:TextBox runat="server" ID="adde_assignedto" CssClass="form-control"></asp:TextBox>--%>
-                                            <asp:DropDownList runat="server" ID="managee_assignedto" CssClass="form-control" required></asp:DropDownList>
+                                            <asp:DropDownList runat="server" ID="managee_assignedto" CssClass="form-control"></asp:DropDownList>
                                             <div class="help-block">E.g: Luis. </div>
                                         </div>
                                     </div>
@@ -91,13 +91,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="text-center">
+                                    <asp:Button runat="server" ID="managee_update_btn" CssClass="btn btn-primary" Text="Update task" OnClick="managee_update_btn_Click" />
 
+                                </div>
                             </fieldset>
-                            <div class="text-center">
-                                <asp:Button runat="server" ID="managee_update" CssClass="btn btn-primary" Text="Update task" OnClick="managee_update_Click" />
-                            </div>
-                            <div class="clearfix"></div>
-
                             <fieldset class="scheduler-border" style="border: 1px solid red !important;">
                                 <legend class="scheduler-border" style="margin-bottom: 5px; color: red !important;">Danger zone</legend>
                                 <div class="row">
@@ -110,7 +108,7 @@
                                         <div class="form-group label-floating">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" runat="server" id="managep_checkbox_delete" required />
+                                                    <input type="checkbox" runat="server" id="managep_checkbox_delete" />
                                                     Confirm to delete.
                                                 </label>
                                             </div>
@@ -118,11 +116,12 @@
                                     </div>
                                     <div class="col-md-2 col-lg-2 col-sm-12">
                                         <div class="form-group label-floating" style="margin-top: 10px !important;">
-                                            <asp:Button runat="server" ID="managep_btn_delete" CssClass="btn btn-danger" Text="Delete project" />
+                                            <asp:Button runat="server" ID="managep_btn_delete" CssClass="btn btn-danger" Text="Delete element" />
                                         </div>
                                     </div>
                                 </div>
                             </fieldset>
+                            <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>

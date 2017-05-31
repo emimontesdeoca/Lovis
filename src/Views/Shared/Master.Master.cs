@@ -149,7 +149,7 @@ namespace lovis.Views.Shared
                         Master_pagetitle.InnerText = "Page not found";
 
                     }
-                    if (splitpath[0] == "Dashboard")
+                    if (splitpath[0] == "Dashboard" || splitpath[0] == "dashboard")
                     {
                         Master_pagetitle.InnerText = "Lovis > Dashboard";
 
@@ -161,6 +161,10 @@ namespace lovis.Views.Shared
                     if (splitpath[0] == "ManageProyect")
                     {
                         Master_pagetitle.InnerText = "Lovis > " + cpTITLE + " > Manage";
+                    }
+                    if (splitpath[0] == "Proyects")
+                    {
+                        Master_pagetitle.InnerText = "Lovis > " + cpTITLE;
                     }
                 }
 

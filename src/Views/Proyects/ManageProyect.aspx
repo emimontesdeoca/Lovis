@@ -22,7 +22,7 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Title</label>
-                                            <asp:TextBox runat="server" ID="managep_title" CssClass="form-control" required></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="managep_title" CssClass="form-control" ></asp:TextBox>
                                             <div class="help-block">E.g: Facebo- oh wait. </div>
                                         </div>
                                     </div>
@@ -125,7 +125,7 @@
                                         <div class="form-group label-floating">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" runat="server" id="managep_checkbox_delete" required />
+                                                    <input type="checkbox" runat="server" id="managep_checkbox_delete"  />
                                                     Confirm to delete.
                                                 </label>
                                             </div>
