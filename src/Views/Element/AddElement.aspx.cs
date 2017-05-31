@@ -57,7 +57,7 @@ namespace lovis.Views.Proyects.Element
                 var query = (from lUL in Controllers.Users.Users.uLTest
                              join UL in Controllers.UserLicense.UserLicense.lUL on lUL.Id equals UL.IdUser
                              where UL.IdLicense == cP.IdLicense
-                             select lUL).ToList();
+                             select lUL).Distinct().ToList();
                 foreach (Controllers.Users.Users u in query)
                 {
                     ListItem l = new ListItem(Security.CryptoUtils.DecodeUserString(u.Name, u) + " " + Security.CryptoUtils.DecodeUserString(u.Surname, u), u.Id);
@@ -69,6 +69,7 @@ namespace lovis.Views.Proyects.Element
         protected void adde_create_Click(object sender, EventArgs e)
         {
             Controllers.Proyects.Proyects cP = Session["Proyect"] as Controllers.Proyects.Proyects;
+            Controllers.Users.Users CU = Session["User"] as Controllers.Users.Users;
 
             if (adde_datestart.Text == "" || adde_datestart == null)
             {
@@ -80,7 +81,17 @@ namespace lovis.Views.Proyects.Element
             }
             else
             {
-                new Controllers.Elements.Elements(adde_title.Text, adde_type.SelectedValue, adde_state.SelectedValue, adde_priority.SelectedValue, adde_assignedto.SelectedValue, adde_summary.Text, Convert.ToDateTime(adde_datestart.Text), Convert.ToDateTime(adde_datefinish.Text), cP);
+                Controllers.Elements.Elements ne = new Controllers.Elements.Elements(adde_title.Text, adde_type.SelectedValue, adde_state.SelectedValue,
+                    adde_priority.SelectedValue, adde_assignedto.SelectedValue, adde_summary.Text,
+                    Convert.ToDateTime(adde_datestart.Text), Convert.ToDateTime(adde_datefinish.Text), cP);
+
+                var nu = Controllers.Users.Users.uLTest.Single(a => a.Id == adde_assignedto.SelectedValue);
+
+                Controllers.Email.Email.SendEmailElementNotification(Security.CryptoUtils.DecodeUsername(nu.Username), cP.Title, adde_title.Text,
+                    adde_summary.Text, adde_type.SelectedValue, adde_state.SelectedValue, adde_priority.SelectedValue,
+                    Security.CryptoUtils.DecodeUserString(nu.Name, nu) + " " + Security.CryptoUtils.DecodeUserString(nu.Surname, nu),
+                    ne.DateCreation.ToString(), adde_datestart.Text, adde_datefinish.Text,
+                    Security.CryptoUtils.DecodeUserString(nu.Name, nu) + " " + Security.CryptoUtils.DecodeUserString(nu.Surname, nu), CU.Name + " " + CU.Surname);
 
                 /// Redirecto to dashboard
                 string fullPATH = HttpContext.Current.Request.Url.AbsoluteUri;

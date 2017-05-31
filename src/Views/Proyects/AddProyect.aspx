@@ -23,7 +23,7 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Title</label>
-                                            <asp:TextBox runat="server" ID="addp_title" CssClass="form-control" required></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="addp_title" CssClass="form-control" required="required"></asp:TextBox>
                                             <div class="help-block">E.g: Facebo- oh wait. </div>
                                         </div>
                                     </div>
@@ -67,28 +67,6 @@
                                         </div>
                                     </div>
 
-                                </div>
-                            </fieldset>
-                            <fieldset class="scheduler-border">
-                                <legend class="scheduler-border" style="margin-bottom: 5px;">Collaborators</legend>
-                                <div class="row">
-                                    <div class="col-md-12 col-lg-12 col-sm-12">
-                                        <div class="form-group label-floating">
-                                            <p>Collaborators are allowed to create, edit and remove tickets from the proyect, but not allowed to edit or remove the proyect. Search then by their username (email) separated by comma (,).</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-lg-12 col-sm-12">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Invite people</label>
-                                            <asp:TextBox runat="server" ID="addp_invitepeople" CssClass="form-control"></asp:TextBox>
-                                            <div class="help-block">For example: brian@gmail.com, strongsqueleton@outlook.com, creeper@mojang.net..</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-lg-12 col-sm-12">
-                                        <div class="form-group label-floating">
-                                            <p>Invited users will receive an email with the information about this proyect and a confirmation link where they can join the proyect.</p>
-                                        </div>
-                                    </div>
                                 </div>
                             </fieldset>
                             <div class="text-center">

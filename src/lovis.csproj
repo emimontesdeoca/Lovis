@@ -87,11 +87,14 @@
     <Content Include="Views\Shared\Assets\js\jquery-3.1.0.min.js" />
     <Content Include="Views\Shared\Assets\js\material-dashboard.js" />
     <Content Include="Views\Shared\Assets\js\material.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Dashboard\Dashboard.cs" />
     <Compile Include="Controllers\Elements\Elements.cs" />
+    <Compile Include="Controllers\Email\Email.cs" />
     <Compile Include="Views\Error\404.aspx.cs">
       <DependentUpon>404.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

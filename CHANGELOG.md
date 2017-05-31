@@ -6,13 +6,15 @@ All notable changes to this project will be documented in this file.
 
 ## [0.3.1] - 31/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
-- Elements showing in project
-- Security measures for elements from other users
+- Elements showing in project.
+- Security measures for elements from other users.
+- Collaborators integrated, works fine.
+- Email notification when creating a project.
+- Email notification when creating an element that is assigned to you.
 
 ### Fixes
-- Update project.
-- Update element.
-
+- Update project system.
+- Update element system.
 
 ## [0.3.0] - 30/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add

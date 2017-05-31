@@ -56,7 +56,7 @@ namespace lovis.Views.Proyects.Element
                     var query = (from lUL in Controllers.Users.Users.uLTest
                                  join UL in Controllers.UserLicense.UserLicense.lUL on lUL.Id equals UL.IdUser
                                  where UL.IdLicense == cP.IdLicense
-                                 select lUL).ToList();
+                                 select lUL).Distinct().ToList();
                     foreach (Controllers.Users.Users u in query)
                     {
                         ListItem l = new ListItem(Security.CryptoUtils.DecodeUserString(u.Name, u) + " " + Security.CryptoUtils.DecodeUserString(u.Surname, u), u.Id);
@@ -92,6 +92,8 @@ namespace lovis.Views.Proyects.Element
                                         managee_datestart.Text = x.DateStart.ToString();
                                         managee_datefinish.Text = x.DateFinish.ToString();
                                         managee_assignedto.SelectedValue = Security.CryptoUtils.DecodeElementString(cP, x.AssignedTo);
+
+
                                     }
                                     catch (Exception)
                                     {
@@ -107,6 +109,8 @@ namespace lovis.Views.Proyects.Element
 
         protected void managee_update_btn_Click(object sender, EventArgs e)
         {
+            Controllers.Users.Users CU = Session["User"] as Controllers.Users.Users;
+
             /// Get the current proyect previously.
             Controllers.Proyects.Proyects cP = Session["Proyect"] as Controllers.Proyects.Proyects;
 
@@ -124,7 +128,17 @@ namespace lovis.Views.Proyects.Element
             x.State = Security.CryptoUtils.EncodeElementString(cP, managee_state.SelectedValue);
             x.Priority = Security.CryptoUtils.EncodeElementString(cP, managee_priority.SelectedValue);
             x.DateFinish = Convert.ToDateTime(managee_datefinish.Text);
-            x.AssignedTo = Security.CryptoUtils.EncodeElementString(cP, managee_assignedto.Text);
+
+            var nu = Controllers.Users.Users.uLTest.Single(a => a.Id == managee_assignedto.SelectedValue);
+
+            if (managee_assignedto.SelectedValue != Security.CryptoUtils.DecodeElementString(cP, x.AssignedTo))
+            {
+                x.AssignedTo = Security.CryptoUtils.EncodeElementString(cP, managee_assignedto.Text);
+                Controllers.Email.Email.SendEmailElementNotification(Security.CryptoUtils.DecodeUsername(nu.Username), cP.Title, managee_title.Text,
+                    managee_summary.Text, managee_type.SelectedValue, managee_state.SelectedValue,
+                    managee_priority.SelectedValue, Security.CryptoUtils.DecodeUserString(nu.Name, nu) + " " + Security.CryptoUtils.DecodeUserString(nu.Surname, nu), x.DateCreation.ToString(),
+                    managee_datestart.Text, managee_datefinish.Text, Security.CryptoUtils.DecodeUserString(nu.Name, nu) + " " + Security.CryptoUtils.DecodeUserString(nu.Surname, nu), CU.Name + " " + CU.Surname);
+            }
 
             Response.Redirect("~/Views/Proyects/Proyects.aspx?id=" + cP.IdLicense);
         }

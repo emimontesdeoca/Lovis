@@ -70,7 +70,7 @@ namespace lovis.Controllers.UserLicense
         public void Edit(string Username, string idLicense, int NewRole)
         {
             // Get idUser from Username
-            string idUser = "";
+            //string idUser = "";
 
             // Set new role
 

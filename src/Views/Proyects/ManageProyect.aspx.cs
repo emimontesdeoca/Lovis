@@ -144,5 +144,19 @@ namespace lovis.Views.Proyects
                 }
             }
         }
+
+        protected void managep_addcollaborators_Click(object sender, EventArgs e)
+        {
+            string[] cb = managep_invitepeople.Text.Split(' ');
+            string fullPATH = HttpContext.Current.Request.Url.AbsoluteUri;
+            string[] splitnpu = fullPATH.Split('=');
+            foreach (string t in cb)
+            {
+                var x = Controllers.Users.Users.uLTest.Single(a => Security.CryptoUtils.DecodeUsername(a.Username) == t);
+                new Controllers.UserLicense.UserLicense(x.Id, splitnpu[1], 1, false);
+            }
+
+            Response.Redirect("~/Views/Proyects/Proyects.aspx?id=" + splitnpu[1]);
+        }
     }
 }

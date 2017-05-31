@@ -22,7 +22,7 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Title</label>
-                                            <asp:TextBox runat="server" ID="managep_title" CssClass="form-control" ></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="managep_title" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: Facebo- oh wait. </div>
                                         </div>
                                     </div>
@@ -73,19 +73,19 @@
                                 <div class="row">
                                     <div class="col-md-12 col-lg-12 col-sm-12">
                                         <div class="form-group label-floating">
-                                            <p>Collaborators are allowed to create, edit and remove tickets from the proyect, but not allowed to edit or remove the proyect. Search then by their username (email) separated by comma (,).</p>
+                                            <p>Collaborators are allowed to create, edit and remove tickets from the proyect, but not allowed to edit or remove the proyect. Search then by their username (email) separated by a space ( ).</p>
                                         </div>
                                     </div>
                                     <div class="col-md-10 col-lg-10 col-sm-10">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Invite people</label>
                                             <asp:TextBox runat="server" ID="managep_invitepeople" CssClass="form-control"></asp:TextBox>
-                                            <div class="help-block">For example: brian@gmail.com, strongsqueleton@outlook.com, creeper@mojang.net..</div>
+                                            <div class="help-block">For example: brian@gmail.com strongsqueleton@outlook.com creeper@mojang.net..</div>
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-lg-2 col-sm-2">
                                         <div class="form-group label-floating">
-                                            <asp:Button runat="server" ID="managep_addcollaborators" CssClass="btn btn-primary" Text="Invite users" />
+                                            <asp:Button runat="server" ID="managep_addcollaborators" CssClass="btn btn-primary" Text="Invite users" OnClick="managep_addcollaborators_Click" />
                                         </div>
                                     </div>
                                     <div class="col-md-12 col-lg-12 col-sm-12">
@@ -125,7 +125,7 @@
                                         <div class="form-group label-floating">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" runat="server" id="managep_checkbox_delete"  />
+                                                    <input type="checkbox" runat="server" id="managep_checkbox_delete" />
                                                     Confirm to delete.
                                                 </label>
                                             </div>

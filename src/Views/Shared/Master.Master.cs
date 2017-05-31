@@ -184,7 +184,7 @@ namespace lovis.Views.Shared
             //string[] urlsplit = url.Split('/');
 
             string dashboardurl = "/Views/Dashboard/Dashboard.aspx";
-            string newproyecturl = "/Views/Proyects/AddProyect.aspx";
+            //string newproyecturl = "/Views/Proyects/AddProyect.aspx";
             string proyecturl = "/Views/Proyects/Proyects.aspx";
             string BASEproyecturl = "/Views/Proyects/Proyects.aspx";
 

@@ -22,7 +22,7 @@ namespace lovis.Views.Proyects
 
             // Create proyect to license
             Controllers.Proyects.Proyects a = new Controllers.Proyects.Proyects(addp_title.Text, addp_summary.Text, addp_owner.Text, addp_webiste.Text, addp_repository.Text, addp_support.Text, CU);
-
+            Controllers.Email.Email.SendEmailProjectNotification(CU.Username, addp_title.Text, addp_summary.Text, addp_owner.Text, addp_webiste.Text, addp_repository.Text, addp_support.Text, CU.Name + " " + CU.Surname);
             //Redirecto to dashboard
             Response.Redirect("~/Views/Proyects/Proyects.aspx?id=" + a.IdLicense);
         }

@@ -89,7 +89,7 @@ namespace lovis.Views.Proyects
             var query = (from lUL in Controllers.Users.Users.uLTest
                          join UL in Controllers.UserLicense.UserLicense.lUL on lUL.Id equals UL.IdUser
                          where UL.IdLicense == cP.IdLicense
-                         select lUL).ToList();
+                         select lUL).Distinct().ToList();
 
             StringBuilder sb = new StringBuilder();
 
