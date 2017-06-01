@@ -47,6 +47,7 @@ namespace lovis.Views.Proyects.Element
                     managee_priority.Items.Add(new ListItem("Critical", "Critical"));
                     /// States
                     managee_state.Items.Add(new ListItem("New", "New"));
+                    managee_state.Items.Add(new ListItem("Analysis", "Analysis"));
                     managee_state.Items.Add(new ListItem("In-Progress", "In-Progress"));
                     managee_state.Items.Add(new ListItem("Resolved", "Resolved"));
                     managee_state.Items.Add(new ListItem("Test", "Test"));

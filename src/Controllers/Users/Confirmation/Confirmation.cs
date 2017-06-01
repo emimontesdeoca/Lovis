@@ -40,8 +40,17 @@ namespace lovis.Controllers.Users.Confirmation
 
         public void Activate(string token, string username)
         {
-            var nu = lC.Single(x => x.Username == username && x.Token == token);
-            new Controllers.Users.Users(nu.Username, nu.Password, nu.Name, nu.Surname).New();
+            try
+            {
+                var nu = lC.Single(x => x.Username == username && x.Token == token);
+                new Controllers.Users.Users(nu.Username, nu.Password, nu.Name, nu.Surname).New();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
 
         }
 

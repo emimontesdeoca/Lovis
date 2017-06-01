@@ -47,6 +47,7 @@ namespace lovis.Views.Proyects.Element
                 /// States
                 /// 
                 adde_state.Items.Add(new ListItem("New", "New"));
+                adde_state.Items.Add(new ListItem("Analysis", "Analysis"));
                 adde_state.Items.Add(new ListItem("In-Progress", "In-Progress"));
                 adde_state.Items.Add(new ListItem("Resolved", "Resolved"));
                 adde_state.Items.Add(new ListItem("Test", "Test"));

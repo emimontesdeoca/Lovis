@@ -177,6 +177,10 @@ namespace lovis.Views.Proyects
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-danger"">{0}</span></td>", b);
                                 }
+                                else if (b == "Analysis")
+                                {
+                                    sb.AppendFormat(@"<td class=""project-table""><span class=""label label-default"">{0}</span></td>", b);
+                                }
                                 else if (b == "In-Progress")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-primary"">{0}</span></td>", b);

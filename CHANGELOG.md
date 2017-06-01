@@ -8,6 +8,9 @@ All notable changes to this project will be documented in this file.
 ### Add
 - Email confirmation sent when register.
 - User needs to confirm in order to actually register.
+- Inviting people to project sends an email that has to be confirmed.
+- Dashboard number are calculated from open task in all user projects.
+- Added a class with constants that are being repeated a lot.
 
 ## [0.3.1] - 31/05/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add

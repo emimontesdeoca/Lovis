@@ -11,23 +11,27 @@
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
-                        <div class="card-header" data-background-color="gray">
+                        <div class="card-header" data-background-color="red">
                             <i class="material-icons">content_copy</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Pending</p>
-                            <h3 class="title">5</h3>
+                            <p class="category">New</p>
+                            <h3 class="title">
+                                <asp:Literal runat="server" ID="newTaskCounter"></asp:Literal></h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
-                        <div class="card-header" data-background-color="red">
+                        <div class="card-header" data-background-color="gray">
                             <i class="material-icons">announcement</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Analysis</p>
-                            <h3 class="title">20</h3>
+                            <p class="category">
+                                Analysis
+                            </p>
+                            <h3 class="title">
+                                <asp:Literal runat="server" ID="analysisTaskCounter"></asp:Literal></h3>
                         </div>
                     </div>
                 </div>
@@ -37,8 +41,11 @@
                             <i class="material-icons">code</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Doing</p>
-                            <h3 class="title">25</h3>
+                            <p class="category" style="font-size: 10px !important">
+                                In-Progress
+                            </p>
+                            <h3 class="title">
+                                <asp:Literal runat="server" ID="inprogressTaskCounter"></asp:Literal></h3>
                         </div>
                     </div>
                 </div>
@@ -49,8 +56,11 @@
                             <i class="material-icons">done</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Closed</p>
-                            <h3 class="title">25</h3>
+                            <p class="category" style="font-size: 10px !important">
+                                Resolved
+                            </p>
+                            <h3 class="title">
+                                <asp:Literal runat="server" ID="resolvedTaskCounter"></asp:Literal></h3>
                         </div>
                     </div>
                 </div>
@@ -60,8 +70,11 @@
                             <i class="material-icons">spellcheck</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Test</p>
-                            <h3 class="title">25</h3>
+                            <p class="category">
+                                Test
+                            </p>
+                            <h3 class="title">
+                                <asp:Literal runat="server" ID="testTaskCounter"></asp:Literal></h3>
                         </div>
                     </div>
                 </div>
@@ -71,13 +84,16 @@
                             <i class="material-icons">done_all</i>
                         </div>
                         <div class="card-content">
-                            <p class="category">Finished</p>
-                            <h3 class="title">25</h3>
+                            <p class="category">
+                                Closed
+                            </p>
+                            <h3 class="title">
+                                <asp:Literal runat="server" ID="closedTaskCounter"></asp:Literal></h3>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <%--<div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="card card-nav-tabs">
                         <div class="card-header" data-background-color="purple">
@@ -365,7 +381,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div>--%>
         </div>
     </div>
 

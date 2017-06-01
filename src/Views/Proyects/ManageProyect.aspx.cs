@@ -104,8 +104,6 @@ namespace lovis.Views.Proyects
                 /// Set it
                 proyect_people.InnerText = sb.ToString();
             }
-
-
         }
 
         protected void managep_update_Click(object sender, EventArgs e)
@@ -147,13 +145,35 @@ namespace lovis.Views.Proyects
 
         protected void managep_addcollaborators_Click(object sender, EventArgs e)
         {
+            /// Get the current proyect previously.
+            Controllers.Proyects.Proyects CP = Session["Proyect"] as Controllers.Proyects.Proyects;
+
             string[] cb = managep_invitepeople.Text.Split(' ');
             string fullPATH = HttpContext.Current.Request.Url.AbsoluteUri;
             string[] splitnpu = fullPATH.Split('=');
+
             foreach (string t in cb)
             {
-                var x = Controllers.Users.Users.uLTest.Single(a => Security.CryptoUtils.DecodeUsername(a.Username) == t);
-                new Controllers.UserLicense.UserLicense(x.Id, splitnpu[1], 1, false);
+                try
+                {
+                    var x = Controllers.Users.Users.uLTest.Single(a => Security.CryptoUtils.DecodeUsername(a.Username) == t);
+
+                    Controllers.UserLicense.Confirmation.Confirmation c = new Controllers.UserLicense.Confirmation.Confirmation(x.Id, splitnpu[1], 1);
+                    c.Add();
+
+                    string user = Security.CryptoUtils.DecodeUsername(x.Username);
+                    string name = Security.CryptoUtils.DecodeUserString(x.Name, x);
+                    string surname = Security.CryptoUtils.DecodeUserString(x.Surname, x);
+                    string owner = CP.Owner;
+                    string projectname = CP.Title;
+
+                    Controllers.Email.Email.SendEmailInvitationProject(user, owner, c.Token, name, surname, projectname, c.DateExpiration);
+                }
+                catch (Exception)
+                {
+
+                    break;
+                }
             }
 
             Response.Redirect("~/Views/Proyects/Proyects.aspx?id=" + splitnpu[1]);
