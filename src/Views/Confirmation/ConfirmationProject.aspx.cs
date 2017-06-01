@@ -16,10 +16,13 @@ namespace lovis.Views.Confirmation
             try
             {
                 new Controllers.UserLicense.Confirmation.Confirmation().Activate(splitnpu[1]);
+                text.InnerText = "Confirmation complete, redirecting to Lovis in 5 seconds...";
             }
             catch (Exception)
             {
+                text.InnerText = "There was an error, redirecting to Lovis in 5 seconds...";
             }
+            System.Threading.Thread.Sleep(5000);
 
             Response.Redirect("~/Views/Login/Login.aspx");
         }

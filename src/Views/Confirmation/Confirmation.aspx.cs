@@ -16,12 +16,16 @@ namespace lovis.Views.Confirmation
 
             string[] token = splitnpu[1].Split('=');
             string[] username = splitnpu[2].Split('=');
+
             try
             {
                 new Controllers.Users.Confirmation.Confirmation().Activate(token[1], username[1]);
+                text.InnerText = "Confirmation completed, redirecting to Lovis in 5 seconds...";
+
             }
             catch (Exception)
             {
+                text.InnerText = "There was an error, redirecting to Lovis in 5 seconds...";
             }
 
             Response.Redirect("~/Views/Login/Login.aspx");

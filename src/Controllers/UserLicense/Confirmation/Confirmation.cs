@@ -40,7 +40,15 @@ namespace lovis.Controllers.UserLicense.Confirmation
             try
             {
                 var x = lUC.Single(a => a.Token == token);
-                new Controllers.UserLicense.UserLicense(x.IdUser, x.IdLicense, x.Role, false);
+                if (x.DateCreation.AddHours(24) < x.DateExpiration)
+                {
+                    new Controllers.UserLicense.UserLicense(x.IdUser, x.IdLicense, x.Role, false);
+                }
+                else
+                {
+                    lUC.Remove(x);
+                    new Exception();
+                }
             }
             catch (Exception)
             {

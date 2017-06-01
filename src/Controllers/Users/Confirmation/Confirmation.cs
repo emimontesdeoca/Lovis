@@ -35,7 +35,7 @@ namespace lovis.Controllers.Users.Confirmation
         public void Add()
         {
             lC.Add(this);
-            Controllers.Email.Email.SendEmailConfirmationRegistration(this.Username, this.Token, this.Name, this.Surname,this.DateExpiration);
+            Controllers.Email.Email.SendEmailConfirmationRegistration(this.Username, this.Token, this.Name, this.Surname, this.DateExpiration);
         }
 
         public void Activate(string token, string username)
@@ -43,14 +43,22 @@ namespace lovis.Controllers.Users.Confirmation
             try
             {
                 var nu = lC.Single(x => x.Username == username && x.Token == token);
-                new Controllers.Users.Users(nu.Username, nu.Password, nu.Name, nu.Surname).New();
+                if (nu.DateCreation.AddHours(24) < nu.DateExpiration)
+                {
+                    new Controllers.Users.Users(nu.Username, nu.Password, nu.Name, nu.Surname).New();
+                }
+                else
+                {
+                    lC.Remove(nu);
+                    new Exception();
+                }
             }
             catch (Exception)
             {
 
                 throw;
             }
-            
+
 
         }
 

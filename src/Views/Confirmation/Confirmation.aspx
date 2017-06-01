@@ -10,6 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <h2 style="text-align: center" runat="server" id="text"></h2>
         </div>
     </form>
 </body>
