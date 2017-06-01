@@ -85,6 +85,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="text-center text-warning">An email will be sent with a link to confirm the registration.</p>
+                                    </div>
+                                </div>
                                 <div class="text-center">
                                     <asp:Button runat="server" ID="reg_register" OnClick="reg_register_Click" CssClass="btn btn-primary" Text="Register" />
                                 </div>

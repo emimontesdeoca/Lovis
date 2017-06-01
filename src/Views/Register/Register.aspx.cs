@@ -18,7 +18,8 @@ namespace lovis.Views.Register
         {
             if (reg_password.Text == reg_repeatpassword.Text && reg_checkbox.Checked)
             {
-                new Controllers.Users.Users(reg_email.Text, reg_password.Text, reg_name.Text, reg_surname.Text).New();
+                new Controllers.Users.Confirmation.Confirmation(reg_email.Text, reg_password.Text, reg_name.Text, reg_surname.Text).Add();
+                //new Controllers.Users.Users(reg_email.Text, reg_password.Text, reg_name.Text, reg_surname.Text).New();
                 Response.Redirect("~/Views/Login/Login.aspx");
             }
         }

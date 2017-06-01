@@ -59,6 +59,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Confirmation\Confirmation.aspx" />
     <Content Include="Views\Error\404.aspx" />
     <Content Include="Views\Login\Login.aspx" />
     <Content Include="Views\Proyects\AddProyect.aspx" />
@@ -92,9 +93,18 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Const\Const.cs" />
     <Compile Include="Controllers\Dashboard\Dashboard.cs" />
     <Compile Include="Controllers\Elements\Elements.cs" />
     <Compile Include="Controllers\Email\Email.cs" />
+    <Compile Include="Controllers\Users\Confirmation\Confirmation.cs" />
+    <Compile Include="Views\Confirmation\Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Confirmation\Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Error\404.aspx.cs">
       <DependentUpon>404.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -21,14 +21,12 @@ namespace lovis.Views.Login
                 /// Test accs
                 if (Controllers.Users.Users.uLTest.Exists(x => Security.CryptoUtils.DecodeUsername(x.Username) == "test@test.com"))
                 {
-
                 }
                 else
                 {
-                    new Controllers.Users.Users("emontesdeoc@gmail.com", "test", "Emiliano", "Montesdeoca").New();
                     new Controllers.Users.Users("test@test.com", "test", "Daniel", "Montesdeoca").New();
-                    new Controllers.Users.Users("test2@test.com", "test", "Luis", "Sanfiel").New();
                 }
+
                 login_error.Visible = false;
             }
             else
