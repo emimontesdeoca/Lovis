@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
+## [0.3.3] - 02/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- Dashboard squares style.
+
 ## [0.3.2] - 01/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - Email confirmation sent when register.

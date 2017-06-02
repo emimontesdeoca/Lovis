@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -11,6 +12,14 @@ namespace lovis.Views.Dashboard
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            BuildCounters();
+
+
+        }
+
+        public void BuildCounters()
+        {
+
             int newCounter = 0;
             int analysisCounter = 0;
             int inprogressCounter = 0;
@@ -24,7 +33,6 @@ namespace lovis.Views.Dashboard
 
             /// Get proyects from user to build sidebar
             List<Controllers.Proyects.Proyects> CuLP = new List<Controllers.Proyects.Proyects>();
-
             foreach (Controllers.UserLicense.UserLicense UL in Controllers.UserLicense.UserLicense.lUL)
             {
                 /// Find Userlicenses of user
@@ -93,12 +101,23 @@ namespace lovis.Views.Dashboard
 
             }
 
+            /// Set values to counters in dashboard
             newTaskCounter.Text = newCounter.ToString();
             analysisTaskCounter.Text = analysisCounter.ToString();
             inprogressTaskCounter.Text = inprogressCounter.ToString();
             resolvedTaskCounter.Text = resolvedCounter.ToString();
             testTaskCounter.Text = testCounter.ToString();
             closedTaskCounter.Text = closedCounter.ToString();
+
+            BuildInfoSquares(CuLP);
+        }
+
+        public void BuildInfoSquares(List<Controllers.Proyects.Proyects> CuLP)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendFormat(@"");
+
         }
     }
 }

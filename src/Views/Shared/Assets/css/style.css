@@ -131,3 +131,20 @@ legend.scheduler-border {
 .project-table {
     padding: 0px 10px !important;
 }
+
+
+.dashboard-squares-title {
+    margin-top: 0px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.dashboard-ul li {
+    float: none !important;
+    margin-bottom: -1px !important;
+    display: inline-block !important;
+}
+
+.dashboard-a-squares {
+    display: inline-block;
+}

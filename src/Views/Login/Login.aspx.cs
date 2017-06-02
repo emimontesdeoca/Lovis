@@ -25,7 +25,7 @@ namespace lovis.Views.Login
                 else
                 {
                     new Controllers.Users.Users("test@test.com", "test", "Daniel", "Montesdeoca").New();
-                    //new Controllers.Users.Users("emontesdeoc@gmail.com", "test", "Emiliano", "Montesdeoca").New();
+                    new Controllers.Users.Users("emontesdeoc@gmail.com", "test", "Emiliano", "Montesdeoca").New();
                 }
 
                 login_error.Visible = false;
