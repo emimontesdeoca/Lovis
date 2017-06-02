@@ -40,7 +40,7 @@ namespace lovis.Controllers.UserLicense.Confirmation
             try
             {
                 var x = lUC.Single(a => a.Token == token);
-                if (x.DateCreation.AddHours(24) < x.DateExpiration)
+                if (DateTime.Now < x.DateExpiration)
                 {
                     new Controllers.UserLicense.UserLicense(x.IdUser, x.IdLicense, x.Role, false);
                 }

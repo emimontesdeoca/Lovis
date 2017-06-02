@@ -8,6 +8,9 @@ All notable changes to this project will be documented in this file.
 ### Add
 - Dashboard squares style.
 
+### Fixes
+- Changes to expiration date when confirming the registration and confirming project's invitations.
+
 ## [0.3.2] - 01/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - Email confirmation sent when register.

@@ -43,7 +43,7 @@ namespace lovis.Controllers.Users.Confirmation
             try
             {
                 var nu = lC.Single(x => x.Username == username && x.Token == token);
-                if (nu.DateCreation.AddHours(24) < nu.DateExpiration)
+                if (DateTime.Now < nu.DateExpiration)
                 {
                     new Controllers.Users.Users(nu.Username, nu.Password, nu.Name, nu.Surname).New();
                 }
