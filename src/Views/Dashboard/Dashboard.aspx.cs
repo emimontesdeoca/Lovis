@@ -123,7 +123,7 @@ namespace lovis.Views.Dashboard
                 sb.AppendFormat(@"<div class=""card-header"" data-background-color=""purple"">");
                 sb.AppendFormat(@"<div class=""nav-tabs-navigation"">");
                 sb.AppendFormat(@"<div class=""nav-tabs-wrapper"">");
-                sb.AppendFormat(@"<h4 class=""dashboard-squares-title"">{0}</h4>", p.Title);
+                sb.AppendFormat(@"<h4 class=""dashboard-squares-title"">{0}</h4>",Security.CryptoUtils.DecodeElementString(p, p.Title));
                 sb.AppendFormat(@"<ul class=""nav nav-tabs text-center dashboard-ul"" data-tabs=""tabs"">");
                 sb.AppendFormat(@"<li class=""active"">");
                 sb.AppendFormat(@"<a href=""#{0}"" data-toggle=""tab"">New<div class=""ripple-container""></div></a>", p.Id + "new");
@@ -183,10 +183,11 @@ namespace lovis.Views.Dashboard
                     sb.AppendFormat(@"<div class=""tab-pane active"" id=""{0}"">", p.Id + s);
                     sb.AppendFormat(@"<table class=""table"">");
                     sb.AppendFormat(@"<tbody>");
+                    sb.AppendFormat(@"<tr>");
                     sb.AppendFormat(@"<td class=""project-table""><b>Priority</b></td>");
                     sb.AppendFormat(@"<td class=""project-table""><b>Type</b></td>");
                     sb.AppendFormat(@"<td><b>Title</b></td>");
-                    sb.AppendFormat(@"td class=""td-actions text-right""><b>Edit</b></td>");
+                    sb.AppendFormat(@"<td class=""td-actions text-right""><b>Edit</b></td>");
                     sb.AppendFormat(@"</tr>");
 
                     var query = (from a in Controllers.Elements.Elements.lE
@@ -195,6 +196,7 @@ namespace lovis.Views.Dashboard
                     /// Elements 
                     foreach (Controllers.Elements.Elements e in query)
                     {
+                        sb.AppendFormat(@"<tr>");
                         string pr = "";
                         /// Priority
                         switch (e.Priority)
@@ -256,11 +258,18 @@ namespace lovis.Views.Dashboard
                     }
                 }
 
-                sb.AppendFormat(@"");
-                sb.AppendFormat(@"");
-                sb.AppendFormat(@"");
-            }
 
+                sb.AppendFormat(@"</tbody>");
+                sb.AppendFormat(@"</table>");
+                sb.AppendFormat(@"</div>");
+                sb.AppendFormat(@"</div>");
+                sb.AppendFormat(@"</div>");
+                sb.AppendFormat(@"</div>");
+
+
+
+            }
+            squares.Text = sb.ToString();
 
         }
     }

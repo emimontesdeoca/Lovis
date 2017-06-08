@@ -67,6 +67,15 @@ namespace lovis.Views.Dashboard {
         protected global::System.Web.UI.WebControls.Literal closedTaskCounter;
         
         /// <summary>
+        /// Control squares.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal squares;
+        
+        /// <summary>
         /// Propiedad Master.
         /// </summary>
         /// <remarks>

@@ -94,7 +94,9 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-12">
+            <asp:Literal runat="server" ID="squares"></asp:Literal>
+
+            <%--<div class="col-lg-6 col-md-12">
                 <div class="card card-nav-tabs">
                     <div class="card-header" data-background-color="purple">
                         <div class="nav-tabs-navigation">
@@ -358,12 +360,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-
-
-
-
+            </div>--%>
         </div>
     </div>
 
