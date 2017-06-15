@@ -110,6 +110,7 @@ namespace lovis.Views.User
                 loginUser.LastModification = x.LastModification;
                 loginUser.RandomKey = x.RandomKey;
                 loginUser.PasswordHash = x.PasswordHash;
+                loginUser.isPublic = x.isPublic;
 
                 /// Clear Session
                 Session.Clear();

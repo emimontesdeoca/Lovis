@@ -261,5 +261,10 @@ namespace lovis.Views.Shared
             Session.Clear();
             Response.Redirect("/Views/Login/Login.aspx");
         }
+
+        protected void btnSearch_ServerClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

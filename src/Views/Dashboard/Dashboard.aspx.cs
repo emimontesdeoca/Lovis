@@ -109,7 +109,7 @@ namespace lovis.Views.Dashboard
             testTaskCounter.Text = testCounter.ToString();
             closedTaskCounter.Text = closedCounter.ToString();
 
-            BuildInfoSquares(CuLP);
+            //BuildInfoSquares(CuLP);
         }
 
         public void BuildInfoSquares(List<Controllers.Proyects.Proyects> CuLP)

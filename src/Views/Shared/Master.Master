@@ -48,7 +48,17 @@
                             <a class="navbar-brand" style="font-size: 26px; line-height: 30px;" runat="server" id="Master_pagetitle"></a>
                         </div>
                         <div class="collapse navbar-collapse">
+
                             <ul class="nav navbar-nav navbar-right">
+                                <li class="navbar-form navbar-left" role="search">
+                                    <div class="form-group  is-empty">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <span class="material-input"></span>
+                                    </div>
+                                    <button runat="server" id="btnSearch" onserverclick="btnSearch_ServerClick" type="submit" class="btn btn-white btn-round btn-just-icon">
+                                        <i class="material-icons">search</i><div class="ripple-container"></div>
+                                    </button>
+                                </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="material-icons">add</i><i class="material-icons" style="font-size: 15px;">keyboard_arrow_down</i>
@@ -93,7 +103,9 @@
                                             <asp:LinkButton runat="server" ID="master_logout" OnClick="master_logout_Click">Sign out</asp:LinkButton>
                                         </li>
                                     </ul>
+
                                 </li>
+
                             </ul>
                         </div>
                     </div>
