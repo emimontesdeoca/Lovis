@@ -63,7 +63,8 @@
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
-                                    <div class="card-content table-responsive">
+                                    <asp:Literal runat="server" ID="txtBug"></asp:Literal>
+                                    <div class="card-content table-responsive" runat="server" id="divBug">
                                         <table class="table" style="margin-bottom: 0px !important">
                                             <thead class="text-primary">
                                                 <th>Title</th>
@@ -91,9 +92,11 @@
                                     </h4>
                                 </a>
                             </div>
+
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
-                                    <div class="card-content table-responsive">
+                                    <asp:Literal runat="server" ID="txtDefect"></asp:Literal>
+                                    <div class="card-content table-responsive" runat="server" id="divDefect">
                                         <table class="table" style="margin-bottom: 0px !important">
                                             <thead class="text-primary">
                                                 <th>Title</th>
@@ -123,7 +126,8 @@
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
-                                    <div class="card-content table-responsive">
+                                    <asp:Literal runat="server" ID="txtPatches"></asp:Literal>
+                                    <div class="card-content table-responsive" runat="server" id="divPatches">
                                         <table class="table" style="margin-bottom: 0px !important">
                                             <thead class="text-primary">
                                                 <th>Title</th>
@@ -147,13 +151,14 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingFour">
                                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                    <h4 class="panel-title">Changes
+                                    <h4 class="panel-title">Changes 
                                     </h4>
                                 </a>
                             </div>
                             <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                                 <div class="panel-body">
-                                    <div class="card-content table-responsive">
+                                    <asp:Literal runat="server" ID="txtChanges"></asp:Literal>
+                                    <div class="card-content table-responsive" runat="server" id="divChanges">
                                         <table class="table" style="margin-bottom: 0px !important">
                                             <thead class="text-primary">
                                                 <th>Title</th>
@@ -177,13 +182,14 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingFive">
                                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                                    <h4 class="panel-title">Feature
+                                    <h4 class="panel-title">Feature 
                                     </h4>
                                 </a>
                             </div>
                             <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                                 <div class="panel-body">
-                                    <div class="card-content table-responsive">
+                                    <asp:Literal runat="server" ID="txtFeature"></asp:Literal>
+                                    <div class="card-content table-responsive" runat="server" id="divFeatures">
                                         <table class="table" style="margin-bottom: 0px !important">
                                             <thead class="text-primary">
                                                 <th>Title</th>
@@ -207,13 +213,14 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingSix">
                                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                                    <h4 class="panel-title">Support
+                                    <h4 class="panel-title">Support 
                                     </h4>
                                 </a>
                             </div>
                             <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
                                 <div class="panel-body">
-                                    <div class="card-content table-responsive">
+                                    <asp:Literal runat="server" ID="txtSupport"></asp:Literal>
+                                    <div class="card-content table-responsive" runat="server" id="divSupport">
                                         <table class="table" style="margin-bottom: 0px !important">
                                             <thead class="text-primary">
                                                 <th>Title</th>
@@ -237,13 +244,14 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingSeven">
                                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                                    <h4 class="panel-title">Review
+                                    <h4 class="panel-title">Review 
                                     </h4>
                                 </a>
                             </div>
                             <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
                                 <div class="panel-body">
-                                    <div class="card-content table-responsive">
+                                    <asp:Literal runat="server" ID="txtReview"></asp:Literal>
+                                    <div class="card-content table-responsive" runat="server" id="divReview">
                                         <table class="table" style="margin-bottom: 0px !important">
                                             <thead class="text-primary">
                                                 <th>Title</th>
@@ -273,7 +281,8 @@
                             </div>
                             <div id="collapseEigth" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEigth">
                                 <div class="panel-body">
-                                    <div class="card-content table-responsive">
+                                    <asp:Literal runat="server" ID="txtDocumentation"></asp:Literal>
+                                    <div class="card-content table-responsive" runat="server" id="divDocumentation">
                                         <table class="table" style="margin-bottom: 0px !important">
                                             <thead class="text-primary">
                                                 <th>Title</th>
@@ -297,13 +306,14 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingNine">
                                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
-                                    <h4 class="panel-title">Closed
+                                    <h4 class="panel-title">Closed 
                                     </h4>
                                 </a>
                             </div>
                             <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
                                 <div class="panel-body">
-                                    <div class="card-content table-responsive">
+                                    <asp:Literal runat="server" ID="txtClosed"></asp:Literal>
+                                    <div class="card-content table-responsive" runat="server" id="divClosed">
                                         <table class="table" style="margin-bottom: 0px !important">
                                             <thead class="text-primary">
                                                 <th>Title</th>

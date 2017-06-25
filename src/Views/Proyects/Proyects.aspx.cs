@@ -10,6 +10,16 @@ namespace lovis.Views.Proyects
 {
     public partial class Proyects : System.Web.UI.Page
     {
+        static int iClosed = 0;
+        static int iBug = 0;
+        static int iDefect = 0;
+        static int iChanges = 0;
+        static int iPatch = 0;
+        static int iReview = 0;
+        static int iFeature = 0;
+        static int iSupport = 0;
+        static int iDocumentation = 0;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             Controllers.Users.Users CU = Session["User"] as Controllers.Users.Users;
@@ -133,46 +143,81 @@ namespace lovis.Views.Proyects
                           select a).OrderByDescending(d => d.DateCreation).ToList();
 
             StringBuilder sb = new StringBuilder();
-            int i = 0;
+
             if (query3.Count > 0)
             {
                 foreach (Controllers.Elements.Elements ea in query3)
                 {
+                    string a = Security.CryptoUtils.DecodeElementString(cP, ea.Type);
+                    string b = Security.CryptoUtils.DecodeElementString(cP, ea.State);
+                    string c = Security.CryptoUtils.DecodeElementString(cP, ea.Title);
+                    string d = Security.CryptoUtils.DecodeElementString(cP, ea.Priority);
+                    string f = Security.CryptoUtils.DecodeElementString(cP, ea.AssignedTo);
+
+                    var u = Controllers.Users.Users.uLTest.Single(s => s.Id == f);
+                    f = Security.CryptoUtils.DecodeUserString(u.Name, u) + " " + Security.CryptoUtils.DecodeUserString(u.Surname, u);
+
                     switch (state)
                     {
                         case 1:
-                            if (Security.CryptoUtils.DecodeElementString(cP, ea.Type) == type && Security.CryptoUtils.DecodeElementString(cP, ea.State) != "Closed")
+                            if (a == type && b != "Closed")
                             {
                                 sb.AppendFormat(@"<tr>");
 
                                 /// Title
-                                string c = Security.CryptoUtils.DecodeElementString(cP, ea.Title);
                                 sb.AppendFormat(@"<td class=""project-table"">{0}</td>", c);
 
                                 /// Type
-                                string a = Security.CryptoUtils.DecodeElementString(cP, ea.Type);
                                 if (a == "Bug" || a == "Defect")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-danger"">{0}</span></td>", a);
+                                    if (a == "Bug")
+                                    {
+                                        iBug++;
+                                    }
+                                    else
+                                    {
+                                        iDefect++;
+                                    }
                                 }
                                 else if (a == "Changes" || a == "Patch")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-warning"">{0}</span></td>", a);
-
+                                    if (a == "Changes")
+                                    {
+                                        iChanges++;
+                                    }
+                                    else
+                                    {
+                                        iPatch++;
+                                    }
                                 }
                                 else if (a == "Review" || a == "Feature")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-info"">{0}</span></td>", a);
-
+                                    if (a == "Review")
+                                    {
+                                        iReview++;
+                                    }
+                                    else
+                                    {
+                                        iFeature++;
+                                    }
                                 }
                                 else if (a == "Support" || a == "Documentation")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-success"">{0}</span></td>", a);
-
+                                    if (a == "Support")
+                                    {
+                                        iSupport++;
+                                    }
+                                    else
+                                    {
+                                        iDocumentation++;
+                                    }
                                 }
 
                                 /// State
-                                string b = Security.CryptoUtils.DecodeElementString(cP, ea.State);
                                 if (b == "New")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-danger"">{0}</span></td>", b);
@@ -199,7 +244,6 @@ namespace lovis.Views.Proyects
                                 }
 
                                 /// Priority
-                                string d = Security.CryptoUtils.DecodeElementString(cP, ea.Priority);
                                 if (d == "Low")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-info"">{0}</span></td>", d);
@@ -218,9 +262,6 @@ namespace lovis.Views.Proyects
                                 }
 
                                 /// Assignation
-                                string f = Security.CryptoUtils.DecodeElementString(cP, ea.AssignedTo);
-                                var u = Controllers.Users.Users.uLTest.Single(s => s.Id == f);
-                                f = Security.CryptoUtils.DecodeUserString(u.Name, u) + " " + Security.CryptoUtils.DecodeUserString(u.Surname, u);
                                 sb.AppendFormat(@"<td class=""project-table"">{0}</td>", f);
 
                                 /// Dates
@@ -235,25 +276,20 @@ namespace lovis.Views.Proyects
                                 sb.AppendFormat(@"</button>");
                                 sb.AppendFormat(@"</td>");
 
-
                                 sb.AppendFormat(@"</tr>");
 
                                 res = sb.ToString();
-                                i++;
-
                             }
                             break;
                         case 2:
-                            if (Security.CryptoUtils.DecodeElementString(cP, ea.State) == "Closed")
+                            if (b == "Closed")
                             {
                                 sb.AppendFormat(@"<tr>");
 
-                                /// Title
-                                string c = Security.CryptoUtils.DecodeElementString(cP, ea.Title);
+                                /// Title                            
                                 sb.AppendFormat(@"<td class=""project-table"">{0}</td>", c);
 
-                                /// Type
-                                string a = Security.CryptoUtils.DecodeElementString(cP, ea.Type);
+                                /// Type                              
                                 if (a == "Bug" || a == "Defect")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-danger"">{0}</span></td>", a);
@@ -261,21 +297,17 @@ namespace lovis.Views.Proyects
                                 else if (a == "Changes" || a == "Patch")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-warning"">{0}</span></td>", a);
-
                                 }
                                 else if (a == "Review" || a == "Feature")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-info"">{0}</span></td>", a);
-
                                 }
                                 else if (a == "Support" || a == "Documentation")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-success"">{0}</span></td>", a);
-
                                 }
 
                                 /// State
-                                string b = Security.CryptoUtils.DecodeElementString(cP, ea.State);
                                 if (b == "New")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-danger"">{0}</span></td>", b);
@@ -298,7 +330,6 @@ namespace lovis.Views.Proyects
                                 }
 
                                 /// Priority
-                                string d = Security.CryptoUtils.DecodeElementString(cP, ea.Priority);
                                 if (d == "Low")
                                 {
                                     sb.AppendFormat(@"<td class=""project-table""><span class=""label label-info"">{0}</span></td>", d);
@@ -317,9 +348,6 @@ namespace lovis.Views.Proyects
                                 }
 
                                 /// Assignation
-                                string f = Security.CryptoUtils.DecodeElementString(cP, ea.AssignedTo);
-                                var u = Controllers.Users.Users.uLTest.Single(s => s.Id == f);
-                                f = Security.CryptoUtils.DecodeUserString(u.Name, u) + " " + Security.CryptoUtils.DecodeUserString(u.Surname, u);
                                 sb.AppendFormat(@"<td class=""project-table"">{0}</td>", f);
 
                                 /// Dates
@@ -337,25 +365,66 @@ namespace lovis.Views.Proyects
 
                                 sb.AppendFormat(@"</tr>");
 
+                                iClosed++;
                                 res = sb.ToString();
-                                i++;
-
                             }
                             break;
                     }
+
+
                 }
             }
-            if (i == 0)
+
+            // Error message shown when theres is not task or whatever
+            string txterror = @"<p class=""text-center"" style=""margin: 0 0 0 0;"">No task or issues found for this category.</p>";
+
+            if (iBug == 0)
             {
-                sb.AppendFormat(@"<p class=""text-center"">No task or issues found for this category.</p>");
-                res = sb.ToString();
-                return res;
+                txtBug.Text = txterror;
+                divBug.Visible = false;
             }
-            else
+            if (iDefect == 0)
             {
-                return res;
+                txtDefect.Text = txterror;
+                divDefect.Visible = false;
+            }
+            if (iChanges == 0)
+            {
+                txtChanges.Text = txterror;
+                divChanges.Visible = false;
+            }
+            if (iPatch == 0)
+            {
+                txtPatches.Text = txterror;
+                divPatches.Visible = false;
+            }
+            if (iReview == 0)
+            {
+                txtReview.Text = txterror;
+                divReview.Visible = false;
+            }
+            if (iFeature == 0)
+            {
+                txtFeature.Text = txterror;
+                divFeatures.Visible = false;
+            }
+            if (iSupport == 0)
+            {
+                txtSupport.Text = txterror;
+                divSupport.Visible = false;
+            }
+            if (iDocumentation == 0)
+            {
+                txtDocumentation.Text = txterror;
+                divDocumentation.Visible = false;
+            }
+            if (iClosed == 0)
+            {
+                txtClosed.Text = txterror;
+                divClosed.Visible = false;
             }
 
+            return res;
         }
 
         protected void btn_edit_task(object sender, EventArgs e)

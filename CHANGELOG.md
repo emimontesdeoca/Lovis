@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
+## [0.3.4] - 25/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- Fixed tables in project.
+
+### Fixes
+- Fixed some errors in code for project.
+
 ## [0.3.3] - 02/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - Dashboard squares style.

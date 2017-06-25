@@ -85,6 +85,24 @@ namespace lovis.Views.Proyects {
         protected global::System.Web.UI.WebControls.HyperLink proyect_manage;
         
         /// <summary>
+        /// Control txtBug.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal txtBug;
+        
+        /// <summary>
+        /// Control divBug.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divBug;
+        
+        /// <summary>
         /// Control bugPanel.
         /// </summary>
         /// <remarks>
@@ -92,6 +110,24 @@ namespace lovis.Views.Proyects {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal bugPanel;
+        
+        /// <summary>
+        /// Control txtDefect.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal txtDefect;
+        
+        /// <summary>
+        /// Control divDefect.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divDefect;
         
         /// <summary>
         /// Control defectPanel.
@@ -103,6 +139,24 @@ namespace lovis.Views.Proyects {
         protected global::System.Web.UI.WebControls.Literal defectPanel;
         
         /// <summary>
+        /// Control txtPatches.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal txtPatches;
+        
+        /// <summary>
+        /// Control divPatches.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPatches;
+        
+        /// <summary>
         /// Control patchesPanel.
         /// </summary>
         /// <remarks>
@@ -110,6 +164,24 @@ namespace lovis.Views.Proyects {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal patchesPanel;
+        
+        /// <summary>
+        /// Control txtChanges.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal txtChanges;
+        
+        /// <summary>
+        /// Control divChanges.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divChanges;
         
         /// <summary>
         /// Control changesPanel.
@@ -121,6 +193,24 @@ namespace lovis.Views.Proyects {
         protected global::System.Web.UI.WebControls.Literal changesPanel;
         
         /// <summary>
+        /// Control txtFeature.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal txtFeature;
+        
+        /// <summary>
+        /// Control divFeatures.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divFeatures;
+        
+        /// <summary>
         /// Control featurePanel.
         /// </summary>
         /// <remarks>
@@ -128,6 +218,24 @@ namespace lovis.Views.Proyects {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal featurePanel;
+        
+        /// <summary>
+        /// Control txtSupport.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal txtSupport;
+        
+        /// <summary>
+        /// Control divSupport.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divSupport;
         
         /// <summary>
         /// Control supportPanel.
@@ -139,6 +247,24 @@ namespace lovis.Views.Proyects {
         protected global::System.Web.UI.WebControls.Literal supportPanel;
         
         /// <summary>
+        /// Control txtReview.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal txtReview;
+        
+        /// <summary>
+        /// Control divReview.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divReview;
+        
+        /// <summary>
         /// Control reviewPanel.
         /// </summary>
         /// <remarks>
@@ -148,6 +274,24 @@ namespace lovis.Views.Proyects {
         protected global::System.Web.UI.WebControls.Literal reviewPanel;
         
         /// <summary>
+        /// Control txtDocumentation.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal txtDocumentation;
+        
+        /// <summary>
+        /// Control divDocumentation.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divDocumentation;
+        
+        /// <summary>
         /// Control documentationPanel.
         /// </summary>
         /// <remarks>
@@ -155,6 +299,24 @@ namespace lovis.Views.Proyects {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal documentationPanel;
+        
+        /// <summary>
+        /// Control txtClosed.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal txtClosed;
+        
+        /// <summary>
+        /// Control divClosed.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divClosed;
         
         /// <summary>
         /// Control closedPanel.
