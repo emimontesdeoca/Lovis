@@ -4,12 +4,16 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
-## [0.3.4] - 25/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+## [0.3.4] - 26/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - Fixed tables in project.
+- Added Profile page.
+- Added Search page.
 
 ### Fixes
 - Fixed some errors in code for project.
+- Improvements in responsive in various views.
+- Added correct pagetitle for each view.
 
 ## [0.3.3] - 02/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add

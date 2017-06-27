@@ -13,6 +13,7 @@ namespace lovis.Views.Profile
         {
             Controllers.Users.Users u = Session["User"] as Controllers.Users.Users;
 
+            /// Load all values from profile to inputs
             user_username.Text = u.Username;
             user_surname.Text = u.Surname;
             user_skype.Text = u.Skype;
@@ -29,7 +30,8 @@ namespace lovis.Views.Profile
             user_company.Text = "Not yet.";
             user_tw.Text = u.Twitter;
 
-
+            /// Set the page title as your name
+            pageTitle.Text = u.Name + " " + u.Surname + " - Lovis";
         }
     }
 }

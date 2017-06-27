@@ -26,7 +26,7 @@ namespace lovis.Views.Proyects.Element
             else
             {
                 /// Set page title from session
-                pagetitle.Text = cP.Title;
+                pagetitle.Text = cP.Title + " - Lovis";
 
                 /// Fill all the dropowns by backend
                 /// Types

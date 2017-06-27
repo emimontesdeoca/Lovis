@@ -13,6 +13,15 @@ namespace lovis.Views.Profile {
     public partial class Profile {
         
         /// <summary>
+        /// Control pageTitle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal pageTitle;
+        
+        /// <summary>
         /// Control user_company.
         /// </summary>
         /// <remarks>

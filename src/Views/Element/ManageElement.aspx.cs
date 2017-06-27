@@ -104,6 +104,7 @@ namespace lovis.Views.Proyects.Element
                             }
                         }
                     }
+                    pagetitle.Text = managee_title.Text + " - Lovis";
                 }
             }
         }

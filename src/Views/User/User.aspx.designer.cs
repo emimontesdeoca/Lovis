@@ -13,6 +13,15 @@ namespace lovis.Views.User {
     public partial class User {
         
         /// <summary>
+        /// Control pagetitle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal pagetitle;
+        
+        /// <summary>
         /// Control user_error.
         /// </summary>
         /// <remarks>

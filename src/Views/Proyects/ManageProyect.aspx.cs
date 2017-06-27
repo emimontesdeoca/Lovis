@@ -104,6 +104,7 @@ namespace lovis.Views.Proyects
                 /// Set it
                 proyect_people.InnerText = sb.ToString();
             }
+            pagetitle.Text = managep_title.Text + " - Lovis";
         }
 
         protected void managep_update_Click(object sender, EventArgs e)

@@ -3,7 +3,7 @@
 <%@ MasterType VirtualPath="~/Views/Shared/Master.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
-    My profile
+    <asp:Literal runat="server" ID="pageTitle"></asp:Literal>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ViewContainer" runat="server">
     <div class="content" style="padding: 5px 15px !important">
@@ -13,7 +13,7 @@
                     <div class="card">
                         <div class="card-header" data-background-color="purple">
                             <h4 class="title">My Profile</h4>
-                            <p class="category">Where you show </p>
+                            <p class="category">What others see about yourself.</p>
                         </div>
                         <div class="card-content">
                             <fieldset class="scheduler-border">

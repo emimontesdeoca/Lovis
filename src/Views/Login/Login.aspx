@@ -27,8 +27,8 @@
 </head>
 <body style="overflow: hidden !important;">
     <form runat="server" id="form1">
-        <div class="content" >
-            <div class="container-fluid " style="min-width: 550px; max-width: 550px; height: 100%; position: absolute; top: 50%; bottom: 0; left: 0; right: 0; margin: auto;">
+        <div class="content">
+            <div class="container-fluid" style="min-width: 550px; max-width: 550px; height: 100%; position: absolute; top: 50%; bottom: 0; left: 0; right: 0; margin: auto;">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">

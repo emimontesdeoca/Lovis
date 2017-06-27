@@ -14,6 +14,8 @@ namespace lovis.Views.User
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            pagetitle.Text = "Settings - Lovis";
+
             Controllers.Users.Users DU = Session["User"] as Controllers.Users.Users;
             if (!IsPostBack)
             {
@@ -36,6 +38,7 @@ namespace lovis.Views.User
                 user_public.Checked = DU.isPublic;
                 user_registerdate.Text = DU.DateRegister.ToString();
                 user_lastmodification.Text = DU.LastModification.ToString();
+
             }
             if (UpdatedSuccess)
             {

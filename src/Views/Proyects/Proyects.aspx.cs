@@ -93,7 +93,7 @@ namespace lovis.Views.Proyects
             proyect_repository.NavigateUrl = cP.Repository;
             proyect_support.NavigateUrl = cP.Website;
             proyect_newtask.NavigateUrl = "/Views/Element/AddElement.aspx?id=" + splitnpu[1];
-            pagetitle.Text = cP.Title;
+            pagetitle.Text = cP.Title + " - Lovis";
 
             /// Get the people from the proyect
             var query = (from lUL in Controllers.Users.Users.uLTest

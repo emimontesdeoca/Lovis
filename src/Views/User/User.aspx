@@ -3,7 +3,7 @@
 <%@ MasterType VirtualPath="~/Views/Shared/Master.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
-    User
+    <asp:Literal runat="server" ID="pagetitle"></asp:Literal>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ViewContainer" runat="server">
     <div class="content">
@@ -24,7 +24,7 @@
                             <fieldset class="scheduler-border">
                                 <legend class="scheduler-border" style="margin-bottom: 5px;">User</legend>
                                 <div class="row">
-                                    <div class="col-md-3">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Company</label>
                                             <asp:TextBox runat="server" ID="user_company" CssClass="form-control" ReadOnly="true"></asp:TextBox>
@@ -32,28 +32,28 @@
 
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Email address</label>
                                             <asp:TextBox runat="server" ID="user_username" Type="Email" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                             <div class="help-block">E.g: shakira@waka.eh.</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Last Modification</label>
                                             <asp:TextBox runat="server" ID="user_registerdate" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                             <div class="help-block">Last modification to the user.</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Last Modification</label>
                                             <asp:TextBox runat="server" ID="user_lastmodification" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                             <div class="help-block">When user registered.</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                         <div class="form-group label-floating">
                                             <div class="checkbox">
                                                 <label>
@@ -66,28 +66,28 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-3">
+                                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Current password</label>
                                             <asp:TextBox runat="server" ID="user_currentpassword" Type="Password" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">Minimun length is 8. </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Repeat new password</label>
                                             <asp:TextBox runat="server" ID="user_password" Type="Password" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">Minimun length is 8. </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">New password</label>
                                             <asp:TextBox runat="server" ID="user_repeatpassword" Type="Password" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">Minimun length is 8. </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group label-floating text-center">
                                             <asp:Button runat="server" ID="user_updatepasswordbtn" CssClass="btn btn-primary btn-xs" Text="Update password" OnClick="user_updatepasswordbtn_Click" />
                                         </div>
@@ -99,14 +99,14 @@
                             <fieldset class="scheduler-border">
                                 <legend class="scheduler-border" style="margin-bottom: 5px;">Information</legend>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">First Name</label>
                                             <asp:TextBox runat="server" ID="user_name" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: Luis. </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Last Name</label>
                                             <asp:TextBox runat="server" ID="user_surname" CssClass="form-control"></asp:TextBox>
@@ -115,7 +115,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-lg-12 col-md-12  col-sm-12 col-xs-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Address</label>
                                             <asp:TextBox runat="server" ID="user_address" CssClass="form-control"></asp:TextBox>
@@ -124,21 +124,21 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">City</label>
                                             <asp:TextBox runat="server" ID="user_city" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: Dhahran. </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Country</label>
                                             <asp:TextBox runat="server" ID="user_country" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: Saudi Arabia. </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Postal Code</label>
                                             <asp:TextBox runat="server" ID="user_cp" CssClass="form-control"></asp:TextBox>
@@ -150,21 +150,21 @@
                             <fieldset class="scheduler-border">
                                 <legend class="scheduler-border" style="margin-bottom: 5px;">Social</legend>
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Facebook</label>
                                             <asp:TextBox runat="server" ID="user_fb" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: https://www.facebook.com/barackobama/. </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Twitter</label>
                                             <asp:TextBox runat="server" ID="user_tw" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: https://twitter.com/officiaikanye. </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Github</label>
                                             <asp:TextBox runat="server" ID="user_gh" CssClass="form-control"></asp:TextBox>
@@ -173,21 +173,21 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Skype</label>
                                             <asp:TextBox runat="server" ID="user_skype" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: peterlaanguila. </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">LinkedIn</label>
                                             <asp:TextBox runat="server" ID="user_linkedin" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: https://www.linkedin.com/in/ronaldo/. </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Google+</label>
                                             <asp:TextBox runat="server" ID="user_googleplus" CssClass="form-control"></asp:TextBox>
@@ -196,7 +196,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">About me</label>
                                             <asp:TextBox runat="server" ID="user_aboutme" TextMode="multiline" Columns="50" Rows="5" CssClass="form-control"></asp:TextBox>

@@ -3,7 +3,7 @@
 <%@ MasterType VirtualPath="~/Views/Shared/Master.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
-    Add proyect
+    Add proyect - Lovis
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ViewContainer" runat="server">
 
