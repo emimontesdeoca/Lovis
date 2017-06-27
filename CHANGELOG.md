@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 - Fixed some errors in code for project.
 - Improvements in responsive in various views.
 - Added correct pagetitle for each view.
+- Sidebar now shows active project when doing stuff in that project.
 
 ## [0.3.3] - 02/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add

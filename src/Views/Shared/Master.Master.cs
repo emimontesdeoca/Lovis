@@ -162,6 +162,10 @@ namespace lovis.Views.Shared
                     {
                         Master_pagetitle.InnerText = "Lovis > " + cpTITLE + " > Manage";
                     }
+                    if (splitpath[0] == "ManageElement")
+                    {
+                        Master_pagetitle.InnerText = "Lovis > " + cpTITLE + " > Manage task";
+                    }
                     if (splitpath[0] == "Proyects")
                     {
                         Master_pagetitle.InnerText = "Lovis > " + cpTITLE;
@@ -190,6 +194,9 @@ namespace lovis.Views.Shared
             string dashboardurl = "/Views/Dashboard/Dashboard.aspx";
             //string newproyecturl = "/Views/Proyects/AddProyect.aspx";
             string proyecturl = "/Views/Proyects/Proyects.aspx";
+            string manageprojecturl = "/Views/Proyects/ManageProyects.aspx";
+            string addtaskurl = "/Views/Element/AddElement.aspx";
+            string managetaskurl = "/Views/Element/ManageElement.aspx";
             string BASEproyecturl = "/Views/Proyects/Proyects.aspx";
 
             /// Fix for proyect
@@ -198,6 +205,35 @@ namespace lovis.Views.Shared
                 string fullPATH = HttpContext.Current.Request.Url.AbsoluteUri;
                 string[] splitnpu = fullPATH.Split('=');
                 proyecturl = proyecturl + "?id=" + splitnpu[1];
+            }
+            if (url == manageprojecturl)
+            {
+                string fullPATH = HttpContext.Current.Request.Url.AbsoluteUri;
+                string[] splitnpu = fullPATH.Split('=');
+                manageprojecturl = manageprojecturl + "?id=" + splitnpu[1];
+            }
+            if (url == addtaskurl)
+            {
+                string fullPATH = HttpContext.Current.Request.Url.AbsoluteUri;
+                string[] splitnpu = fullPATH.Split('=');
+                addtaskurl = addtaskurl + "?id=" + splitnpu[1];
+            }
+            bool isManageTask = false;
+            string urlManage = "";
+            if (url == managetaskurl)
+            {
+                string fullPATH = HttpContext.Current.Request.Url.AbsoluteUri;
+                string[] splitnpu = fullPATH.Split('=');
+                managetaskurl = managetaskurl + "?id=" + splitnpu[1];
+
+                urlManage = splitnpu[1];
+
+                string a = Controllers.Elements.Elements.lE.Single(b => b.Id == splitnpu[1]).IdProyect;
+
+                if (Controllers.Proyects.Proyects.lP.Single(x => x.Id == a) != null)
+                {
+                    isManageTask = true;
+                }
             }
 
             StringBuilder sb = new StringBuilder();
@@ -218,28 +254,11 @@ namespace lovis.Views.Shared
             sb.Append(@"</a>");
             sb.Append("</li>");
 
-            /// New proyect
-
-
-            //if (newproyecturl == url)
-            //{
-            //    sb.Append(@"<li class=""active"">");
-            //}
-            //else
-            //{
-            //    sb.Append("<li>");
-            //}
-            //sb.AppendFormat(@"<a href=""{0}"">", newproyecturl);
-            //sb.Append(@"<i class=""material-icons"">add</i>");
-            //sb.Append(@"<p class=""text-capitalize"">New project</p>");
-            //sb.Append(@"</a>");
-            //sb.Append("</li>");
-
             /// Proyects
             foreach (Controllers.Proyects.Proyects DP in CuLPP)
             {
 
-                if (proyecturl == url + "?id=" + DP.IdLicense)
+                if (proyecturl == url + "?id=" + DP.IdLicense || manageprojecturl == url + "?id=" + DP.IdLicense || addtaskurl == url + "?id=" + DP.IdLicense || managetaskurl == url + "?id=" + urlManage && isManageTask)
                 {
                     sb.Append(@"<li class=""active"">");
                 }
