@@ -68,6 +68,7 @@
     <Content Include="Views\Element\AddElement.aspx" />
     <Content Include="Views\Element\ManageElement.aspx" />
     <Content Include="Views\Proyects\ManageProyect.aspx" />
+    <Content Include="Views\Proyects\YourProjects.aspx" />
     <Content Include="Views\Register\Register.aspx" />
     <Content Include="Views\Search\Search.aspx" />
     <Content Include="Views\Shared\Assets\icon\favicon.ico" />
@@ -174,6 +175,13 @@
     </Compile>
     <Compile Include="Views\Proyects\ManageProyect.aspx.designer.cs">
       <DependentUpon>ManageProyect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Proyects\YourProjects.aspx.cs">
+      <DependentUpon>YourProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Proyects\YourProjects.aspx.designer.cs">
+      <DependentUpon>YourProjects.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Register\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

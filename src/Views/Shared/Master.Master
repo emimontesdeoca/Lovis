@@ -85,8 +85,8 @@
                                             <span class="span-li">Hello <b><span runat="server" class="text-capitalize" id="master_username"></span></b>!</span>
                                         </li>
                                         <hr class="dropdown-hr" />
-                                        <li class="disabled">
-                                            <a href="#">Your profile</a>
+                                        <li>
+                                            <a href="/Views/Profile/Profile.aspx">Your profile</a>
                                         </li>
                                         <li class="disabled">
                                             <a href="#">Your proyects</a>

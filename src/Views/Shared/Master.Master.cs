@@ -166,6 +166,10 @@ namespace lovis.Views.Shared
                     {
                         Master_pagetitle.InnerText = "Lovis > " + cpTITLE;
                     }
+                    if (splitpath[0] == "Profile")
+                    {
+                        Master_pagetitle.InnerText = "Lovis > My profile";
+                    }
                 }
 
                 #endregion
