@@ -70,7 +70,9 @@
     <Content Include="Views\Proyects\ManageProyect.aspx" />
     <Content Include="Views\Proyects\YourProjects.aspx" />
     <Content Include="Views\Register\Register.aspx" />
+    <Content Include="Views\Shared\Assets\css\pace.css" />
     <Content Include="Views\Shared\Assets\icon\favicon.ico" />
+    <Content Include="Views\Shared\Assets\js\pace.js" />
     <Content Include="Views\User\User.aspx" />
     <Content Include="Views\Dashboard\Dashboard.aspx" />
     <Content Include="Views\Proyects\Proyects.aspx" />

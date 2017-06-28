@@ -18,6 +18,8 @@
     <link href="../Shared/Assets/css/material-dashboard.css" rel="stylesheet" />
     <!--  Lovis CSS  -->
     <link href="../Shared/Assets/css/style.css" rel="stylesheet" />
+    <!-- Progress bar -->
+    <link href="../Shared/Assets/css/pace.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css' />
@@ -25,12 +27,12 @@
 <body>
     <form id="form1" runat="server">
         <div class="content">
-            <div class="container-fluid " style="min-width: 550px; max-width: 550px; height: 100%; position: absolute; top: 50%; bottom: 0; left: 0; right: 0; margin: auto;">
+            <div class="container-fluid form-center">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header" data-background-color="purple">
-                                <h2 class="title text-center">Lovis</h2>
+                                <h2 class="title text-center"><a href="../Login/Login.aspx">Lovis</a></h2>
                                 <p class="category text-center">Keep track of everything</p>
                             </div>
                             <div class="card-content">
@@ -107,6 +109,7 @@
     <script src="../Shared/Assets/js/material.min.js" type="text/javascript"></script>
     <!-- Material Dashboard javascript methods -->
     <script src="../Shared/Assets/js/material-dashboard.js"></script>
-    <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+    <!-- Progress bar -->
+    <script src="../Shared/Assets/js/pace.js"></script>
 </body>
 </html>

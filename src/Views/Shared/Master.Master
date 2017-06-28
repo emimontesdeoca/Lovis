@@ -20,6 +20,8 @@
     <link href="../Shared/Assets/css/material-dashboard.css" rel="stylesheet" />
     <!--  Lovis CSS  -->
     <link href="../Shared/Assets/css/style.css" rel="stylesheet" />
+    <!-- Progress bar -->
+    <link href="../Shared/Assets/css/pace.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
@@ -70,7 +72,7 @@
                                             <a href="/Views/Proyects/AddProyect.aspx">New project</a>
                                         </li>
                                         <li class="disabled">
-                                            <a href="/View/Ticket/AddTicket.aspx">New ticket</a>
+                                            <a href="/Views/Ticket/AddTicket.aspx">New ticket</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -88,8 +90,8 @@
                                         <li>
                                             <a href="/Views/Profile/Profile.aspx">Your profile</a>
                                         </li>
-                                        <li class="disabled">
-                                            <a href="#">Your proyects</a>
+                                        <li>
+                                            <a href="/Views/Proyects/YourProjects.aspx">Your projects</a>
                                         </li>
                                         <li class="disabled">
                                             <a href="#">Help</a>
@@ -123,6 +125,8 @@
     <script src="../Shared/Assets/js/material.min.js" type="text/javascript"></script>
     <!-- Material Dashboard javascript methods -->
     <script src="../Shared/Assets/js/material-dashboard.js"></script>
+    <!-- Progress bar -->
+    <script src="../Shared/Assets/js/pace.js"></script>
 </body>
 
 

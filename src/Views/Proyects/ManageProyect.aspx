@@ -24,7 +24,7 @@
                                 </div>
                             </div>
                             <fieldset class="scheduler-border">
-                                <legend class="scheduler-border" style="margin-bottom: 5px;">Initial information</legend>
+                               <legend class="scheduler-border bmargin5">Initial information</legend>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group label-floating">
@@ -76,7 +76,7 @@
                                 </div>
                             </fieldset>
                             <fieldset class="scheduler-border">
-                                <legend class="scheduler-border" style="margin-bottom: 5px;">Collaborators</legend>
+                                <legend class="scheduler-border bmargin5">Collaborators</legend>
                                 <div class="row">
                                     <div class="col-md-12 col-lg-12 col-sm-12">
                                         <div class="form-group label-floating">

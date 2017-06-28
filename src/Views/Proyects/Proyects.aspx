@@ -6,13 +6,13 @@
     <asp:Literal runat="server" ID="pagetitle"></asp:Literal>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ViewContainer" runat="server">
-    <div class="content"  style="padding: 5px 15px !important;">
+    <div class="content" style="padding: 5px 15px !important;">
         <div class="container-fluid">
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <fieldset class="scheduler-border">
-                            <legend class="scheduler-border" style="margin-bottom: 5px;">Summary</legend>
+                            <legend class="scheduler-border bmargin5">Summary</legend>
                             <p runat="server" id="proyect_summary"></p>
                         </fieldset>
                     </div>
@@ -35,13 +35,13 @@
                     </div>
                     <div class="col-lg-3 col-md-5 col-sm-5">
                         <fieldset class="scheduler-border">
-                            <legend class="scheduler-border" style="margin-bottom: 5px;">Collaborators</legend>
+                            <legend class="scheduler-border bmargin5">Collaborators</legend>
                             <p runat="server" id="proyect_people"></p>
                         </fieldset>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-3 text-center">
                         <fieldset class="scheduler-border">
-                            <legend class="scheduler-border" style="margin-bottom: 5px;">Management</legend>
+                            <legend class="scheduler-border bmargin5">Management</legend>
                             <div class="btn-group-vertical ">
                                 <asp:HyperLink runat="server" ID="proyect_newtask" CssClass="btn btn-primary btn-ms btn-manage-proyect btn-responsive" Text="New task" />
                                 <asp:HyperLink runat="server" ID="proyect_manage" CssClass="btn btn-warning btn-ms btn-manage-proyect btn-responsive" Text="Manage proyect" />
@@ -65,7 +65,7 @@
                                 <div class="panel-body">
                                     <asp:Literal runat="server" ID="txtBug"></asp:Literal>
                                     <div class="card-content table-responsive" runat="server" id="divBug">
-                                        <table class="table" style="margin-bottom: 0px !important">
+                                        <table class="table nomarginbot">
                                             <thead class="text-primary">
                                                 <th>Title</th>
                                                 <th>Type</th>
@@ -97,7 +97,7 @@
                                 <div class="panel-body">
                                     <asp:Literal runat="server" ID="txtDefect"></asp:Literal>
                                     <div class="card-content table-responsive" runat="server" id="divDefect">
-                                        <table class="table" style="margin-bottom: 0px !important">
+                                        <table class="table nomarginbot">
                                             <thead class="text-primary">
                                                 <th>Title</th>
                                                 <th>Type</th>
@@ -107,7 +107,7 @@
                                                 <th>Creation date</th>
                                                 <th>Start date</th>
                                                 <th>Finish date</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                                <th class="managetaskth">Manage</th>
                                             </thead>
                                             <tbody>
                                                 <asp:Literal runat="server" ID="defectPanel"></asp:Literal>
@@ -128,7 +128,7 @@
                                 <div class="panel-body">
                                     <asp:Literal runat="server" ID="txtPatches"></asp:Literal>
                                     <div class="card-content table-responsive" runat="server" id="divPatches">
-                                        <table class="table" style="margin-bottom: 0px !important">
+                                        <table class="table nomarginbot">
                                             <thead class="text-primary">
                                                 <th>Title</th>
                                                 <th>Type</th>
@@ -138,7 +138,7 @@
                                                 <th>Creation date</th>
                                                 <th>Start date</th>
                                                 <th>Finish date</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                                <th class="managetaskth">Manage</th>
                                             </thead>
                                             <tbody>
                                                 <asp:Literal runat="server" ID="patchesPanel"></asp:Literal>
@@ -159,7 +159,7 @@
                                 <div class="panel-body">
                                     <asp:Literal runat="server" ID="txtChanges"></asp:Literal>
                                     <div class="card-content table-responsive" runat="server" id="divChanges">
-                                        <table class="table" style="margin-bottom: 0px !important">
+                                        <table class="table nomarginbot">
                                             <thead class="text-primary">
                                                 <th>Title</th>
                                                 <th>Type</th>
@@ -169,7 +169,7 @@
                                                 <th>Creation date</th>
                                                 <th>Start date</th>
                                                 <th>Finish date</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                                <th class="managetaskth">Manage</th>
                                             </thead>
                                             <tbody>
                                                 <asp:Literal runat="server" ID="changesPanel"></asp:Literal>
@@ -190,7 +190,7 @@
                                 <div class="panel-body">
                                     <asp:Literal runat="server" ID="txtFeature"></asp:Literal>
                                     <div class="card-content table-responsive" runat="server" id="divFeatures">
-                                        <table class="table" style="margin-bottom: 0px !important">
+                                        <table class="table nomarginbot">
                                             <thead class="text-primary">
                                                 <th>Title</th>
                                                 <th>Type</th>
@@ -200,7 +200,7 @@
                                                 <th>Creation date</th>
                                                 <th>Start date</th>
                                                 <th>Finish date</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                                <th class="managetaskth">Manage</th>
                                             </thead>
                                             <tbody>
                                                 <asp:Literal runat="server" ID="featurePanel"></asp:Literal>
@@ -221,7 +221,7 @@
                                 <div class="panel-body">
                                     <asp:Literal runat="server" ID="txtSupport"></asp:Literal>
                                     <div class="card-content table-responsive" runat="server" id="divSupport">
-                                        <table class="table" style="margin-bottom: 0px !important">
+                                        <table class="table nomarginbot">
                                             <thead class="text-primary">
                                                 <th>Title</th>
                                                 <th>Type</th>
@@ -231,7 +231,7 @@
                                                 <th>Creation date</th>
                                                 <th>Start date</th>
                                                 <th>Finish date</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                                <th class="managetaskth">Manage</th>
                                             </thead>
                                             <tbody>
                                                 <asp:Literal runat="server" ID="supportPanel"></asp:Literal>
@@ -252,7 +252,7 @@
                                 <div class="panel-body">
                                     <asp:Literal runat="server" ID="txtReview"></asp:Literal>
                                     <div class="card-content table-responsive" runat="server" id="divReview">
-                                        <table class="table" style="margin-bottom: 0px !important">
+                                        <table class="table nomarginbot">
                                             <thead class="text-primary">
                                                 <th>Title</th>
                                                 <th>Type</th>
@@ -262,7 +262,7 @@
                                                 <th>Creation date</th>
                                                 <th>Start date</th>
                                                 <th>Finish date</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                                <th class="managetaskth">Manage</th>
                                             </thead>
                                             <tbody>
                                                 <asp:Literal runat="server" ID="reviewPanel"></asp:Literal>
@@ -283,7 +283,7 @@
                                 <div class="panel-body">
                                     <asp:Literal runat="server" ID="txtDocumentation"></asp:Literal>
                                     <div class="card-content table-responsive" runat="server" id="divDocumentation">
-                                        <table class="table" style="margin-bottom: 0px !important">
+                                        <table class="table nomarginbot">
                                             <thead class="text-primary">
                                                 <th>Title</th>
                                                 <th>Type</th>
@@ -293,7 +293,7 @@
                                                 <th>Creation date</th>
                                                 <th>Start date</th>
                                                 <th>Finish date</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                                <th class="managetaskth">Manage</th>
                                             </thead>
                                             <tbody>
                                                 <asp:Literal runat="server" ID="documentationPanel"></asp:Literal>
@@ -314,7 +314,7 @@
                                 <div class="panel-body">
                                     <asp:Literal runat="server" ID="txtClosed"></asp:Literal>
                                     <div class="card-content table-responsive" runat="server" id="divClosed">
-                                        <table class="table" style="margin-bottom: 0px !important">
+                                        <table class="table nomarginbot">
                                             <thead class="text-primary">
                                                 <th>Title</th>
                                                 <th>Type</th>
@@ -324,7 +324,7 @@
                                                 <th>Creation date</th>
                                                 <th>Start date</th>
                                                 <th>Finish date</th>
-                                                <th style="text-overflow: ellipsis; width: 150px;">Manage</th>
+                                                <th class="managetaskth">Manage</th>
                                             </thead>
                                             <tbody>
                                                 <asp:Literal runat="server" ID="closedPanel"></asp:Literal>

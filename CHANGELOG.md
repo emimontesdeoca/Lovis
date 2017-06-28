@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
+## [0.3.6] - 28/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- YourProjects view done.
+- Link to login from register.
+- Progress bar added.
+
+### Fixes
+- Styles to classes in css/html for some views.
+
 ## [0.3.5] - 28/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - Exception for deleting project if you are not the owner of it.

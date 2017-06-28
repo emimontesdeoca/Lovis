@@ -148,3 +148,28 @@ legend.scheduler-border {
 .dashboard-a-squares {
     display: inline-block;
 }
+
+.bmargin5 {
+    margin-bottom: 5px !important;
+}
+
+.nomarginbot {
+    margin-bottom: 0px !important
+}
+
+.managetaskth {
+    text-overflow: ellipsis;
+    width: 150px;
+}
+
+.form-center {
+    min-width: 550px !important;
+    max-width: 550px !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 50% !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto !important;
+}
