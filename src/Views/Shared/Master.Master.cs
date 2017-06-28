@@ -194,7 +194,7 @@ namespace lovis.Views.Shared
             string dashboardurl = "/Views/Dashboard/Dashboard.aspx";
             //string newproyecturl = "/Views/Proyects/AddProyect.aspx";
             string proyecturl = "/Views/Proyects/Proyects.aspx";
-            string manageprojecturl = "/Views/Proyects/ManageProyects.aspx";
+            string manageprojecturl = "/Views/Proyects/ManageProyect.aspx";
             string addtaskurl = "/Views/Element/AddElement.aspx";
             string managetaskurl = "/Views/Element/ManageElement.aspx";
             string BASEproyecturl = "/Views/Proyects/Proyects.aspx";
@@ -254,7 +254,7 @@ namespace lovis.Views.Shared
             sb.Append(@"</a>");
             sb.Append("</li>");
 
-            /// Proyects
+            /// Projects
             foreach (Controllers.Proyects.Proyects DP in CuLPP)
             {
 

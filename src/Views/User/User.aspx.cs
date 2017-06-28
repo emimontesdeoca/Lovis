@@ -99,6 +99,7 @@ namespace lovis.Views.User
                 loginUser.Username = Security.CryptoUtils.DecodeUsername(x.Username);
                 loginUser.Name = Security.CryptoUtils.DecodeUserString(x.Name, x);
                 loginUser.Surname = Security.CryptoUtils.DecodeUserString(x.Surname, x);
+                loginUser.Address = Security.CryptoUtils.DecodeUserString(x.Address, x);
                 loginUser.City = Security.CryptoUtils.DecodeUserString(x.City, x);
                 loginUser.Country = Security.CryptoUtils.DecodeUserString(x.Country, x);
                 loginUser.PostalCode = Security.CryptoUtils.DecodeUserString(x.PostalCode, x);

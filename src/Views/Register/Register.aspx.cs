@@ -11,7 +11,6 @@ namespace lovis.Views.Register
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void reg_register_Click(object sender, EventArgs e)

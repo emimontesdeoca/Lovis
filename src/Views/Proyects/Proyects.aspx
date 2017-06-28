@@ -6,7 +6,7 @@
     <asp:Literal runat="server" ID="pagetitle"></asp:Literal>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ViewContainer" runat="server">
-    <div class="content" style="margin-top: 50px;">
+    <div class="content"  style="padding: 5px 15px !important;">
         <div class="container-fluid">
             <div class="col-md-12">
                 <div class="row">

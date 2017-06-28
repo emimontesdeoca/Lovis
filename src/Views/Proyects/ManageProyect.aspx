@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ViewContainer" runat="server">
 
-    <div class="content">
+    <div class="content" style="padding: 5px 15px !important;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
@@ -16,6 +16,13 @@
                             <p class="category">Change the project's information or settings.</p>
                         </div>
                         <div class="card-content">
+                            <div class="row" runat="server" id="errorDiv">
+                                <div class="col-lg-12">
+                                    <div class="form-group label-floating">
+                                        <h4 class="control-label text-danger text-center"><asp:Literal runat="server" ID="errorText"></asp:Literal></h4>
+                                    </div>
+                                </div>
+                            </div>
                             <fieldset class="scheduler-border">
                                 <legend class="scheduler-border" style="margin-bottom: 5px;">Initial information</legend>
                                 <div class="row">
@@ -109,19 +116,19 @@
                             <fieldset class="scheduler-border" style="border: 1px solid red !important;">
                                 <legend class="scheduler-border" style="margin-bottom: 5px; color: red !important;">Danger zone</legend>
                                 <div class="row">
-                                    <div class="col-md-12 col-lg-12 col-sm-12">
+                                    <div class="col-md-12 col-lg-12 col-xs-12">
                                         <div class="form-group label-floating">
                                             <p style="color: red;" class="text-center"><b>Deleted projects can not be restored since they are wiped out from our database.</b></p>
                                         </div>
                                     </div>
-                                    <div class="col-md-8 col-lg-8 col-sm-12">
+                                    <div class="col-md-8 col-lg-8 col-xs-8">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Insert the project name to confirm</label>
                                             <asp:TextBox runat="server" ID="managep_name_delete" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">For example: MyProjectName</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-2 col-lg-2 col-sm-12">
+                                    <div class="col-md-4 col-lg-2 col-xs-4">
                                         <div class="form-group label-floating">
                                             <div class="checkbox">
                                                 <label>
@@ -131,8 +138,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-2 col-lg-2 col-sm-12">
-                                        <div class="form-group label-floating" style="margin-top: 10px !important;">
+                                    <div class="col-md-12 col-lg-2 col-xs-12">
+                                        <div class="form-group label-floating text-center" style="margin-top: 10px !important;">
                                             <asp:Button runat="server" ID="managep_btn_delete" CssClass="btn btn-danger" Text="Delete project" OnClick="managep_btn_delete_Click" />
                                         </div>
                                     </div>

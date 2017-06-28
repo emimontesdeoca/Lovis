@@ -22,6 +22,24 @@ namespace lovis.Views.Proyects {
         protected global::System.Web.UI.WebControls.Literal pagetitle;
         
         /// <summary>
+        /// Control errorDiv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorDiv;
+        
+        /// <summary>
+        /// Control errorText.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal errorText;
+        
+        /// <summary>
         /// Control managep_title.
         /// </summary>
         /// <remarks>

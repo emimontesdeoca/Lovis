@@ -4,7 +4,16 @@ All notable changes to this project will be documented in this file.
 
 [LICENSE](LICENSE) - [README](README.md) - [CHANGELOG](CHANGELOG.md) 
 
-## [0.3.4] - 26/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+## [0.3.5] - 28/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
+### Add
+- Exception for deleting project if you are not the owner of it.
+- Deleting elements before deleting project.
+
+### Fixes
+- Fixes to task/element table.
+- Address not saving when updating profile.
+
+## [0.3.4] - 27/06/2017 - [@emimontesdeoca](https://github.com/emimontesdeoca)
 ### Add
 - Fixed tables in project.
 - Added Profile page.

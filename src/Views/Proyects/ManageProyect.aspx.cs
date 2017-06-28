@@ -103,6 +103,7 @@ namespace lovis.Views.Proyects
                 sb.Remove(sb.Length - 2, 2);
                 /// Set it
                 proyect_people.InnerText = sb.ToString();
+                errorDiv.Visible = false;
             }
             pagetitle.Text = managep_title.Text + " - Lovis";
         }
@@ -132,15 +133,43 @@ namespace lovis.Views.Proyects
             {
                 if (managep_checkbox_delete.Checked)
                 {
-                    /// Remove project
-                    Controllers.Proyects.Proyects.lP.Remove(Controllers.Proyects.Proyects.lP.Single(a => a.Id == CP.Id));
-
-                    /// Remove userlicense to this user
+                    /// Build owner string
                     Controllers.Users.Users CU = Session["User"] as Controllers.Users.Users;
-                    Controllers.UserLicense.UserLicense.lUL.Remove(Controllers.UserLicense.UserLicense.lUL.Single(b => b.IdUser == CU.Id && b.IdLicense == CP.IdLicense));
+                    string c = CU.Name + " " + CU.Surname + " (" + CU.Username + ")";
 
-                    Response.Redirect("~/Views/Dashboard/dashboard.aspx");
+                    if (CP.Owner == c)
+                    {
+                        /// Remove project elements
+                        Controllers.Elements.Elements.lE.RemoveAll(x => x.IdProyect == CP.Id);
+
+                        /// Remove project
+                        Controllers.Proyects.Proyects.lP.Remove(Controllers.Proyects.Proyects.lP.Single(a => a.Id == CP.Id));
+
+                        /// Remove userlicense to this user
+                        Controllers.UserLicense.UserLicense.lUL.Remove(Controllers.UserLicense.UserLicense.lUL.Single(b => b.IdUser == CU.Id && b.IdLicense == CP.IdLicense));
+
+                        /// Redirect to dashboard
+                        Response.Redirect("~/Views/Dashboard/dashboard.aspx");
+                    }
+                    /// Not owner
+                    else
+                    {
+                        errorDiv.Visible = true;
+                        errorText.Text = "Only the owner can delete the project.";
+                    }
                 }
+                /// Not checked
+                else
+                {
+                    errorDiv.Visible = true;
+                    errorText.Text = "You have to check to delete.";
+                }
+            }
+            /// Wrong project name
+            else
+            {
+                errorDiv.Visible = true;
+                errorText.Text = "Incorrect name introduced.";
             }
         }
 

@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
-                        <div class="card-header" data-background-color="red">
+                        <div class="card-header" data-background-color="red" style="padding: 10px !important;">
                             <i class="material-icons">content_copy</i>
                         </div>
                         <div class="card-content">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
-                        <div class="card-header" data-background-color="gray">
+                        <div class="card-header" data-background-color="gray" style="padding: 10px !important;">
                             <i class="material-icons">announcement</i>
                         </div>
                         <div class="card-content">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
-                        <div class="card-header fuck">
+                        <div class="card-header fuck" style="padding: 10px !important;">
                             <i class="material-icons">code</i>
                         </div>
                         <div class="card-content">
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
-                        <div class="card-header" data-background-color="orange">
+                        <div class="card-header" data-background-color="orange" style="padding: 10px !important;">
 
                             <i class="material-icons">done</i>
                         </div>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
-                        <div class="card-header" data-background-color="blue">
+                        <div class="card-header" data-background-color="blue" style="padding: 10px !important;">
                             <i class="material-icons">spellcheck</i>
                         </div>
                         <div class="card-content">
@@ -80,7 +80,7 @@
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4">
                     <div class="card card-stats">
-                        <div class="card-header" data-background-color="green">
+                        <div class="card-header" data-background-color="green" style="padding: 10px !important;">
                             <i class="material-icons">done_all</i>
                         </div>
                         <div class="card-content">

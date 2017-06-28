@@ -270,7 +270,7 @@ namespace lovis.Views.Proyects
                                 sb.AppendFormat(@"<td class=""project-table"">{0}</td>", ea.DateFinish);
 
                                 /// Button
-                                sb.AppendFormat(@"<td class=""project-table"">");
+                                sb.AppendFormat(@"<td class=""project-table"" style=""width:1%;"">");
                                 sb.AppendFormat(@"<a href=""/Views/Element/ManageElement.aspx?id={0}"" class=""btn btn-primary btn-simple btn-xs"">", ea.Id);
                                 sb.AppendFormat(@"<i class=""material-icons"">edit</i>");
                                 sb.AppendFormat(@"</button>");
