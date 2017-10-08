@@ -5,8 +5,12 @@
         <img src="https://travis-ci.org/emimontesdeoca/lovis.svg?branch=master"
              alt="build status">
     </a>
+    <a href="https://github.com/emimontesdeoca/Lovis/blob/master/CHANGELOG.md">
+        <img src="https://img.shields.io/badge/changelog-link-brightgreen.svg"
+             alt="build status">
+    </a>
     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UBYQDM59B3GCC">
-        <img src="https://img.shields.io/badge/Donate-PayPal-green.svg"
+        <img src="https://img.shields.io/badge/donate-PayPal-green.svg"
              alt="Donate a coffee!">
     </a>
     <a href="LICENSE">
@@ -21,7 +25,7 @@
 
 ## About
 
-Lovis is a web application written in pure ASP.net that makes easier for teams to report issues, bugs, request to other co-workers. Just like Github's issue system but in a different way including all kind of email notifications and better security overall.
+Lovis is a web application written in pure ASP.net that makes easier for teams to report issues, bugs, request to other developers. Just like Github's issue system but in a different way including all kind of email notifications and better security overall.
 
 ## Contributing
 
@@ -70,9 +74,7 @@ Even if Lovis is not MVC, I did serpate stuff in folders, this is the structure:
 └───tools
 ```
 
-As a developer, or if you want to request something cool, if you feel like helping, any contribution is welcome. 
-
-And as user, if youy have any bug, issue, feature request or question, feel free to open a [ticket issue](https://github.com/emimontesdeoca/lovis/issues).
+Any bug, issue, feature request or question, feel free to open a [ticket issue](https://github.com/emimontesdeoca/lovis/issues), if possible use proper labels.
 
 ## License
 
