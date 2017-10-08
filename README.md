@@ -1,23 +1,79 @@
-# lovis  [![Build Status](https://travis-ci.org/emimontesdeoca/lovis.svg?branch=master)](https://travis-ci.org/emimontesdeoca/lovis)
+<h1 align="center">Lovis</h1>
 
-For Changelog click [here](CHANGELOG.md).
+<p align="center">
+    <a href="https://travis-ci.org/emimontesdeoca/lovis.svg">
+        <img src="https://travis-ci.org/emimontesdeoca/lovis.svg?branch=master"
+             alt="build status">
+    </a>
+    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UBYQDM59B3GCC">
+        <img src="https://img.shields.io/badge/Donate-PayPal-green.svg"
+             alt="Donate a coffee!">
+    </a>
+    <a href="LICENSE">
+        <img src="https://img.shields.io/github/license/mashape/apistatus.svg"
+             alt="Donate a coffee!">
+    </a>    
+</p>
 
-For License click [here](LICENSE).
+<p align="center">
+📑 Project management tool with ticket system for teams or single developers.
+</p>
 
-## Purpose
+## About
 
-Lovis was an updated idea of an app that I was developing that was basically a team management that included kanban, 
-but with [@SrMelian](https://github.com/SrMelian) we came up with an idea of a personal website that you can keep track
-of everything that you have to do. This includes class, software development, even maybe gym status
+Lovis is a web application written in pure ASP.net that makes easier for teams to report issues, bugs, request to other co-workers. Just like Github's issue system but in a different way including all kind of email notifications and better security overall.
 
-#### How is this working?:
+## Contributing
 
-The enviorment that we created was pretty simple, everything is hosted in our servers and all you need to do is to register and
-start tracking your stuff.
+Even if Lovis is not MVC, I did serpate stuff in folders, this is the structure:
 
-> There are several templates for your project, like "Class" that includes: exams, activities, day work, etc or for example 
-> "Development team" that includes: bugs, issues, request, etc. Users will be able to submit types of templates for them to be
-> added to the app.
+```
 
+├───docs
+├───src
+│   ├───Controllers
+│   │   ├───Const
+│   │   ├───Dashboard
+│   │   ├───Elements
+│   │   ├───Email
+│   │   ├───License
+│   │   ├───Proyects
+│   │   │   └───Templates
+│   │   ├───Role
+│   │   ├───UserLicense
+│   │   │   └───Confirmation
+│   │   └───Users
+│   │       ├───Confirmation
+│   │       ├───Login
+│   │       └───Register
+│   ├───Models
+│   ├───Security
+│   │   ├───IdGenerator
+│   │   └───Users
+│   └───Views
+│       ├───Confirmation
+│       ├───Dashboard
+│       │   └───NewFolder1
+│       ├───Element
+│       ├───Error
+│       ├───Login
+│       ├───Profile
+│       ├───Proyects
+│       ├───Register
+│       ├───Shared
+│       │   └───Assets
+│       │       ├───css
+│       │       ├───icon
+│       │       ├───img
+│       │       └───js
+│       └───User
+└───tools
+```
 
+As a developer, or if you want to request something cool, if you feel like helping, any contribution is welcome. 
 
+And as user, if youy have any bug, issue, feature request or question, feel free to open a [ticket issue](https://github.com/emimontesdeoca/lovis/issues).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
