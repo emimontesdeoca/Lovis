@@ -32,6 +32,8 @@ namespace lovis.Views.Profile
 
             /// Set the page title as your name
             pageTitle.Text = u.Name + " " + u.Surname + " - Lovis";
+
+            Master.cpTITLE = u.Name + " " + u.Surname;
         }
     }
 }

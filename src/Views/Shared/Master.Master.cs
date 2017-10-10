@@ -166,7 +166,7 @@ namespace lovis.Views.Shared
                     }
                     if (splitpath[0] == "Profile")
                     {
-                        Master_pagetitle.InnerText = "Lovis > My profile";
+                        Master_pagetitle.InnerText = "Lovis > " + cpTITLE;
                     }
                     if (splitpath[0] == "YourProjects")
                     {
