@@ -27,7 +27,7 @@
                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Title</label>
-                                            <asp:TextBox runat="server" ID="managee_title" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="managee_title" MaxLength="40"  CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: Responsive not working. </div>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Summary</label>
-                                            <asp:TextBox runat="server" ID="managee_summary" TextMode="multiline" Columns="50" Rows="5" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="managee_summary" MaxLength="200" TextMode="multiline" Columns="50" Rows="5" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: Responsive design is not working on login view. </div>
                                         </div>
                                     </div>
