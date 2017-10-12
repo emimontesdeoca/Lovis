@@ -22,6 +22,7 @@ namespace lovis.Views.Proyects
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             Controllers.Users.Users CU = Session["User"] as Controllers.Users.Users;
             /// Someone tried to access this web without the correct id
 
@@ -89,8 +90,8 @@ namespace lovis.Views.Proyects
             proyect_website.Text = cP.Website;
             proyect_repository.Text = cP.Repository;
             proyect_support.Text = cP.Support;
-            proyect_website.NavigateUrl = cP.Website;
-            proyect_repository.NavigateUrl = cP.Repository;
+            proyect_website.NavigateUrl = "http://github.com/" + cP.Website;
+            proyect_repository.NavigateUrl = "http://" + cP.Repository;
             proyect_support.NavigateUrl = "mailto:" + cP.Support;
             proyect_newtask.NavigateUrl = "/Views/Element/AddElement.aspx?id=" + splitnpu[1];
             pagetitle.Text = cP.Title + " - Lovis";
@@ -117,6 +118,8 @@ namespace lovis.Views.Proyects
             sb.Remove(sb.Length - 2, 2);
 
             proyect_people.InnerText = sb.ToString();
+
+
 
             /// Elements load
             bugPanel.Text = BuildElement("Bug", splitnpu[1], cP, 1);
@@ -377,52 +380,61 @@ namespace lovis.Views.Proyects
 
             // Error message shown when theres is not task or whatever
             string txterror = @"<p class=""text-center"" style=""margin: 0 0 0 0;"">No task or issues found for this category.</p>";
-
+            /*
             if (iBug == 0)
             {
+                divBug.InnerHtml = "";
                 txtBug.Text = txterror;
                 divBug.Visible = false;
             }
             if (iDefect == 0)
             {
                 txtDefect.Text = txterror;
-                divDefect.Visible = false;
+                divDefect.InnerHtml = "";
+                divDefect.Visible = false;             
             }
             if (iChanges == 0)
             {
+                divChanges.InnerHtml = "";
                 txtChanges.Text = txterror;
                 divChanges.Visible = false;
             }
             if (iPatch == 0)
             {
+                divPatches.InnerHtml = "";
                 txtPatches.Text = txterror;
                 divPatches.Visible = false;
             }
             if (iReview == 0)
             {
+                divReview.InnerHtml = "";
                 txtReview.Text = txterror;
                 divReview.Visible = false;
             }
             if (iFeature == 0)
             {
+                divFeatures.InnerHtml = "";
                 txtFeature.Text = txterror;
                 divFeatures.Visible = false;
             }
             if (iSupport == 0)
             {
+                divSupport.InnerHtml = "";
                 txtSupport.Text = txterror;
                 divSupport.Visible = false;
             }
             if (iDocumentation == 0)
             {
+                divDocumentation.InnerHtml = "";
                 txtDocumentation.Text = txterror;
                 divDocumentation.Visible = false;
             }
             if (iClosed == 0)
             {
+                divClosed.InnerHtml = "";
                 txtClosed.Text = txterror;
                 divClosed.Visible = false;
-            }
+            }*/
 
             return res;
         }

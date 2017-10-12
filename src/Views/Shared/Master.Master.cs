@@ -218,6 +218,7 @@ namespace lovis.Views.Shared
             }
             bool isManageTask = false;
             string urlManage = "";
+            string projectID = "";
             if (url == managetaskurl)
             {
                 string fullPATH = HttpContext.Current.Request.Url.AbsoluteUri;
@@ -228,9 +229,10 @@ namespace lovis.Views.Shared
 
                 string a = Controllers.Elements.Elements.lE.Single(b => b.Id == splitnpu[1]).IdProyect;
 
-                if (Controllers.Proyects.Proyects.lP.Single(x => x.Id == a) != null)
+                if ((projectID = Controllers.Proyects.Proyects.lP.Single(x => x.Id == a).Id) != null)
                 {
                     isManageTask = true;
+                   
                 }
             }
 
@@ -255,8 +257,9 @@ namespace lovis.Views.Shared
             /// Projects
             foreach (Controllers.Proyects.Proyects DP in CuLPP)
             {
-
-                if (proyecturl == url + "?id=" + DP.IdLicense || manageprojecturl == url + "?id=" + DP.IdLicense || addtaskurl == url + "?id=" + DP.IdLicense || managetaskurl == url + "?id=" + urlManage && isManageTask)
+                
+                string test =  url + "?id=" + urlManage;
+                if (proyecturl == url + "?id=" + DP.IdLicense || manageprojecturl == url + "?id=" + DP.IdLicense || addtaskurl == url + "?id=" + DP.IdLicense || managetaskurl == url + "?id=" + urlManage && isManageTask && DP.Id == projectID)
                 {
                     sb.Append(@"<li class=""active"">");
                 }
