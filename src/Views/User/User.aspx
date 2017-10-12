@@ -41,14 +41,14 @@
                                     </div>
                                     <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
                                         <div class="form-group label-floating">
-                                            <label class="control-label">Last Modification</label>
+                                            <label class="control-label">Registration date</label>
                                             <asp:TextBox runat="server" ID="user_registerdate" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                             <div class="help-block">Last modification to the user.</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
-                                            <label class="control-label">Last Modification</label>
+                                            <label class="control-label">Last modification</label>
                                             <asp:TextBox runat="server" ID="user_lastmodification" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                             <div class="help-block">When user registered.</div>
                                         </div>

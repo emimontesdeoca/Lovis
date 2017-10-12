@@ -48,8 +48,8 @@
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
                                             <label for="reg_password" class="control-label">Password</label>
-                                            <asp:TextBox ID="reg_password" runat="server" TextMode="Password" data-minlength="6" CssClass="form-control" required pattern="^[_A-z0-9]{1,}$"></asp:TextBox>
-                                            <div class="help-block">Minimum of 6 characters</div>
+                                            <asp:TextBox ID="reg_password" runat="server" TextMode="Password" data-minlength="6" CssClass="form-control" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"></asp:TextBox>
+                                            <div class="help-block">Minimum of 8 characters, lowercase, uppercase and number. </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -64,13 +64,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
                                             <label for="reg_name" class="control-label">Name</label>
-                                            <asp:TextBox ID="reg_name" runat="server" CssClass="form-control" data-minlength="3" data-maxlength="20" required pattern="^[_A-z0-9]{1,}$"></asp:TextBox>
+                                            <asp:TextBox ID="reg_name" runat="server" CssClass="form-control" data-minlength="3" data-maxlength="20" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
                                             <label for="reg_surname" class="control-label">Surname</label>
-                                            <asp:TextBox ID="reg_surname" runat="server" CssClass="form-control" data-minlength="3" data-maxlength="20" required pattern="^[_A-z0-9]{1,}$"></asp:TextBox>
+                                            <asp:TextBox ID="reg_surname" runat="server" CssClass="form-control" data-minlength="3" data-maxlength="20" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"></asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
