@@ -69,21 +69,21 @@
                                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Current password</label>
-                                            <asp:TextBox runat="server" ID="user_currentpassword" Type="Password" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_currentpassword" Type="Password" CssClass="form-control" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"></asp:TextBox>
                                             <div class="help-block">Minimun length is 8. </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Repeat new password</label>
-                                            <asp:TextBox runat="server" ID="user_password" Type="Password" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_password" Type="Password" CssClass="form-control"  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"></asp:TextBox>
                                             <div class="help-block">Minimun length is 8. </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">New password</label>
-                                            <asp:TextBox runat="server" ID="user_repeatpassword" Type="Password" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_repeatpassword" Type="Password" CssClass="form-control"  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"></asp:TextBox>
                                             <div class="help-block">Minimun length is 8. </div>
                                         </div>
                                     </div>
@@ -102,14 +102,14 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">First Name</label>
-                                            <asp:TextBox runat="server" ID="user_name" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_name" pattern="^[A-Za-z -]+$" MaxLength="20" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: Luis. </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Last Name</label>
-                                            <asp:TextBox runat="server" ID="user_surname" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_surname" pattern="^[A-Za-z -]+$" MaxLength="20" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: Sanfiel. </div>
                                         </div>
                                     </div>
@@ -118,7 +118,7 @@
                                     <div class="col-lg-12 col-md-12  col-sm-12 col-xs-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Address</label>
-                                            <asp:TextBox runat="server" ID="user_address" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,30}$" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_address" pattern="^[a-zA-Z0-9- -]+$" MaxLength="70" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: Bader H Al-Khalifa. </div>
                                         </div>
                                     </div>
@@ -127,21 +127,21 @@
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">City</label>
-                                            <asp:TextBox runat="server" ID="user_city" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_city" pattern="^[A-Za-z -]+$" MaxLength="20" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: Dhahran. </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Country</label>
-                                            <asp:TextBox runat="server" ID="user_country" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_country" pattern="^[A-Za-z -]+$" MaxLength="20" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: Saudi Arabia. </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Postal Code</label>
-                                            <asp:TextBox runat="server" ID="user_cp" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,10}$" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_cp" pattern="^[A-Za-z -]+$" MaxLength="10" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: 32901. </div>
                                         </div>
                                     </div>
@@ -153,21 +153,21 @@
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Facebook</label>
-                                            <asp:TextBox runat="server" ID="user_fb" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_fb" pattern="^[a-zA-Z0-9- -]+$" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: barackobama. </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Twitter</label>
-                                            <asp:TextBox runat="server" ID="user_tw" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_tw" pattern="^[a-zA-Z0-9- -]+$" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: officiaikanye. </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Github</label>
-                                            <asp:TextBox runat="server" ID="user_gh" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_gh" pattern="^[a-zA-Z0-9- -]+$" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: emimontesdeoca. </div>
                                         </div>
                                     </div>
@@ -176,21 +176,21 @@
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Skype</label>
-                                            <asp:TextBox runat="server" ID="user_skype" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_skype" pattern="^[a-zA-Z0-9- -]+$" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: peterlaanguila. </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">LinkedIn</label>
-                                            <asp:TextBox runat="server" ID="user_linkedin" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_linkedin" ppattern="^[a-zA-Z0-9- -]+$" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: ronaldo. </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Google+</label>
-                                            <asp:TextBox runat="server" ID="user_googleplus" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="user_googleplus" pattern="^[a-zA-Z0-9- -]+$" MaxLength="20" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: 12378341313103488825. </div>
                                         </div>
                                     </div>

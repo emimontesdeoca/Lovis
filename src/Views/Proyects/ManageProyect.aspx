@@ -54,21 +54,21 @@
                                     <div class="col-md-4 col-lg-4 col-sm-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Project website</label>
-                                            <asp:TextBox runat="server" ID="managep_webiste" CssClass="form-control"></asp:TextBox>
-                                            <div class="help-block">E.g: https://www.myproyectwebpage.com. </div>
+                                            <asp:TextBox runat="server" ID="managep_webiste"  pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,50}$" CssClass="form-control"></asp:TextBox>
+                                            <div class="help-block">E.g: myproyectwebpage.com. </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-lg-4 col-sm-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Repository website</label>
-                                            <asp:TextBox runat="server" ID="managep_repository" CssClass="form-control"></asp:TextBox>
-                                            <div class="help-block">E.g: https://github.com/emimontesdeoca/lovis. </div>
+                                            <asp:TextBox runat="server" ID="managep_repository"  pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,50}$" CssClass="form-control"></asp:TextBox>
+                                            <div class="help-block">E.g: github.com/emimontesdeoca/lovis. </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-lg-4 col-sm-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Support email</label>
-                                            <asp:TextBox runat="server" ID="managep_support" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="managep_support"  pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,50}$" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: support@proyect.com. </div>
                                         </div>
                                     </div>
