@@ -79,7 +79,7 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label ">Date start</label>
-                                            <asp:TextBox runat="server" ID="managee_datestart" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="managee_datestart" type="datetime-local" CssClass="form-control"></asp:TextBox>
                                             <div class="help-block">E.g: 10/06/2018. </div>
                                         </div>
                                     </div>

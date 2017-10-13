@@ -90,8 +90,8 @@ namespace lovis.Views.Proyects
             proyect_website.Text = cP.Website;
             proyect_repository.Text = cP.Repository;
             proyect_support.Text = cP.Support;
-            proyect_website.NavigateUrl = "http://github.com/" + cP.Website;
-            proyect_repository.NavigateUrl = "http://" + cP.Repository;
+            proyect_website.NavigateUrl = "http://" + cP.Website;
+            proyect_repository.NavigateUrl = "http://github.com/" + cP.Repository;
             proyect_support.NavigateUrl = "mailto:" + cP.Support;
             proyect_newtask.NavigateUrl = "/Views/Element/AddElement.aspx?id=" + splitnpu[1];
             pagetitle.Text = cP.Title + " - Lovis";
